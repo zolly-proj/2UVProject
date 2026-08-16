@@ -1,0 +1,8 @@
+<LOGGING>
+	<!-- Path where to save the log files -->	
+	<SAVEDIR value="/home/zolly/Desktop/Unix/2UVProjects/#LogServer/Logging/"/>
+	<!-- Size in bytes -->
+	<SIZE value="128000000"/>
+	<!-- Max disk usage -->
+	<DISKUSAGE value="50%"/>
+</LOGGING>
