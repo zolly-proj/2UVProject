@@ -1,0 +1,56 @@
+<root>
+	<lib name="OPERATION" source="libclOperation.so" path="./Objects/">
+		<method name="openOperation">
+			<!-- 
+			bool clOperation::doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp)
+			paMethodName=openOperation
+			
+			paParametersType,paParameters,paParametersValue)
+			CLASS            OPERATION    OPERATION
+			COLUMNTYPE1      COLUMNNAME1   VALUE1
+			COLUMNTYPE2      COLUMNNAME2   VALUE2
+			COLUMNTYPE3      COLUMNNAME3   VALUE3
+		    ...
+			-->
+		</method>
+		<method name="closeOperation">
+			<!-- 
+			bool clOperation::doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp)
+			paMethodName=closeOperation
+			
+			paParametersType,paParameters,paParametersValue)
+			CLASS            OPERATION    OPERATION
+			UUID             PKEY          VALUE1
+			COLUMNTYPE2      COLUMNNAME2   VALUE2 (values to update)
+			COLUMNTYPE3      COLUMNNAME3   VALUE3 (values to update)
+		    ...
+			-->		
+		</method>
+	</lib>
+	<lib name="ERRORTABLE" source="libclErrorTable.so" path="./Objects/">
+		<method name="getErrorNumberFromText">
+			<!-- 
+			bool clOperation::doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp)
+			paMethodName=getErrorNumberFromText
+			
+			paParametersType,	paParameters,				paParametersValue)
+			CLASS            	ERRORS_LIVING_OBJ_MACH    	ERRORS_LIVING_OBJ_MACH
+			UUID      			PKEY   						VALUE1
+			TEXT      			THEERROR				    VALUE2
+		    ...
+			-->
+		</method>
+		<method name="getTextFromErrorNumber">
+			<!-- 
+			bool clOperation::doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp)
+			paMethodName=getTextFromErrorNumber
+			
+			paParametersType,	paParameters,				paParametersValue)
+			CLASS            	ERRORS_LIVING_OBJ_MACH    	ERRORS_LIVING_OBJ_MACH
+			UUID      			PKEY   						VALUE1
+			TEXT      			THEERROR				    VALUE2
+		    ...
+			-->
+		</method>
+	</lib>	
+</root>
