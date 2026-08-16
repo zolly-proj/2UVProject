@@ -1,0 +1,32 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_GraphClient']
+
+SourcesGraphClient = [ 'clMain.cpp',
+                  myenv.Moc('clMainWindow.h'),
+                  myenv.Moc('clGraphView.h'),
+                  'clMainWindow.cpp',
+                  'clIceClientLogging.cpp',
+                  'clIceClientServer.cpp',
+                  'ICE_LogApplication.cpp',
+                  'ICE_ServerApplication.cpp',
+                  'clGraphView.cpp',
+                  'clGraphLine.cpp',
+                  'clQuery.cpp'
+                 ]
+GraphClient = myenv.Program('2UVGraphClient', SourcesGraphClient, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Gui',
+                    'libQt5Xml',
+                    'libQt5Charts',
+                    'libQt5Network',
+					'libpq',
+                    'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL',
+                    'libpython3.12'
+                        ])
+myenv.Install (InstallDir, GraphClient)

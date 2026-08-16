@@ -1,0 +1,22 @@
+<GraphView>
+	<operationQuery class="OPERATION" property="OBJECT" type="uuid" expression="=" value="640bdc8c-2564-11f1-9439-0800273b2796" refreshMS="5000">
+	</operationQuery>
+	<GraphLines>
+		<GraphLine color="red" name="Measured Value 01">
+			<valueQuery_Y>	
+				<query class="OPERATION" property="MEASURED_FLOAT_VALUE" type="float8[]" index="0"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERATION" property="DATUM_STOP" type="timestamp(3)" index="0"/>
+			</valueQuery_X>			
+		</GraphLine>
+		<GraphLine color="red" name="Measured Value 02">
+			<valueQuery_Y>	
+				<query class="OPERATION" property="MEASURED_FLOAT_VALUE" type="float8[]" index="1"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERATION" property="DATUM_STOP" type="timestamp(3)" index="0"/>
+			</valueQuery_X>			
+		</GraphLine>					
+	</GraphLines>
+</GraphView>

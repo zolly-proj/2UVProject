@@ -1,0 +1,22 @@
+<GraphView>
+	<operationQuery class="OPERATION" property="OBJECT" type="uuid" expression="=" value="df1e314c-29c2-11f1-9439-0800273b2796" refreshMS="5000">
+	</operationQuery>
+	<GraphLines>
+		<GraphLine color="red" name="Machine state">
+			<valueQuery_Y>	
+				<query class="OPERATION" property="OPERATION_STATE" type="int" index="0"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERATION" property="DATUM_START" type="timestamp(3)" index="0"/>
+			</valueQuery_X>			
+		</GraphLine>
+		<GraphLine color="red" name="Measured Value 02">
+			<valueQuery_Y>	
+				<query class="OPERATION" property="OPERATION_CLOSED_CAUSE" type="int" index="0"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERATION" property="DATUM_START" type="timestamp(3)" index="0"/>
+			</valueQuery_X>			
+		</GraphLine>					
+	</GraphLines>
+</GraphView>
