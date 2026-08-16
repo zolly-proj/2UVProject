@@ -1,0 +1,175 @@
+Import ('env')
+
+
+
+myenv = env
+
+InstallDir = myenv['BINDIR_ServerTest']
+
+################################ Methods library ###################################
+#CreateOperationForMachine
+SourcesDllCreateOperationForMachine = [
+                'clCreateOperationForMachine.cpp',
+                'clMethodCall.cpp',
+                '../clDatabaseColumn.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+CreateOperationForMachine = myenv.SharedLibrary('clCreateOperationForMachine', SourcesDllCreateOperationForMachine,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Xml',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclCreateOperationForMachine.so')
+
+#ExportToExcel
+SourcesDllExportToExcel = [
+                myenv.Moc('clExportToExcelUI.h'),
+                'clExportToExcel.cpp',
+                'clExportToExcelUI.cpp',
+                'clMethodCall.cpp',
+                '../clDatabaseColumn.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+ExportToExcel = myenv.SharedLibrary('clExportToExcel', SourcesDllExportToExcel,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Svg',
+                                                'libQt5Gui',
+                                                'libQt5Widgets',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclExportToExcel.so')
+
+#RunForMachine
+SourcesDllRunForMachine = [
+                'clRunForMachine.cpp',
+                'clMethodCall.cpp',
+                '../clDatabaseColumn.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+RunForMachine = myenv.SharedLibrary('clRunForMachine', SourcesDllRunForMachine,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Xml',
+                                                'libQt5Network',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclRunForMachine.so')
+
+#PauseForMachine
+SourcesDllPauseForMachine = [
+                'clPauseForMachine.cpp',
+                'clMethodCall.cpp',
+                '../clDatabaseColumn.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+PauseForMachine = myenv.SharedLibrary('clPauseForMachine', SourcesDllPauseForMachine,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Xml',
+                                                'libQt5Network',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclPauseForMachine.so')
+
+#ContinueForMachine
+SourcesDllContinueForMachine = [
+                'clContinueForMachine.cpp',
+                'clMethodCall.cpp',
+                '../clDatabaseColumn.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+ContinueForMachine = myenv.SharedLibrary('clContinueForMachine', SourcesDllContinueForMachine,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Xml',
+                                                'libQt5Network',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclContinueForMachine.so')
+
+
+#QrCode create
+SourcesDllCreateQrCodeOfObject = [
+                'clCreateQrCodeOfObject.cpp',
+                'clMethodCall.cpp',
+                './qrcode/QrCodeGenerator.cpp',
+                './qrcode/qrcodegen/qrcodegen.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+CreateQrCodeOfObject = myenv.SharedLibrary('clCreateQrCodeOfObject', SourcesDllCreateQrCodeOfObject,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Svg',
+                                                'libQt5Gui',
+                                                'libQt5Widgets',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+                                                )
+myenv.Install (InstallDir + '/Methods', 'libclCreateQrCodeOfObject.so')
+
+#QrCode show
+
+SourcesDllShowQrCodeOfObject = [
+                myenv.Moc('clShowQrCodeOfObjectUI.h'),
+                'clShowQrCodeOfObject.cpp',
+                'clShowQrCodeOfObjectUI.cpp',
+                'clMethodCall.cpp',
+                './qrcode/QrCodeGenerator.cpp',
+                './qrcode/qrcodegen/qrcodegen.cpp',
+                '../clIceClientLogging.cpp',
+                '../clIceClientServer.cpp',
+                '../ICE_LogApplication.cpp',
+                '../ICE_ServerApplication.cpp'
+                ]
+ShowQrCodeOfObject = myenv.SharedLibrary('clShowQrCodeOfObject', SourcesDllShowQrCodeOfObject,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Svg',
+                                                'libQt5Gui',
+                                                'libQt5Widgets',
+												'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+                                               )
+myenv.Install (InstallDir + '/Methods', 'libclShowQrCodeOfObject.so')
