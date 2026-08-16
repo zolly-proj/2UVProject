@@ -1,0 +1,42 @@
+<root>
+	<process name="clLoggingServer.exe" number="1">
+		<command>/home/zolly/Desktop/2UVProject/Unix/LogServer/./clLoggingServer</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/LogServer/clLogginServer.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/LogServer/BINDIR</working_dir>
+	</process>
+	<process name="2UVServer.exe" number="2">
+		<command>/home/zolly/Desktop/2UVProject/Unix/Server/BINDIR/./2UVServer</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/Server/BINDIR/ServerConfiguration.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/Server/BINDIR</working_dir>
+	</process>	
+	<process name="2UVCycleBuilder.exe" number="3">
+		<command>/home/zolly/Desktop/2UVProject/Unix/CycleBuilder/BINDIR/./2UVCycleBuilder</command>
+		<arg></arg>	
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/CycleBuilder/BINDIR</working_dir>
+	</process>		
+	<process name="DatabaseEditor.exe" number="4">
+		<command>/home/zolly/Desktop/2UVProject/Unix/DatabaseEditor/BINDIR/./DatabaseEditor</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/DatabaseEditor/BINDIR/DatabaseConfig.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/DatabaseEditor/BINDIR</working_dir>
+	</process>			
+	<process name="2UVServerTest.exe" number="5">
+		<command>/home/zolly/Desktop/2UVProject/Unix/ServerTest/BINDIR/./2UVServerTest</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/ServerTest/BINDIR/DatabaseConfig.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/ServerTest/BINDIR</working_dir>
+	</process>
+	<process name="ObjectViewer.exe" number="6">
+		<command>/home/zolly/Desktop/2UVProject/Unix/ObjectViewer/BINDIR/./2UVObjectViewer</command>
+		<arg>classConfigurationView_01.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/ObjectViewer/BINDIR</working_dir>
+	</process>
+	<process name="SocketBox.exe" number="7">
+		<command>/home/zolly/Desktop/2UVProject/Unix/SocketBox/BINDIR/./clSocketBox</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/SocketBox/BINDIR/SocketBox.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/SocketBox/BINDIR</working_dir>
+	</process>
+	<process name="GraphViewer.exe" number="8">
+		<command>/home/zolly/Desktop/2UVProject/Unix/GraphClient/BINDIR/./2UVGraphClient</command>
+		<arg>/home/zolly/Desktop/2UVProject/Unix/GraphClient/BINDIR/2UVGraphView.xml</arg>
+		<working_dir>/home/zolly/Desktop/2UVProject/Unix/GraphClient/BINDIR</working_dir>
+	</process>
+</root>

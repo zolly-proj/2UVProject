@@ -1,0 +1,18 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_AppStartup']
+
+SourcesAppStarter = [   'clMain.cpp',
+                        myenv.Moc('clAppStarterWidget.h'),
+                        'clAppStarterWidget.cpp'
+                    ]
+             
+AppStarter = myenv.Program('AppStarter', SourcesAppStarter, 
+                  LIBS=['libQt5Core',
+                        'libQt5Svg',
+                        'libQt5Gui',
+                        'libQt5Widgets',
+                        'libQt5Xml'
+                        ])
+myenv.Install (InstallDir, AppStarter)
