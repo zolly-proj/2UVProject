@@ -1,0 +1,40 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_DatabaseEditor']
+
+SourcesQtTest = [ 'clMain.cpp',
+                  myenv.Moc('clDatabaseEditorWidget.h'),
+                  'clDatabaseEditorWidget.cpp', 
+                  myenv.QT4UI('wdgDatabaseEditor.ui')[1:],
+                  'clDatabaseClass.cpp',
+                  'clXMLReader.cpp',
+                  'clDatabaseMySql.cpp',
+                  'clDatabaseOracle.cpp',
+                  'clDatabasePostgres.cpp',
+                  'clDatabaseTable.cpp',
+                  'clDatabaseColumn.cpp',
+                  'clDatabaseRoutine.cpp',
+                  'clDatabaseAction.cpp'
+                 ]
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+DatabaseProg = myenv.Program('DatabaseEditor', SourcesQtTest, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Charts',
+                    'libQt5Gui',
+                  	'libpq',
+                  	'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL',
+					'libpython3.12'
+                        ])
+myenv.Install (InstallDir, DatabaseProg)

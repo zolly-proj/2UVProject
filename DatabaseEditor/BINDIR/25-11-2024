@@ -1,0 +1,1164 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.1
+-- Dumped by pg_dump version 14.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: a_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_customer OWNER TO poststress;
+
+--
+-- Name: a_cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_cycle_routine OWNER TO poststress;
+
+--
+-- Name: a_cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_cycles OWNER TO poststress;
+
+--
+-- Name: a_empl_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_empl_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_empl_group OWNER TO poststress;
+
+--
+-- Name: a_employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_employee OWNER TO poststress;
+
+--
+-- Name: a_errors_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_errors_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_errors_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: a_linkeddoc; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_linkeddoc (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_linkeddoc OWNER TO poststress;
+
+--
+-- Name: a_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: a_operation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_operation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_operation OWNER TO poststress;
+
+--
+-- Name: a_person; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_person (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_person OWNER TO poststress;
+
+--
+-- Name: a_rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_chef OWNER TO poststress;
+
+--
+-- Name: a_rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_customer OWNER TO poststress;
+
+--
+-- Name: a_rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_phone OWNER TO poststress;
+
+--
+-- Name: a_tool; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_tool (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_tool OWNER TO poststress;
+
+--
+-- Name: a_workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_workstep OWNER TO poststress;
+
+--
+-- Name: customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    lastname character varying(255),
+    firstname character varying(255),
+    straat character varying(255)
+);
+
+
+ALTER TABLE public.customer OWNER TO poststress;
+
+--
+-- Name: cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routine uuid,
+    routine_class character varying(255),
+    cycle uuid,
+    parent uuid[],
+    parent_class character varying(255),
+    children uuid[],
+    child_class character varying(255)
+);
+
+
+ALTER TABLE public.cycle_routine OWNER TO poststress;
+
+--
+-- Name: cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routines uuid[],
+    amount_of_processors integer,
+    startnumber_of_processors integer,
+    workstation_name character varying(255),
+    current_routine uuid
+);
+
+
+ALTER TABLE public.cycles OWNER TO poststress;
+
+--
+-- Name: empl_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.empl_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    description text,
+    level integer,
+    created_on timestamp without time zone
+);
+
+
+ALTER TABLE public.empl_group OWNER TO poststress;
+
+--
+-- Name: employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    email text,
+    password text,
+    sure_name character varying(255),
+    famely_name character varying(255),
+    employee_groups uuid[],
+    created_on timestamp without time zone,
+    name text
+);
+
+
+ALTER TABLE public.employee OWNER TO poststress;
+
+--
+-- Name: errors_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.errors_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    standard_errors text[],
+    custom_errors text[]
+);
+
+
+ALTER TABLE public.errors_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: linkeddoc; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.linkeddoc (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp without time zone,
+    file_name text,
+    file_path text,
+    file_type integer,
+    file_names_extra text[],
+    comment text
+);
+
+
+ALTER TABLE public.linkeddoc OWNER TO poststress;
+
+--
+-- Name: living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    datum_start timestamp without time zone,
+    datum_stop timestamp without time zone,
+    timer_cycle integer,
+    socket_port integer,
+    socket_ip text,
+    workstation_name text,
+    commands_todo text[],
+    commands_done text[],
+    command_replay_history text[],
+    connection_state integer,
+    device_state integer,
+    device_filetransfer integer,
+    error_table uuid,
+    current_error text
+);
+
+
+ALTER TABLE public.living_obj_mach OWNER TO poststress;
+
+--
+-- Name: operation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.operation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    object uuid,
+    objects uuid[],
+    datum_start timestamp without time zone,
+    datum_stop timestamp without time zone,
+    h2o_value double precision,
+    performed_workstep uuid,
+    operation_state integer,
+    operation_source integer,
+    operation_closed_cause integer,
+    operation_error_information text
+);
+
+
+ALTER TABLE public.operation OWNER TO poststress;
+
+--
+-- Name: person; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.person (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    lastname character varying(255),
+    firstname character varying(255),
+    straat character varying(255)
+);
+
+
+ALTER TABLE public.person OWNER TO poststress;
+
+--
+-- Name: rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_chef OWNER TO poststress;
+
+--
+-- Name: rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_customer OWNER TO poststress;
+
+--
+-- Name: rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_phone OWNER TO poststress;
+
+--
+-- Name: tool; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.tool (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(64),
+    bijnamen text[],
+    datum timestamp without time zone,
+    datumarr timestamp without time zone[],
+    leven character varying(255),
+    levenarr text[],
+    eployeetest01 uuid,
+    eployeetestarr uuid[],
+    number01 integer,
+    number02 integer,
+    number03 bigint,
+    number04 real,
+    number05 double precision,
+    number06 integer[],
+    number07 integer[],
+    number08 bigint[],
+    number09 real[],
+    number10 double precision[]
+);
+
+
+ALTER TABLE public.tool OWNER TO poststress;
+
+--
+-- Name: workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    ws_tech integer,
+    ws_assigned uuid,
+    ws_workplace uuid,
+    created_on timestamp without time zone,
+    ws_state integer,
+    ws_performed_by uuid,
+    ws_planned_start timestamp without time zone,
+    ws_planned_stop timestamp without time zone,
+    linked_documents uuid[]
+);
+
+
+ALTER TABLE public.workstep OWNER TO poststress;
+
+--
+-- Data for Name: a_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+82c01b4e-aea4-11ef-8d94-2cf05d44ba6c	createQrCode	create qr code	DLL	clCreateQrCodeOfObject.dll	doMethod
+538b119c-afb4-11ef-8d95-2cf05d44ba6c	ShowQrCodeOfObject	Show Qr code of object	DLL	clShowQrCodeOfObject.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycle_routine (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycles (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_empl_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_empl_group (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_employee (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+3849bf36-b70d-11ef-8da1-2cf05d44ba6c	ExportToExcel	Export to excel	DLL	clExportToExcel.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_errors_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_errors_living_obj_mach (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_linkeddoc; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_linkeddoc (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+23b417bc-c2b9-11ef-b320-2cf05d44ba6c	OpenLinkedDoc	OpenLinkedDoc	DLL	clOpenLinkedDoc.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_living_obj_mach (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_operation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_operation (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_person; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_person (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_chef (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_phone (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_tool; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_tool (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_workstep (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+4307d46a-c245-11ef-b317-2cf05d44ba6c	SaveLinkedDoc	SaveLinkedDoc	DLL	clSaveLinkedDoc.dll	doMethod
+0cf215c4-c2b9-11ef-b31f-2cf05d44ba6c	OpenLinkedDoc	OpenLinkedDoc	DLL	clOpenLinkedDoc.dll	doMethod
+\.
+
+
+--
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.customer (pkey, name, lastname, firstname, straat) FROM stdin;
+06f58452-a109-11ef-8fdd-2cf05d44ba6c	Tom Desoeter	Desoeter	Tom	4 Wandelingenweg 78
+1cab48c2-a109-11ef-8fde-2cf05d44ba6c	Karel Vankeerberge	Karel	Vankeerberge	Eikelstraat 13
+\.
+
+
+--
+-- Data for Name: cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycle_routine (pkey, name, routine, routine_class, cycle, parent, parent_class, children, child_class) FROM stdin;
+3d316dc0-a11c-11ef-9b2f-2cf05d44ba6c	Cycle_02_Phone_03	efa26564-a11b-11ef-9b2c-2cf05d44ba6c	rti_add_phone	f326dbbe-a113-11ef-8fe4-2cf05d44ba6c	{}	CYCLES	{}	CYCLES
+674be802-c317-11ef-b34c-2cf05d44ba6c	Cycle_01_Phone_03	efa26564-a11b-11ef-9b2c-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{25fab38c-a11c-11ef-9b2e-2cf05d44ba6c}		{}	CYCLES
+20fb4ca2-a11c-11ef-9b2d-2cf05d44ba6c	Cycle_01_Phone_01_messageToAddPhoneNumber	974af782-a11b-11ef-9b2a-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{25fab38c-a11c-11ef-9b2e-2cf05d44ba6c}		{}	CYCLES
+25fab38c-a11c-11ef-9b2e-2cf05d44ba6c	Cycle_01_Phone_02_checkIfEmployerExists	ccc8864a-a11b-11ef-9b2b-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{}	CYCLES	{674be802-c317-11ef-b34c-2cf05d44ba6c,20fb4ca2-a11c-11ef-9b2d-2cf05d44ba6c}	
+\.
+
+
+--
+-- Data for Name: cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycles (pkey, name, routines, amount_of_processors, startnumber_of_processors, workstation_name, current_routine) FROM stdin;
+e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	Cycle_01	{}	4	2	5AXE-MINI	\N
+f326dbbe-a113-11ef-8fe4-2cf05d44ba6c	Cycle_02	{}	4	2	5AXE-MINI	\N
+\.
+
+
+--
+-- Data for Name: empl_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.empl_group (pkey, name, description, level, created_on) FROM stdin;
+2e1c2684-ab78-11ef-9bed-2cf05d44ba6c	Verzorgers	Verzorgenden	30	2024-11-25 22:56:31
+1bee2fac-ab78-11ef-9bec-2cf05d44ba6c	Verplegers	Verpleegkundigen	30	2024-11-25 22:56:59
+f80ad068-ab77-11ef-9beb-2cf05d44ba6c	R&D	Research and development	40	2024-11-25 22:57:05
+27d75404-ab75-11ef-82ff-2cf05d44ba6c	Cleaners	Cleaning the bulding	30	2024-11-25 22:57:11
+5004e9b6-ab78-11ef-9bee-2cf05d44ba6c	Cooks	Cooks	30	2024-11-25 22:57:29
+\.
+
+
+--
+-- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.employee (pkey, email, password, sure_name, famely_name, employee_groups, created_on, name) FROM stdin;
+c7399988-a113-11ef-8fe2-2cf05d44ba6c	wouter.vandorpe.2UVframework@hotmail.com	test	Wouter	Vandorpe	{27d75404-ab75-11ef-82ff-2cf05d44ba6c,f80ad068-ab77-11ef-9beb-2cf05d44ba6c}	2024-11-25 23:06:20	Wouter
+18521866-a10c-11ef-8fdf-2cf05d44ba6c	jean.vandorpe@gmail.com	test	Jean	Vandorpe	{1bee2fac-ab78-11ef-9bec-2cf05d44ba6c,5004e9b6-ab78-11ef-9bee-2cf05d44ba6c}	2024-11-25 23:07:00	Jean
+\.
+
+
+--
+-- Data for Name: errors_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.errors_living_obj_mach (pkey, name, standard_errors, custom_errors) FROM stdin;
+64625ea6-a106-11ef-8fd8-2cf05d44ba6c	Machine_01	{500;Socket,10010;approx,20010;something}	{"10020;99999 Error",20500;testing}
+\.
+
+
+--
+-- Data for Name: linkeddoc; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.linkeddoc (pkey, name, created_on, file_name, file_path, file_type, file_names_extra, comment) FROM stdin;
+0384550c-c2d6-11ef-b322-2cf05d44ba6c	2UV_02.png	2024-12-25 15:36:30	2UV_02.png	\N	0	\N	\N
+15f30986-c2d6-11ef-b323-2cf05d44ba6c	2UV_01.png	2024-12-25 15:37:01	2UV_01.png	\N	0	\N	\N
+58448224-c2d6-11ef-b324-2cf05d44ba6c	2UV_01.png	2024-12-25 15:38:53	2UV_01.png	\N	0	\N	\N
+e6949212-c2d6-11ef-b325-2cf05d44ba6c	2UV_01.png	2024-12-25 15:42:51	2UV_01.png	\N	0	\N	\N
+ec5d7f56-c2d6-11ef-b326-2cf05d44ba6c	2UV_01.png	2024-12-25 15:43:01	2UV_01.png	\N	0	\N	\N
+f34a2648-c2d6-11ef-b327-2cf05d44ba6c	2UV_01.png	2024-12-25 15:43:13	2UV_01.png	\N	0	\N	\N
+24ea40d4-c2d7-11ef-b328-2cf05d44ba6c	2UV_01.png	2024-12-25 15:44:36	2UV_01.png	\N	0	\N	\N
+a6051d42-c2d7-11ef-b329-2cf05d44ba6c	2UV_01.png	2024-12-25 15:48:13	2UV_01.png	\N	0	\N	\N
+40112aac-c2d8-11ef-b32a-2cf05d44ba6c	2UV_01.png	2024-12-25 15:52:31	2UV_01.png	\N	0	\N	\N
+9c030d58-c2d8-11ef-b32b-2cf05d44ba6c	2UV_01.png	2024-12-25 15:55:05	2UV_01.png	\N	0	\N	\N
+a23aa69a-c2d8-11ef-b32c-2cf05d44ba6c	contact test.png	2024-12-25 15:55:16	contact test.png	\N	0	\N	\N
+20d2ad0e-c2d9-11ef-b32d-2cf05d44ba6c	contact test.png	2024-12-25 15:58:48	contact test.png	\N	0	\N	\N
+8eed37be-c2d9-11ef-b32e-2cf05d44ba6c	contact test.png	2024-12-25 16:01:53	contact test.png	\N	0	\N	\N
+ab9a96a4-c2d9-11ef-b32f-2cf05d44ba6c	2UV_02.png	2024-12-25 16:02:41	2UV_02.png	\N	0	\N	\N
+72b55df6-c2e3-11ef-b330-2cf05d44ba6c	2UV_02.png	2024-12-25 17:12:40	2UV_02.png	\N	0	\N	\N
+d1f6284a-c2e3-11ef-b331-2cf05d44ba6c	2UV_02.png	2024-12-25 17:15:20	2UV_02.png	\N	0	\N	\N
+2ff81fd4-c2e4-11ef-b332-2cf05d44ba6c	2UV_02.png	2024-12-25 17:17:58	2UV_02.png	\N	0	\N	\N
+385cc5d0-c2e4-11ef-b333-2cf05d44ba6c	2UV.png	2024-12-25 17:18:12	2UV.png	\N	0	\N	\N
+269383f4-c2f1-11ef-b338-2cf05d44ba6c	2UV_02.png	2024-12-25 18:50:46	2UV_02.png	\N	0	\N	\N
+2f29863a-c2f1-11ef-b339-2cf05d44ba6c	test.png	2024-12-25 18:51:00	test.png	\N	0	\N	\N
+0b8310de-c2f6-11ef-b33a-2cf05d44ba6c	2UV_02.png	2024-12-25 19:25:48	2UV_02.png	\N	0	\N	\N
+1534a976-c2f6-11ef-b33b-2cf05d44ba6c	contact test.png	2024-12-25 19:26:04	contact test.png	\N	0	\N	\N
+25624042-c2f6-11ef-b33c-2cf05d44ba6c	download.jpg	2024-12-25 19:26:31	download.jpg	\N	0	\N	\N
+30eab638-c2f6-11ef-b33d-2cf05d44ba6c	contact test.png	2024-12-25 19:26:51	contact test.png	\N	0	\N	\N
+7e18fff0-c2f6-11ef-b33e-2cf05d44ba6c	tandwiel.png	2024-12-25 19:29:00	tandwiel.png	\N	0	\N	\N
+bb5ab610-c2f6-11ef-b33f-2cf05d44ba6c	Untitled.xcf	2024-12-25 19:30:43	Untitled.xcf	\N	0	\N	\N
+c0fba688-c2f6-11ef-b340-2cf05d44ba6c	contact test.png	2024-12-25 19:30:52	contact test.png	\N	0	\N	\N
+f463cb4e-c2f7-11ef-b341-2cf05d44ba6c	2UV.png	2024-12-25 19:39:28	2UV.png	\N	0	\N	\N
+0f835b7e-c2f8-11ef-b342-2cf05d44ba6c	Untitled.png	2024-12-25 19:40:13	Untitled.png	\N	0	\N	\N
+21a74f9a-c2f8-11ef-b343-2cf05d44ba6c	2UV_01.png	2024-12-25 19:40:44	2UV_01.png	\N	0	\N	\N
+2321dfbe-c2fa-11ef-b344-2cf05d44ba6c	2UV.xcf	2024-12-25 19:55:05	2UV.xcf	\N	0	\N	\N
+87348196-c2ff-11ef-b346-2cf05d44ba6c	service.jpg	2024-12-25 20:33:41	service.jpg	\N	0	\N	\N
+03f5ec2c-c302-11ef-b348-2cf05d44ba6c		2024-12-25 20:51:29		\N	0	\N	\N
+0ae1cc86-c302-11ef-b349-2cf05d44ba6c	contact test.png	2024-12-25 20:51:41	contact test.png	\N	0	\N	\N
+a69bad72-c30c-11ef-b34a-2cf05d44ba6c	1735164446348904700809154102115.jpg	2024-12-25 22:07:37	1735164446348904700809154102115.jpg	\N	0	\N	\N
+f2a2ccc4-c310-11ef-b34b-2cf05d44ba6c	2UV_02.png	2024-12-25 22:38:22	2UV_02.png	\N	0	\N	\N
+0538d61c-c36b-11ef-b34d-2cf05d44ba6c	netwoork_create.bat	2024-12-26 09:23:09	netwoork_create.bat	\N	0	\N	\N
+566bde7c-c379-11ef-b34e-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:05:38	17352110830336171624991900172499.jpg	\N	0	\N	\N
+8b8b59ac-c379-11ef-b34f-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:07	17352110830336171624991900172499.jpg	\N	0	\N	\N
+8c5d589e-c379-11ef-b350-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:09	17352110830336171624991900172499.jpg	\N	0	\N	\N
+9766ffe2-c379-11ef-b351-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:27	17352110830336171624991900172499.jpg	\N	0	\N	\N
+98d79102-c3b5-11ef-b352-2cf05d44ba6c	autorun.ico	2024-12-26 18:17:00	autorun.ico	\N	0	\N	\N
+1d61df66-d902-11ef-9a74-2cf05d44ba6c	config.client.Server	2025-01-22 21:47:37	config.client.Server	\N	0	\N	\N
+\.
+
+
+--
+-- Data for Name: living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.living_obj_mach (pkey, name, datum_start, datum_stop, timer_cycle, socket_port, socket_ip, workstation_name, commands_todo, commands_done, command_replay_history, connection_state, device_state, device_filetransfer, error_table, current_error) FROM stdin;
+a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	Machine_01	2024-11-12 22:03:27	2024-11-12 22:03:27	1000	1234	192.168.1.210	5AXE-MINI	{}	{}	{}	0	10	0	64625ea6-a106-11ef-8fd8-2cf05d44ba6c	
+\.
+
+
+--
+-- Data for Name: operation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.operation (pkey, name, object, objects, datum_start, datum_stop, h2o_value, performed_workstep, operation_state, operation_source, operation_closed_cause, operation_error_information) FROM stdin;
+7f0c3dca-a139-11ef-9b31-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-12 22:02:58	2024-11-12 22:03:16	\N	\N	20	40	10	
+cfc13d98-a390-11ef-926b-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:33:02	2024-11-15 21:33:11	\N	\N	20	40	10	
+e7a98924-a390-11ef-926c-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:33:42	2024-11-15 21:33:51	\N	\N	20	40	10	
+f8fd503e-a390-11ef-926d-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:34:11	2024-11-15 21:34:21	\N	\N	20	40	10	
+ef9a3b2a-ae7f-11ef-8562-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:29:57	2024-11-29 18:59:57	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+b0091d36-ae80-11ef-8563-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:35:20	2024-11-29 18:59:57	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+3f39cd18-ae84-11ef-8568-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:00:49	2024-11-29 19:00:53	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+b982c852-ae81-11ef-8567-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:42:45	2024-11-29 19:01:42	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+9e27223a-ae84-11ef-8569-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:03:28	2024-11-29 19:03:35	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+247346fc-ae85-11ef-856a-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:07:13	2024-11-29 19:21:17	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+12c05774-afed-11ef-8d96-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-01 14:03:42	2024-12-01 14:03:51	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+1d6ad922-ae87-11ef-856b-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:21:20	2024-12-02 20:00:24	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+08a27ed8-b0e8-11ef-8d97-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-02 20:00:09	2024-12-02 23:03:11	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+9ca70694-b101-11ef-8d98-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-02 23:03:15	2024-12-04 20:49:11	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+33a2f208-b281-11ef-8d99-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-04 20:49:05	2024-12-05 16:34:32	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+d0a3fc64-b326-11ef-8d9a-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-05 16:34:36	2024-12-06 16:33:02	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+b8c66cd4-b3ef-11ef-8d9b-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-06 16:32:45	2024-12-06 16:33:02	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+bea02a46-b3ef-11ef-8d9c-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-06 16:32:54	2024-12-07 19:37:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+ac93d878-b4d2-11ef-8d9d-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-07 19:37:20	2024-12-09 09:55:10	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+da879020-b5b4-11ef-8d9e-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-08 22:36:23	2024-12-10 14:36:08	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+1b03b250-b704-11ef-8da0-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-10 14:36:13	2024-12-10 16:20:16	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N
+1999e1f0-b704-11ef-8d9f-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-10 14:36:10	2024-12-22 19:39:25	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+16d681f0-c09e-11ef-a5f8-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:51:09	2024-12-22 19:51:22	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N
+278ff63e-c09e-11ef-a5f9-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:51:37	2024-12-22 19:51:42	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N
+53a4cd5a-c0a6-11ef-a5fa-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 20:50:07	2024-12-22 20:50:17	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+36440e08-c180-11ef-adf4-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-23 22:49:48	2024-12-23 22:49:54	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+6aa1ec90-c09c-11ef-a5f7-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:39:11	2024-12-23 22:50:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+42843a3a-c180-11ef-adf5-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-23 22:50:08	2024-12-23 22:50:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+5652f752-c0a6-11ef-a5fb-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 20:50:12	2024-12-24 10:21:43	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N
+3632f1f8-c1ea-11ef-adf7-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 11:28:34	2024-12-24 11:28:38	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N
+dca02b50-c1e0-11ef-adf6-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 10:21:39	2024-12-24 17:53:38	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N
+0c09add6-c2d5-11ef-b321-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 15:29:35	2024-12-25 18:32:20	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N
+d1123088-c2f0-11ef-b335-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:22	2024-12-25 18:48:33	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N
+d4c072d0-c2f0-11ef-b336-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:28	2024-12-25 18:48:41	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N
+028eceea-c220-11ef-b316-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 17:53:40	2024-12-29 18:21:52	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+d9e7d564-c2f0-11ef-b337-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:37	2024-12-29 18:21:52	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+cb55bd62-c611-11ef-b353-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-29 18:22:00	2024-12-29 18:22:28	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+98ba99c0-c2ee-11ef-b334-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:32:29	2024-12-30 21:09:51	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N
+d6a52752-c611-11ef-b354-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-29 18:22:19	2024-12-30 21:09:51	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N
+6c52f53c-c6f2-11ef-b355-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-30 21:09:57	2024-12-30 21:10:03	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N
+349e7260-c792-11ef-b357-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-31 16:13:43	\N	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	10	50	\N	\N
+73bfb38c-c6f2-11ef-b356-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-30 21:10:09	2024-12-31 16:13:55	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N
+eeb6eb16-c876-11ef-b358-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2025-01-01 19:31:01	\N	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	10	50	\N	\N
+\.
+
+
+--
+-- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.person (pkey, name, lastname, firstname, straat) FROM stdin;
+ce3e1824-a106-11ef-8fda-2cf05d44ba6c	Jan Devos	Devos	Jan	Bloemenhof 25
+e1ef345c-a106-11ef-8fdb-2cf05d44ba6c	Pieter Declerck	Declerck	Pieter	Natienlaan 7
+f2d9c688-a106-11ef-8fdc-2cf05d44ba6c	Lien De Mol	De Mol	Lien	Ambachtstraat 48
+\.
+
+
+--
+-- Data for Name: rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_chef (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+\.
+
+
+--
+-- Data for Name: rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_customer (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+\.
+
+
+--
+-- Data for Name: rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_phone (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+974af782-a11b-11ef-9b2a-2cf05d44ba6c	Phone_01_messageToAddPhoneNumber	PYTHON	RTI_ADD_PHONE.py	messageToAddPhoneNumber	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+efa26564-a11b-11ef-9b2c-2cf05d44ba6c	Phone_03	PYTHON	RTI_ADD_PHONE.py	deletePhoneNumber	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+ccc8864a-a11b-11ef-9b2b-2cf05d44ba6c	Phone_02_checkIfEmployerExists	PYTHON	RTI_ADD_PHONE.py	checkIfEmployerExists	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: tool; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.tool (pkey, name, bijnamen, datum, datumarr, leven, levenarr, eployeetest01, eployeetestarr, number01, number02, number03, number04, number05, number06, number07, number08, number09, number10) FROM stdin;
+7fc0e16a-a113-11ef-8fe0-2cf05d44ba6c	Borstel	{Zwabber}	2024-11-12 17:30:01	{}		{}	18521866-a10c-11ef-8fdf-2cf05d44ba6c	{18521866-a10c-11ef-8fdf-2cf05d44ba6c,18521866-a10c-11ef-8fdf-2cf05d44ba6c}	0	0	0	0	0	{}	{}	{}	{}	{}
+8a0a0570-a113-11ef-8fe1-2cf05d44ba6c	Trekker	{}	2024-11-12 17:31:08	{}		{}	\N	{}	0	0	0	0	0	{}	{}	{}	{}	{}
+\.
+
+
+--
+-- Data for Name: workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.workstep (pkey, name, ws_tech, ws_assigned, ws_workplace, created_on, ws_state, ws_performed_by, ws_planned_start, ws_planned_stop, linked_documents) FROM stdin;
+6742d11e-ab79-11ef-9bf0-2cf05d44ba6c	Meeting-01	200	1bee2fac-ab78-11ef-9bec-2cf05d44ba6c	\N	2024-11-25 23:05:00	\N	\N	\N	\N	\N
+12785830-a114-11ef-8fe6-2cf05d44ba6c	Cooking-01	500	5004e9b6-ab78-11ef-9bee-2cf05d44ba6c	\N	2024-12-24 23:52:34	0	\N	2024-12-24 23:52:34	2024-12-24 23:52:34	{cb71668c-c249-11ef-b31d-2cf05d44ba6c,ceaf7c3a-c249-11ef-b31e-2cf05d44ba6c}
+4d478746-ab79-11ef-9bef-2cf05d44ba6c	Research-01	300	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-25 23:04:29	20	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	\N	{21a74f9a-c2f8-11ef-b343-2cf05d44ba6c}
+833952d4-ae81-11ef-8565-2cf05d44ba6c	Research-03	300	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:40:38	30	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:40:38	2024-11-29 19:40:38	{0ae1cc86-c302-11ef-b349-2cf05d44ba6c,f2a2ccc4-c310-11ef-b34b-2cf05d44ba6c}
+05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	Cleaning-01	10	27d75404-ab75-11ef-82ff-2cf05d44ba6c	\N	2024-11-25 23:02:55	10	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	\N	{269383f4-c2f1-11ef-b338-2cf05d44ba6c,269383f4-c2f1-11ef-b338-2cf05d44ba6c,2f29863a-c2f1-11ef-b339-2cf05d44ba6c,0f835b7e-c2f8-11ef-b342-2cf05d44ba6c,87348196-c2ff-11ef-b346-2cf05d44ba6c,a69bad72-c30c-11ef-b34a-2cf05d44ba6c,98d79102-c3b5-11ef-b352-2cf05d44ba6c}
+96b15708-ae81-11ef-8566-2cf05d44ba6c	Cleaning-02	27	27d75404-ab75-11ef-82ff-2cf05d44ba6c	\N	2024-11-29 19:41:20	30	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:41:20	2024-11-29 19:41:20	{8eed37be-c2d9-11ef-b32e-2cf05d44ba6c,8eed37be-c2d9-11ef-b32e-2cf05d44ba6c,7e18fff0-c2f6-11ef-b33e-2cf05d44ba6c,bb5ab610-c2f6-11ef-b33f-2cf05d44ba6c,c0fba688-c2f6-11ef-b340-2cf05d44ba6c,f463cb4e-c2f7-11ef-b341-2cf05d44ba6c,2321dfbe-c2fa-11ef-b344-2cf05d44ba6c,a4fb001a-c2ff-11ef-b347-2cf05d44ba6c,0538d61c-c36b-11ef-b34d-2cf05d44ba6c,1d61df66-d902-11ef-9a74-2cf05d44ba6c}
+68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	Research-02	300	f80ad068-ab77-11ef-9beb-2cf05d44ba6c	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	2024-11-29 19:39:42	0	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:39:42	2024-11-29 19:39:42	{385cc5d0-c2e4-11ef-b333-2cf05d44ba6c}
+\.
+
+
+--
+-- Name: a_customer a_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_customer
+    ADD CONSTRAINT a_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycle_routine a_cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycle_routine
+    ADD CONSTRAINT a_cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycles a_cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycles
+    ADD CONSTRAINT a_cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_empl_group a_empl_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_empl_group
+    ADD CONSTRAINT a_empl_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_employee a_employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_employee
+    ADD CONSTRAINT a_employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_errors_living_obj_mach a_errors_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_errors_living_obj_mach
+    ADD CONSTRAINT a_errors_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_linkeddoc a_linkeddoc_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_linkeddoc
+    ADD CONSTRAINT a_linkeddoc_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_living_obj_mach a_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_living_obj_mach
+    ADD CONSTRAINT a_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_operation a_operation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_operation
+    ADD CONSTRAINT a_operation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_person a_person_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_person
+    ADD CONSTRAINT a_person_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_chef a_rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_chef
+    ADD CONSTRAINT a_rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_customer a_rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_customer
+    ADD CONSTRAINT a_rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_phone a_rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_phone
+    ADD CONSTRAINT a_rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_tool a_tool_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_tool
+    ADD CONSTRAINT a_tool_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_workstep a_workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_workstep
+    ADD CONSTRAINT a_workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycle_routine cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycle_routine
+    ADD CONSTRAINT cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycles cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycles
+    ADD CONSTRAINT cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: empl_group empl_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.empl_group
+    ADD CONSTRAINT empl_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.employee
+    ADD CONSTRAINT employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: errors_living_obj_mach errors_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.errors_living_obj_mach
+    ADD CONSTRAINT errors_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: linkeddoc linkeddoc_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.linkeddoc
+    ADD CONSTRAINT linkeddoc_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: living_obj_mach living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.living_obj_mach
+    ADD CONSTRAINT living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: operation operation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.operation
+    ADD CONSTRAINT operation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: person person_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.person
+    ADD CONSTRAINT person_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_chef rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_chef
+    ADD CONSTRAINT rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_customer rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_customer
+    ADD CONSTRAINT rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_phone rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_phone
+    ADD CONSTRAINT rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: tool tool_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.tool
+    ADD CONSTRAINT tool_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: workstep workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.workstep
+    ADD CONSTRAINT workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- PostgreSQL database dump complete
+--
+

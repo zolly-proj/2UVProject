@@ -1,0 +1,27 @@
+<DatabaseEditor>
+  <TABLES>
+    <!-- Max table name lenght is 32 char (if postgress not recompiled to more) -->
+    <!--
+    CREATE TABLE equipment(
+    equip_id uuid PRIMARY KEY
+    DEFAULT uuid_generate_v1() ,
+    equip_name varchar(255));
+    -->
+    <TABLE name="EMPLOYEE">
+      <COLUMN name="PKEY" alias="Primary key" type="uuid" extra="" reference="no"></COLUMN>	
+      <COLUMN name="NAME" alias="Name" type="varchar(64)" extra="" reference="no"></COLUMN>
+      <COLUMN name="CUSTOMERS" alias="Serves customers" type="uuid[]" extra="" reference="CUSTOMER"></COLUMN>
+      <COLUMN name="CHEF" alias="Works for" type="uuid" extra="" reference="EMPLOYEE"></COLUMN>
+      <COLUMN name="DATUM" alias="Works for" type="timestamp" extra="" reference="EMPLOYEE"></COLUMN>
+      <COLUMN name="DATUMARR" alias="Works for" type="timestamp[]" extra="" reference="EMPLOYEE"></COLUMN>
+      <ACTION name="ADD_CUSTOMER" alias="Adding a customer" source="PYTHON" sourcename="ADD_CUSTOMER.PY" returnType="integer"></ACTION>
+      <ACTION name="LINK_EMPL" alias="Link an employee" source="DLL" sourcename="LINK_EMPLOYEE.DLL" returnType="string"></ACTION>
+    </TABLE>
+    <TABLE name="PERSON">
+      <COLUMN name="PKEY" alias="Primary key" type="uuid" extra="" reference="no"></COLUMN>	
+      <COLUMN name="NAME" alias="Name" type="varchar(255)" extra="" reference="no"></COLUMN>
+      <ACTION name="ADD_PHONE" alias="Adding a customer" source="PYTHON" sourcename="ADD_CUSTOMER.PY" returnType="integer"></ACTION>
+      <ACTION name="SEARCH_PERSON" alias="SEARCH_PERSON" source="DLL" sourcename="LINK_EMPLOYEE.DLL" returnType="string"></ACTION>
+    </TABLE>
+  </TABLES>
+</DatabaseEditor>

@@ -1,0 +1,872 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.1
+-- Dumped by pg_dump version 14.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: a_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_customer OWNER TO poststress;
+
+--
+-- Name: a_cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_cycle_routine OWNER TO poststress;
+
+--
+-- Name: a_cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_cycles OWNER TO poststress;
+
+--
+-- Name: a_employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_employee OWNER TO poststress;
+
+--
+-- Name: a_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: a_opertation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_opertation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_opertation OWNER TO poststress;
+
+--
+-- Name: a_person; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_person (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_person OWNER TO poststress;
+
+--
+-- Name: a_rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_chef OWNER TO poststress;
+
+--
+-- Name: a_rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_customer OWNER TO poststress;
+
+--
+-- Name: a_rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_phone OWNER TO poststress;
+
+--
+-- Name: a_tool; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_tool (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_tool OWNER TO poststress;
+
+--
+-- Name: a_workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_returntype character varying(64)
+);
+
+
+ALTER TABLE public.a_workstep OWNER TO poststress;
+
+--
+-- Name: customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    lastname character varying(255),
+    firstname character varying(255),
+    straat character varying(255)
+);
+
+
+ALTER TABLE public.customer OWNER TO poststress;
+
+--
+-- Name: cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routine uuid,
+    routine_class character varying(255),
+    cycle uuid,
+    parent_class character varying(255),
+    children uuid[],
+    parent uuid[],
+    child_class character varying(255)
+);
+
+
+ALTER TABLE public.cycle_routine OWNER TO poststress;
+
+--
+-- Name: cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routines uuid[],
+    amount_of_processors integer,
+    startnumber_of_processors integer,
+    workstation_name character varying(255),
+    current_routine uuid
+);
+
+
+ALTER TABLE public.cycles OWNER TO poststress;
+
+--
+-- Name: employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(64),
+    customers uuid[],
+    datum timestamp without time zone,
+    datumarr timestamp without time zone[],
+    achter character varying(64) DEFAULT false NOT NULL,
+    toolusage uuid
+);
+
+
+ALTER TABLE public.employee OWNER TO poststress;
+
+--
+-- Name: living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    datum_start timestamp without time zone,
+    datum_stop timestamp without time zone,
+    timer_cycle integer,
+    socket_port integer,
+    workstation_name text,
+    commands_todo text[],
+    commands_done text[],
+    command_replay_history text[],
+    connection_state integer,
+    device_state integer,
+    socket_ip text
+);
+
+
+ALTER TABLE public.living_obj_mach OWNER TO poststress;
+
+--
+-- Name: opertation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.opertation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    objects uuid[],
+    datum_start timestamp without time zone,
+    datum_stop timestamp without time zone,
+    h2o_value double precision,
+    performed_workstep uuid
+);
+
+
+ALTER TABLE public.opertation OWNER TO poststress;
+
+--
+-- Name: person; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.person (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    lastname character varying(255),
+    firstname character varying(255),
+    straat character varying(255)
+);
+
+
+ALTER TABLE public.person OWNER TO poststress;
+
+--
+-- Name: rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    return_type character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_chef OWNER TO poststress;
+
+--
+-- Name: rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    return_type character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_customer OWNER TO poststress;
+
+--
+-- Name: rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    return_type character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_phone OWNER TO poststress;
+
+--
+-- Name: tool; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.tool (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(64) DEFAULT false NOT NULL,
+    achter character varying(64) DEFAULT false NOT NULL,
+    bijnamen text[] NOT NULL,
+    datum timestamp without time zone,
+    datumarr timestamp without time zone[],
+    leven character varying(255),
+    levenarr text[],
+    eployeetestarr uuid[] NOT NULL,
+    number01 integer NOT NULL,
+    number02 integer NOT NULL,
+    number03 bigint NOT NULL,
+    number04 real NOT NULL,
+    number05 double precision NOT NULL,
+    number06 integer[] NOT NULL,
+    number07 integer[] NOT NULL,
+    number08 bigint[] NOT NULL,
+    number09 real[] NOT NULL,
+    number10 double precision[] NOT NULL,
+    eployeetest01 uuid
+);
+
+
+ALTER TABLE public.tool OWNER TO poststress;
+
+--
+-- Name: workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    mesurevalue01 double precision,
+    mesurevalue02 double precision
+);
+
+
+ALTER TABLE public.workstep OWNER TO poststress;
+
+--
+-- Data for Name: a_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycle_routine (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycles (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_employee (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+04eae00a-9a13-11ef-98d7-2cf05d44ba6c	ExportToExcel	Export to excel	DLL	clExportToExcel.dll	int
+\.
+
+
+--
+-- Data for Name: a_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_living_obj_mach (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_opertation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_opertation (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_person; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_person (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_chef (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_phone (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_tool; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_tool (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_workstep (pkey, action_name, action_alias, action_source, action_sourcename, action_returntype) FROM stdin;
+\.
+
+
+--
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.customer (pkey, name, lastname, firstname, straat) FROM stdin;
+b6cb9352-7c4d-11ef-a4b1-2cf05d44ba6c	qsdfsqdfqs	dfqsfdqsdffqsd	qsdfqsdfqsdf	qsdfqsdfqsf
+d6c1ddc0-7c4c-11ef-a4af-2cf05d44ba6c	sdf	sdfqs	dfqs	test
+c0ef2588-7c4d-11ef-a4b2-2cf05d44ba6c	sqfqsdfqsdfqs	fqsdfdqsfqsdfqsdf	qsdfqsdfqsdfsqf	botten
+b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c	Jan	dfddsqf	qsfdqsdf	qsdfqsdf
+\.
+
+
+--
+-- Data for Name: cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycle_routine (pkey, name, routine, routine_class, cycle, parent_class, children, parent, child_class) FROM stdin;
+9253acee-9859-11ef-9627-2cf05d44ba6c	Cycle01_Phone_functions_TESTEN	29da9eb4-9225-11ef-b7dd-2cf05d44ba6c	rti_add_chef	6e2d65d2-8ee3-11ef-b375-2cf05d44ba6c		{}	{7b6aea24-9624-11ef-97ff-2cf05d44ba6c}	CYCLES
+7e806edc-9624-11ef-9800-2cf05d44ba6c	Cycle01_Phone_functions_Delete phone number	6b9625d2-9624-11ef-97fd-2cf05d44ba6c	rti_add_phone	6e2d65d2-8ee3-11ef-b375-2cf05d44ba6c		{}	{7b6aea24-9624-11ef-97ff-2cf05d44ba6c}	CYCLES
+7b6aea24-9624-11ef-97ff-2cf05d44ba6c	Cycle01_Phone_functions_Check Employee	b2b7fa54-92d1-11ef-b9e4-2cf05d44ba6c	rti_add_phone	6e2d65d2-8ee3-11ef-b375-2cf05d44ba6c		{9253acee-9859-11ef-9627-2cf05d44ba6c,7e806edc-9624-11ef-9800-2cf05d44ba6c}	{7721412a-9624-11ef-97fe-2cf05d44ba6c}	
+7721412a-9624-11ef-97fe-2cf05d44ba6c	Cycle01_Phone_functions_Message to add phone	fa3a715e-8fde-11ef-979d-2cf05d44ba6c	rti_add_phone	6e2d65d2-8ee3-11ef-b375-2cf05d44ba6c	CYCLES	{7b6aea24-9624-11ef-97ff-2cf05d44ba6c}	{}	
+bc8f6210-92d1-11ef-b9e5-2cf05d44ba6c	Prototype_Jean01	b2b7fa54-92d1-11ef-b9e4-2cf05d44ba6c	rti_add_phone	917d9cae-92d1-11ef-b9e3-2cf05d44ba6c	CYCLES	{}	{}	CYCLES
+\.
+
+
+--
+-- Data for Name: cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycles (pkey, name, routines, amount_of_processors, startnumber_of_processors, workstation_name, current_routine) FROM stdin;
+917d9cae-92d1-11ef-b9e3-2cf05d44ba6c	Prototype	{}	2	2	TEST	\N
+6e2d65d2-8ee3-11ef-b375-2cf05d44ba6c	Cycle01_Phone_functions	{}	2	2	5AXE-MINI	9253acee-9859-11ef-9627-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.employee (pkey, name, customers, datum, datumarr, achter, toolusage) FROM stdin;
+bf2082b2-829a-11ef-9c0e-2cf05d44ba6c	Koen Bordeel	{b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c}	2024-10-04 23:50:33	{}		\N
+a145ba3a-8283-11ef-916c-2cf05d44ba6c	Tom Vandesande	{c0ef2588-7c4d-11ef-a4b2-2cf05d44ba6c}	2024-10-25 15:25:20	{}	test	7ae13edc-8198-11ef-9c68-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.living_obj_mach (pkey, name, datum_start, datum_stop, timer_cycle, socket_port, workstation_name, commands_todo, commands_done, command_replay_history, connection_state, device_state, socket_ip) FROM stdin;
+f90152f0-8b27-11ef-bac9-2cf05d44ba6c	Mach01	2024-10-18 19:52:14	2024-10-18 19:52:14	1000	1234	5AXE-MINI	{}	{}	{}	0	0	192.168.1.210
+\.
+
+
+--
+-- Data for Name: opertation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.opertation (pkey, name, objects, datum_start, datum_stop, h2o_value, performed_workstep) FROM stdin;
+a076bb1e-7c51-11ef-a4b3-2cf05d44ba6c	qsfdqdfsq	{f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c}	2000-01-02 00:00:00	2000-01-03 00:00:00	\N	\N
+2f27ce2c-7c78-11ef-bc89-2cf05d44ba6c	sdfgsdjgfghkgjlkjlhl	{abae2fac-7c43-11ef-a4ae-2cf05d44ba6c,d6c1ddc0-7c4c-11ef-a4af-2cf05d44ba6c,b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c,dc411568-7c42-11ef-a4ac-2cf05d44ba6c}	2024-09-28 04:27:50	2024-09-25 04:27:50	\N	\N
+292a485f-a56a-4938-8f1a-bbbbbbbbbbb1	test	{a145ba3a-8283-11ef-916c-2cf05d44ba6c,a145ba3a-8283-11ef-916c-2cf05d44ba6c,dc411568-7c42-11ef-a4ac-2cf05d44ba6c,f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c,b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c}	2024-10-06 19:59:30	2024-10-06 19:59:30	\N	\N
+8e5c83e2-8416-11ef-aad4-2cf05d44ba6c	Testoperation01	{b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c,bf2082b2-829a-11ef-9c0e-2cf05d44ba6c}	2024-10-11 21:21:15	2024-10-11 21:21:15	50	05cbd804-8671-11ef-a722-2cf05d44ba6c
+a5644926-8416-11ef-aad5-2cf05d44ba6c	Testoperation02	{b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c,bf2082b2-829a-11ef-9c0e-2cf05d44ba6c}	2024-10-07 21:36:15	2024-10-11 21:36:15	78.1	2ae14278-8671-11ef-a725-2cf05d44ba6c
+beeeee0a-8416-11ef-aad6-2cf05d44ba6c	Testoperation03	{b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c,bf2082b2-829a-11ef-9c0e-2cf05d44ba6c}	2024-10-11 21:21:35	2024-10-11 21:38:35	120	12dc75d0-8671-11ef-a723-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.person (pkey, name, lastname, firstname, straat) FROM stdin;
+dc411568-7c42-11ef-a4ac-2cf05d44ba6c	Wouter	Vandorpe	enmf	Weststraat
+f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c	Peter	Decock	Jerre	Vesting
+abae2fac-7c43-11ef-a4ae-2cf05d44ba6c	Pieter	Lammens	Polly	Teststraat
+\.
+
+
+--
+-- Data for Name: rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_chef (pkey, name, source_type, source_file, return_type, employee, person) FROM stdin;
+29da9eb4-9225-11ef-b7dd-2cf05d44ba6c	TESTEN	DLL	clCreateOperationForMachine.dll	int	bf2082b2-829a-11ef-9c0e-2cf05d44ba6c	f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_customer (pkey, name, source_type, source_file, return_type, employee, person) FROM stdin;
+b44c123e-8fe7-11ef-979f-2cf05d44ba6c	test	DLL	test.dll	int	a145ba3a-8283-11ef-916c-2cf05d44ba6c	dc411568-7c42-11ef-a4ac-2cf05d44ba6c
+bff8ad54-8ff1-11ef-97a1-2cf05d44ba6c	Peer	PYTHON	peter.py	int	bf2082b2-829a-11ef-9c0e-2cf05d44ba6c	f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_phone (pkey, name, source_type, source_file, return_type, employee, person) FROM stdin;
+6b9625d2-9624-11ef-97fd-2cf05d44ba6c	Delete phone number	PYTHON	RTI_ADD_PHONE.py	deletePhoneNumber	a145ba3a-8283-11ef-916c-2cf05d44ba6c	abae2fac-7c43-11ef-a4ae-2cf05d44ba6c
+b2b7fa54-92d1-11ef-b9e4-2cf05d44ba6c	Check Employee	PYTHON	RTI_ADD_PHONE.py	checkIfEmployerExists	a145ba3a-8283-11ef-916c-2cf05d44ba6c	abae2fac-7c43-11ef-a4ae-2cf05d44ba6c
+fa3a715e-8fde-11ef-979d-2cf05d44ba6c	Message to add phone	PYTHON	RTI_ADD_PHONE.py	messageToAddPhoneNumber	a145ba3a-8283-11ef-916c-2cf05d44ba6c	f7d5e376-7c42-11ef-a4ad-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: tool; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.tool (pkey, name, achter, bijnamen, datum, datumarr, leven, levenarr, eployeetestarr, number01, number02, number03, number04, number05, number06, number07, number08, number09, number10, eployeetest01) FROM stdin;
+c8626236-81dd-11ef-9c69-2cf05d44ba6c	Sander	vanachteren	{sdf,qsdf}	2024-10-04 23:51:20	{}		{}	{a145ba3a-8283-11ef-916c-2cf05d44ba6c,bf2082b2-829a-11ef-9c0e-2cf05d44ba6c}	0	0	0	0	0	{}	{}	{}	{}	{}	\N
+cd4ff532-81de-11ef-890b-2cf05d44ba6c	test	test	{}	2024-10-04 01:25:31	{}		{}	{a145ba3a-8283-11ef-916c-2cf05d44ba6c}	0	0	0	0	0	{}	{}	{}	{}	{}	\N
+7ae13edc-8198-11ef-9c68-2cf05d44ba6c	BERT	Vandorpe	{enmf}	2024-10-04 23:49:41	{}	qsd	{sqdfs}	{bf2082b2-829a-11ef-9c0e-2cf05d44ba6c}	1	1	1	1.5	1.5	{1,45}	{457,4575}	{755}	{78.465}	{457.866}	98bbe91c-7c79-11ef-bc8a-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.workstep (pkey, name, mesurevalue01, mesurevalue02) FROM stdin;
+05cbd804-8671-11ef-a722-2cf05d44ba6c	Meting01	123.5	122.4
+12dc75d0-8671-11ef-a723-2cf05d44ba6c	Meting02	100.65	114.32
+1cf95380-8671-11ef-a724-2cf05d44ba6c	Meting03	130.45	127.5
+2ae14278-8671-11ef-a725-2cf05d44ba6c	Meting04	118.65	105.9
+3b95c59e-8671-11ef-a726-2cf05d44ba6c	Meting05	133.65	119.54
+\.
+
+
+--
+-- Name: a_customer a_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_customer
+    ADD CONSTRAINT a_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycle_routine a_cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycle_routine
+    ADD CONSTRAINT a_cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycles a_cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycles
+    ADD CONSTRAINT a_cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_employee a_employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_employee
+    ADD CONSTRAINT a_employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_living_obj_mach a_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_living_obj_mach
+    ADD CONSTRAINT a_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_opertation a_opertation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_opertation
+    ADD CONSTRAINT a_opertation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_person a_person_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_person
+    ADD CONSTRAINT a_person_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_chef a_rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_chef
+    ADD CONSTRAINT a_rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_customer a_rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_customer
+    ADD CONSTRAINT a_rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_phone a_rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_phone
+    ADD CONSTRAINT a_rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_tool a_tool_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_tool
+    ADD CONSTRAINT a_tool_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_workstep a_workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_workstep
+    ADD CONSTRAINT a_workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycle_routine cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycle_routine
+    ADD CONSTRAINT cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycles cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycles
+    ADD CONSTRAINT cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.employee
+    ADD CONSTRAINT employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: living_obj_mach living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.living_obj_mach
+    ADD CONSTRAINT living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: opertation opertation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.opertation
+    ADD CONSTRAINT opertation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: person person_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.person
+    ADD CONSTRAINT person_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_chef rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_chef
+    ADD CONSTRAINT rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_customer rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_customer
+    ADD CONSTRAINT rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_phone rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_phone
+    ADD CONSTRAINT rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: tool tool_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.tool
+    ADD CONSTRAINT tool_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: workstep workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.workstep
+    ADD CONSTRAINT workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- PostgreSQL database dump complete
+--
+

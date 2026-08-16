@@ -1,0 +1,1 @@
+insert into employee values('a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11','wouter','{a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11,a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11}',current_timestamp,array[timestamp '2015-01-10 00:51:14', timestamp '2015-01-11 00:51:14'],'word');

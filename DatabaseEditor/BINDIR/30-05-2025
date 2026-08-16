@@ -1,0 +1,2900 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.1
+-- Dumped by pg_dump version 14.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: a_allergy; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_allergy (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_allergy OWNER TO poststress;
+
+--
+-- Name: a_batch; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_batch (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_batch OWNER TO poststress;
+
+--
+-- Name: a_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_customer OWNER TO poststress;
+
+--
+-- Name: a_customer_remark; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_customer_remark (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_customer_remark OWNER TO poststress;
+
+--
+-- Name: a_cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_cycle_routine OWNER TO poststress;
+
+--
+-- Name: a_cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_cycles OWNER TO poststress;
+
+--
+-- Name: a_diet; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_diet (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_diet OWNER TO poststress;
+
+--
+-- Name: a_does_not_like; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_does_not_like (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_does_not_like OWNER TO poststress;
+
+--
+-- Name: a_empl_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_empl_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_empl_group OWNER TO poststress;
+
+--
+-- Name: a_employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_employee OWNER TO poststress;
+
+--
+-- Name: a_errors_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_errors_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_errors_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: a_food_bread; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_bread (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_bread OWNER TO poststress;
+
+--
+-- Name: a_food_breakfast; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_breakfast (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_breakfast OWNER TO poststress;
+
+--
+-- Name: a_food_butter; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_butter (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_butter OWNER TO poststress;
+
+--
+-- Name: a_food_charcuterie; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_charcuterie (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_charcuterie OWNER TO poststress;
+
+--
+-- Name: a_food_dessert; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_dessert (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_dessert OWNER TO poststress;
+
+--
+-- Name: a_food_dinner; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_dinner (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_dinner OWNER TO poststress;
+
+--
+-- Name: a_food_drink; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_drink (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_drink OWNER TO poststress;
+
+--
+-- Name: a_food_drinkserivce; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_drinkserivce (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_drinkserivce OWNER TO poststress;
+
+--
+-- Name: a_food_lunch; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_lunch (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_lunch OWNER TO poststress;
+
+--
+-- Name: a_food_place; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_place (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_place OWNER TO poststress;
+
+--
+-- Name: a_food_portion; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_portion (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_portion OWNER TO poststress;
+
+--
+-- Name: a_food_sugar; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_sugar (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_sugar OWNER TO poststress;
+
+--
+-- Name: a_food_texture; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_food_texture (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_food_texture OWNER TO poststress;
+
+--
+-- Name: a_linkeddoc; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_linkeddoc (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_linkeddoc OWNER TO poststress;
+
+--
+-- Name: a_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: a_mach_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_mach_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_mach_group OWNER TO poststress;
+
+--
+-- Name: a_operation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_operation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_operation OWNER TO poststress;
+
+--
+-- Name: a_paper; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_paper (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_paper OWNER TO poststress;
+
+--
+-- Name: a_planning; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_planning (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_planning OWNER TO poststress;
+
+--
+-- Name: a_product; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_product (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_product OWNER TO poststress;
+
+--
+-- Name: a_rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_chef OWNER TO poststress;
+
+--
+-- Name: a_rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_customer OWNER TO poststress;
+
+--
+-- Name: a_rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_rti_add_phone OWNER TO poststress;
+
+--
+-- Name: a_shift; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_shift (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_shift OWNER TO poststress;
+
+--
+-- Name: a_workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.a_workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    action_name character varying(64),
+    action_alias character varying(64),
+    action_source character varying(64),
+    action_sourcename character varying(64),
+    action_methodname character varying(64)
+);
+
+
+ALTER TABLE public.a_workstep OWNER TO poststress;
+
+--
+-- Name: allergy; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.allergy (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.allergy OWNER TO poststress;
+
+--
+-- Name: batch; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.batch (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    products uuid[],
+    product_number integer,
+    product_priority integer,
+    worksteps uuid[]
+);
+
+
+ALTER TABLE public.batch OWNER TO poststress;
+
+--
+-- Name: customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    lastname character varying(255),
+    firstname character varying(255),
+    straat character varying(255),
+    created_on timestamp(3) without time zone,
+    customer_room_number character varying(255),
+    customer_diet uuid[],
+    customer_allergy uuid[],
+    customer_insuline_morning integer,
+    customer_insuline_noon integer,
+    customer_insuline_evening integer,
+    customer_help_feeding integer,
+    customer_swallow_prob integer,
+    customer_does_not_like uuid[],
+    customer_texture uuid,
+    customer_portion uuid,
+    standard_bread_w1_2 uuid,
+    standard_bread_w3_4 uuid,
+    standard_smear integer,
+    standard_crusts integer,
+    standard_butter uuid,
+    standard_sugar uuid,
+    standard_napkin integer,
+    standard_paper uuid,
+    customer_location_group integer,
+    customer_standard_amout_bread_br integer,
+    customer_standard_amout_bread_di integer,
+    customer_standard_amout_charcuterie_br integer,
+    customer_standard_amout_charcuterie_di integer,
+    standard_drinks_br uuid[],
+    standard_drinks_di uuid[],
+    standard_dessert_br uuid,
+    standard_dessert_di uuid,
+    standard_bread_br uuid,
+    standard_bread_di uuid,
+    standard_drinkservice_br uuid[],
+    standard_drinkservice_di uuid[],
+    customer_qr text,
+    standard_charcuterie_br uuid[],
+    standard_charcuterie_di uuid[],
+    customer_on_room integer
+);
+
+
+ALTER TABLE public.customer OWNER TO poststress;
+
+--
+-- Name: customer_remark; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.customer_remark (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    comment text,
+    remark_customer uuid,
+    remark_date timestamp(3) without time zone,
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.customer_remark OWNER TO poststress;
+
+--
+-- Name: cycle_routine; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycle_routine (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routine uuid,
+    routine_class character varying(255),
+    cycle uuid,
+    parent uuid[],
+    parent_class character varying(255),
+    children uuid[],
+    child_class character varying(255),
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.cycle_routine OWNER TO poststress;
+
+--
+-- Name: cycles; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.cycles (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    routines uuid[],
+    amount_of_processors integer,
+    startnumber_of_processors integer,
+    workstation_name character varying(255),
+    current_routine uuid,
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.cycles OWNER TO poststress;
+
+--
+-- Name: diet; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.diet (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.diet OWNER TO poststress;
+
+--
+-- Name: does_not_like; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.does_not_like (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.does_not_like OWNER TO poststress;
+
+--
+-- Name: empl_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.empl_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    description text,
+    level integer,
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.empl_group OWNER TO poststress;
+
+--
+-- Name: employee; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.employee (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    email text,
+    password text,
+    sure_name character varying(255),
+    famely_name character varying(255),
+    employee_groups uuid[],
+    created_on timestamp(3) without time zone,
+    name text
+);
+
+
+ALTER TABLE public.employee OWNER TO poststress;
+
+--
+-- Name: errors_living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.errors_living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    standard_errors text[],
+    custom_errors text[],
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.errors_living_obj_mach OWNER TO poststress;
+
+--
+-- Name: food_bread; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_bread (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_bread OWNER TO poststress;
+
+--
+-- Name: food_breakfast; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_breakfast (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    breakfast_customer uuid,
+    breakfast_perpared integer,
+    breakfast_bread uuid,
+    breakfast_amount_bread integer,
+    breakfast_smear integer,
+    breakfast_crusts integer,
+    breakfast_butter uuid,
+    comment text,
+    breakfast_drinks uuid[],
+    breakfast_charcuterie uuid[],
+    breakfast_amount_charcuterie integer,
+    breakfast_sugar uuid,
+    breakfast_dessert uuid,
+    breakfast_napkin integer,
+    breakfast_paper uuid,
+    breakfast_date timestamp(3) without time zone,
+    breakfast_location_group integer,
+    breakfast_drinksservice uuid[]
+);
+
+
+ALTER TABLE public.food_breakfast OWNER TO poststress;
+
+--
+-- Name: food_butter; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_butter (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_butter OWNER TO poststress;
+
+--
+-- Name: food_charcuterie; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_charcuterie (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text,
+    charcuterie_available_br integer,
+    charcuterie_available_di integer
+);
+
+
+ALTER TABLE public.food_charcuterie OWNER TO poststress;
+
+--
+-- Name: food_dessert; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_dessert (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_dessert OWNER TO poststress;
+
+--
+-- Name: food_dinner; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_dinner (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    dinner_customer uuid,
+    dinner_perpared integer,
+    dinner_bread uuid,
+    dinner_amount_bread integer,
+    dinner_smear integer,
+    dinner_crusts integer,
+    dinner_butter uuid,
+    comment text,
+    dinner_drinks uuid[],
+    dinner_charcuterie uuid[],
+    dinner_amount_charcuterie integer,
+    dinner_sugar uuid,
+    dinner_dessert uuid,
+    dinner_napkin integer,
+    dinner_date timestamp(3) without time zone,
+    dinner_location_group integer,
+    dinner_drinksservice uuid[]
+);
+
+
+ALTER TABLE public.food_dinner OWNER TO poststress;
+
+--
+-- Name: food_drink; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_drink (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_drink OWNER TO poststress;
+
+--
+-- Name: food_drinkserivce; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_drinkserivce (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_drinkserivce OWNER TO poststress;
+
+--
+-- Name: food_lunch; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_lunch (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text,
+    lunch_customer uuid,
+    lunch_perpared integer,
+    lunch_location uuid,
+    lunch_texture uuid,
+    lunch_portion uuid,
+    lunch_plate integer,
+    lunch_drinks uuid[],
+    lunch_apiritif uuid,
+    lunch_napkin integer,
+    lunch_date timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.food_lunch OWNER TO poststress;
+
+--
+-- Name: food_place; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_place (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_place OWNER TO poststress;
+
+--
+-- Name: food_portion; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_portion (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_portion OWNER TO poststress;
+
+--
+-- Name: food_sugar; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_sugar (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_sugar OWNER TO poststress;
+
+--
+-- Name: food_texture; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.food_texture (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.food_texture OWNER TO poststress;
+
+--
+-- Name: linkeddoc; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.linkeddoc (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    file_name text,
+    file_path text,
+    file_type integer,
+    file_names_extra text[],
+    comment text
+);
+
+
+ALTER TABLE public.linkeddoc OWNER TO poststress;
+
+--
+-- Name: living_obj_mach; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.living_obj_mach (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    datum_start timestamp without time zone,
+    datum_stop timestamp without time zone,
+    timer_cycle integer,
+    socket_port integer,
+    socket_ip text,
+    workstation_name text,
+    commands_todo text[],
+    commands_done text[],
+    command_replay_history text[],
+    connection_state integer,
+    device_state integer,
+    device_filetransfer integer,
+    error_table uuid,
+    current_error text,
+    ws_tech integer,
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.living_obj_mach OWNER TO poststress;
+
+--
+-- Name: mach_group; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.mach_group (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    mach_group_machs uuid[],
+    mach_group_planning uuid
+);
+
+
+ALTER TABLE public.mach_group OWNER TO poststress;
+
+--
+-- Name: operation; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.operation (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    object uuid,
+    objects uuid[],
+    datum_start timestamp(3) without time zone,
+    datum_stop timestamp(3) without time zone,
+    h2o_value double precision,
+    performed_workstep uuid,
+    operation_state integer,
+    operation_source integer,
+    operation_closed_cause integer,
+    operation_error_information text,
+    created_on timestamp(3) without time zone
+);
+
+
+ALTER TABLE public.operation OWNER TO poststress;
+
+--
+-- Name: paper; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.paper (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    comment text
+);
+
+
+ALTER TABLE public.paper OWNER TO poststress;
+
+--
+-- Name: planning; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.planning (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    overlap_time integer,
+    pre_prep integer,
+    post_prep integer,
+    planning_shift uuid
+);
+
+
+ALTER TABLE public.planning OWNER TO poststress;
+
+--
+-- Name: product; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.product (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    previous_workstep uuid,
+    current_workstep uuid,
+    next_workstep uuid,
+    product_state integer,
+    product_ws_state integer,
+    product_index integer
+);
+
+
+ALTER TABLE public.product OWNER TO poststress;
+
+--
+-- Name: rti_add_chef; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_chef (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_chef OWNER TO poststress;
+
+--
+-- Name: rti_add_customer; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_customer (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_customer OWNER TO poststress;
+
+--
+-- Name: rti_add_phone; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.rti_add_phone (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    source_type character varying(255),
+    source_file character varying(255),
+    method_name character varying(255),
+    employee uuid,
+    person uuid
+);
+
+
+ALTER TABLE public.rti_add_phone OWNER TO poststress;
+
+--
+-- Name: shift; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.shift (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name text,
+    created_on timestamp(3) without time zone,
+    shift_start_monday timestamp without time zone,
+    shift_start_tuesday timestamp without time zone,
+    shift_start_wednesday timestamp without time zone,
+    shift_start_thursday timestamp without time zone,
+    shift_start_friday timestamp without time zone,
+    shift_start_saturday timestamp without time zone,
+    shift_start_sunday timestamp without time zone,
+    shift_stop_monday timestamp without time zone,
+    shift_stop_tuesday timestamp without time zone,
+    shift_stop_wednesday timestamp without time zone,
+    shift_stop_thursday timestamp without time zone,
+    shift_stop_friday timestamp without time zone,
+    shift_stop_saturday timestamp without time zone,
+    shift_stop_sunday timestamp without time zone
+);
+
+
+ALTER TABLE public.shift OWNER TO poststress;
+
+--
+-- Name: workstep; Type: TABLE; Schema: public; Owner: poststress
+--
+
+CREATE TABLE public.workstep (
+    pkey uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    name character varying(255),
+    ws_tech integer,
+    ws_assigned uuid,
+    ws_workplace uuid,
+    created_on timestamp(3) without time zone,
+    ws_state integer,
+    ws_performed_by uuid,
+    ws_planned_start timestamp without time zone,
+    ws_planned_stop timestamp without time zone,
+    linked_documents uuid[],
+    ws_mach_group uuid,
+    ws_include_planning integer
+);
+
+
+ALTER TABLE public.workstep OWNER TO poststress;
+
+--
+-- Data for Name: a_allergy; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_allergy (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_batch; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_batch (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+82c01b4e-aea4-11ef-8d94-2cf05d44ba6c	createQrCode	create qr code	DLL	clCreateQrCodeOfObject.dll	doMethod
+538b119c-afb4-11ef-8d95-2cf05d44ba6c	ShowQrCodeOfObject	Show Qr code of object	DLL	clShowQrCodeOfObject.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_customer_remark; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_customer_remark (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycle_routine (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_cycles (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_diet; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_diet (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_does_not_like; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_does_not_like (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_empl_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_empl_group (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_employee (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+3849bf36-b70d-11ef-8da1-2cf05d44ba6c	ExportToExcel	Export to excel	DLL	clExportToExcel.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_errors_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_errors_living_obj_mach (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_bread; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_bread (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_breakfast; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_breakfast (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_butter; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_butter (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_charcuterie; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_charcuterie (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_dessert; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_dessert (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_dinner; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_dinner (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_drink; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_drink (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_drinkserivce; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_drinkserivce (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_lunch; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_lunch (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_place; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_place (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_portion; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_portion (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_sugar; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_sugar (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_food_texture; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_food_texture (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_linkeddoc; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_linkeddoc (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+23b417bc-c2b9-11ef-b320-2cf05d44ba6c	OpenLinkedDoc	OpenLinkedDoc	DLL	clOpenLinkedDoc.dll	doMethod
+\.
+
+
+--
+-- Data for Name: a_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_living_obj_mach (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_mach_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_mach_group (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_operation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_operation (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_paper; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_paper (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_planning; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_planning (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_product; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_product (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_chef (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_customer (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_rti_add_phone (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_shift; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_shift (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+\.
+
+
+--
+-- Data for Name: a_workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.a_workstep (pkey, action_name, action_alias, action_source, action_sourcename, action_methodname) FROM stdin;
+4307d46a-c245-11ef-b317-2cf05d44ba6c	SaveLinkedDoc	SaveLinkedDoc	DLL	clSaveLinkedDoc.dll	doMethod
+0cf215c4-c2b9-11ef-b31f-2cf05d44ba6c	OpenLinkedDoc	OpenLinkedDoc	DLL	clOpenLinkedDoc.dll	doMethod
+\.
+
+
+--
+-- Data for Name: allergy; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.allergy (pkey, name, created_on, comment) FROM stdin;
+361148dc-0d6c-11f0-8cee-2cf05d44ba6c	tomaten	2025-03-30 15:37:59.511	
+\.
+
+
+--
+-- Data for Name: batch; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.batch (pkey, name, created_on, products, product_number, product_priority, worksteps) FROM stdin;
+d8fa2a4c-e7f5-11ef-849a-2cf05d44ba6c	Batch_02	2025-02-10 22:26:55.9	{d8f3f1b8-e7f5-11ef-8490-2cf05d44ba6c,d8f60f2a-e7f5-11ef-8491-2cf05d44ba6c,d8f6927e-e7f5-11ef-8492-2cf05d44ba6c,d8f6faca-e7f5-11ef-8493-2cf05d44ba6c,d8f6facb-e7f5-11ef-8494-2cf05d44ba6c,d8f6facc-e7f5-11ef-8495-2cf05d44ba6c,d8f6facd-e7f5-11ef-8496-2cf05d44ba6c,d8f8616c-e7f5-11ef-8497-2cf05d44ba6c,d8f8616d-e7f5-11ef-8498-2cf05d44ba6c,d8f9c796-e7f5-11ef-8499-2cf05d44ba6c}	10	3	{}
+125431d0-e598-11ef-a3e4-2cf05d44ba6c	Batch_01	2024-02-10 20:59:24.111	{1251aece-e598-11ef-a3df-2cf05d44ba6c,1252609e-e598-11ef-a3e0-2cf05d44ba6c,1252ee10-e598-11ef-a3e1-2cf05d44ba6c}	3	11	{2fc4ba9a-e670-11ef-ac51-2cf05d44ba6c,4d13e1d4-e670-11ef-ac52-2cf05d44ba6c,661b545a-e670-11ef-ac53-2cf05d44ba6c}
+\.
+
+
+--
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.customer (pkey, name, lastname, firstname, straat, created_on, customer_room_number, customer_diet, customer_allergy, customer_insuline_morning, customer_insuline_noon, customer_insuline_evening, customer_help_feeding, customer_swallow_prob, customer_does_not_like, customer_texture, customer_portion, standard_bread_w1_2, standard_bread_w3_4, standard_smear, standard_crusts, standard_butter, standard_sugar, standard_napkin, standard_paper, customer_location_group, customer_standard_amout_bread_br, customer_standard_amout_bread_di, customer_standard_amout_charcuterie_br, customer_standard_amout_charcuterie_di, standard_drinks_br, standard_drinks_di, standard_dessert_br, standard_dessert_di, standard_bread_br, standard_bread_di, standard_drinkservice_br, standard_drinkservice_di, customer_qr, standard_charcuterie_br, standard_charcuterie_di, customer_on_room) FROM stdin;
+a964035a-2668-11f0-9c55-2cf05d44ba6c	Hubert	Demaegdt	Hubert		2025-05-01 10:40:09.641	K504	{}	{}	0	0	0	0	2	{}	a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	1	4	4	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 FE:D3:C1:01:86:D9	{}	{}	0
+83327a98-0d79-11f0-8d00-2cf05d44ba6c	Jenny	Constant	Jenny		2025-03-30 17:11:16.033	K107	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	2	2	3	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 EF:B0:8E:7A:AB:23	{}	{}	0
+656bbed8-2463-11f0-b716-2cf05d44ba6c	Paul	Adins	Paul		2025-04-28 21:01:43.179	K112	{}	{}	0	0	0	1	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	52808238-1dfe-11f0-ac27-2cf05d44ba6c	0	\N	2	2	3	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{0de167e4-2463-11f0-b714-2cf05d44ba6c}	\N	206c2d36-2463-11f0-b715-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 EB:F6:E7:38:25:1B	{}	{}	1
+328c6ddc-266b-11f0-9c56-2cf05d44ba6c	Jacqueline	Demey	Jacqueline		2025-05-01 10:56:51.091	K110	{}	{}	0	1	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	2	2	3	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 DD:D9:78:CD:51:5B	{}	{}	1
+1ec5df94-266c-11f0-9c57-2cf05d44ba6c	Daniel	Derresauw	Daniel		2025-05-01 11:04:38.87	K508	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	52808238-1dfe-11f0-ac27-2cf05d44ba6c	0	\N	3	1	2	2	2	{68ab21ea-2460-11f0-af7a-2cf05d44ba6c}	{}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	{}	{}	03 EF:E8:AF:9C:C5:79	{}	{}	1
+1f13d6d0-2686-11f0-9c58-2cf05d44ba6c	Odette	Deruwa	Odette		2025-05-01 14:10:18.107	K201	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	4	3	3	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{f1c614f8-2460-11f0-af83-2cf05d44ba6c}	03 DF:39:EA:34:90:8D	{}	{}	0
+0d5c4228-2687-11f0-9c59-2cf05d44ba6c	Adrienne	Deschacht	Adrienne		2025-05-01 14:16:44.325	K001	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	0	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}		{}	{}	0
+05766654-2666-11f0-9c52-2cf05d44ba6c	Rita	Brengman	Rita		2025-05-01 10:20:27.753	K503	{}	{}	0	0	0	0	0	{}	a1febb60-0d67-11f0-ad9b-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	1	2	2	2	2	{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{}	03 EC:83:04:D5:5B:4E	{396e13a0-1abb-11f0-9aa8-2cf05d44ba6c}	{4015a326-1abb-11f0-9aa9-2cf05d44ba6c}	1
+3fbbf25e-0d6e-11f0-8cef-2cf05d44ba6c	Robert	Aneca	Robert		2025-03-30 15:50:47.641	K004	{}	{}	0	0	0	2	2	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,6806973c-0d6e-11f0-8cf3-2cf05d44ba6c,d81c7ebc-2464-11f0-b717-2cf05d44ba6c}	9d075cc0-0d67-11f0-ad9a-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	52808238-1dfe-11f0-ac27-2cf05d44ba6c	1	\N	0	4	4	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 C7:B7:CE:47:61:50	{}	{}	1
+c43576ce-2469-11f0-b718-2cf05d44ba6c	Agnes	Barbaix	Agnes		2022-04-28 21:47:25.879	K202	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	4	4	4	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	\N	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 E7:63:67:3E:1D:32	{}	{}	0
+e3b9c2fa-0d6e-11f0-8cf4-2cf05d44ba6c	Erna	Beirens	Erna		2025-03-30 15:55:48.37	K505	{}	{}	0	0	0	0	0	{}	9d075cc0-0d67-11f0-ad9a-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	1	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 ED:08:E8:A3:07:1E	{}	{}	0
+00fa5b20-2667-11f0-9c53-2cf05d44ba6c	Martha	Decoster	Martha		2025-05-01 10:32:11.241	K504	{}	{}	0	0	0	0	0	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,0c898218-2667-11f0-9c54-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	1	3	3	3	3	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 FE:D3:C1:01:86:D9	{}	{}	0
+5b292424-2661-11f0-9c4f-2cf05d44ba6c	Paule	Bertels	Paula		2025-05-01 09:51:43.831	K506	{ec652b62-0d67-11f0-ada0-2cf05d44ba6c}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	38f37b56-2072-11f0-b0d2-2cf05d44ba6c	7fddeb6a-2661-11f0-9c50-2cf05d44ba6c	1	0	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	3	3	3	3	3	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	38f37b56-2072-11f0-b0d2-2cf05d44ba6c	38f37b56-2072-11f0-b0d2-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 F4:80:1D:55:49:21	{}	{}	1
+b102bb24-2663-11f0-9c51-2cf05d44ba6c	Annie	Blomme	Annie		2025-05-01 10:03:36.184	K510	{}	{}	1	1	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	3	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ceb1a478-2460-11f0-af80-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 E0:F7:83:08:8B:7A	{}	{}	0
+e438d450-2691-11f0-9c6c-2cf05d44ba6c	Rachel	Lauwaet	Rachel		2025-05-01 15:39:46.656	K507	{}	{}	0	0	0	0	0	{aa0abf44-2689-11f0-9c61-2cf05d44ba6c,f15926a8-2691-11f0-9c6d-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	3	2	1	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	\N	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 CB:3B:1F:2B:98:E2	{}	{}	0
+483ad4e4-2697-11f0-9c79-2cf05d44ba6c	Helene	Steels	Helene		2025-05-01 16:15:16.319	K508	{d821a748-0d67-11f0-ad9e-2cf05d44ba6c}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	\N	0	\N	3	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 F6:11:03:46:88:3B	{}	{}	1
+714e3494-2687-11f0-9c5a-2cf05d44ba6c	Freddy	Desmedt	Freddy		2025-05-01 14:23:36.595	K204	{}	{}	0	0	0	0	0	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,0c898218-2667-11f0-9c54-2cf05d44ba6c,7a845750-2687-11f0-9c5b-2cf05d44ba6c}	a1febb60-0d67-11f0-ad9b-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	4	3	4	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}		{}	{}	0
+5203cab2-2688-11f0-9c5c-2cf05d44ba6c	Gilbert	Devriendt	Gilbert		2025-05-01 14:31:03.527	K501	{}	{}	0	0	0	1	0	{5ce798e6-2688-11f0-9c5d-2cf05d44ba6c}	a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	0	0	\N	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	1	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}		{}	{}	0
+ade659e0-2696-11f0-9c78-2cf05d44ba6c	Mientje	Hermans	Mientje		2025-05-01 16:09:56.325	K109	{df80c898-0d67-11f0-ad9f-2cf05d44ba6c}	{}	0	0	0	0	1	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,1ea27316-2693-11f0-9c71-2cf05d44ba6c,239a75bc-2693-11f0-9c72-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	2	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{}	03 F4:4D:56:6C:8A:70	{}	{}	1
+07fca5dc-2693-11f0-9c6e-2cf05d44ba6c	Marie Jeanne	Lingier	Marie Jeanne		2025-05-01 15:46:52.255	K006	{}	{}	0	0	0	1	0	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,d81c7ebc-2464-11f0-b717-2cf05d44ba6c,6806973c-0d6e-11f0-8cf3-2cf05d44ba6c,163339f4-2693-11f0-9c6f-2cf05d44ba6c}	a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	0	2	1	2	2	{}	{aab829ea-2693-11f0-9c75-2cf05d44ba6c}	\N	\N	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 C7:B7:CE:47:61:50	{}	{}	0
+1ae91076-2694-11f0-9c76-2cf05d44ba6c	Albert	Lottefier	Albert		2025-05-01 15:56:09.845	K007	{}	{}	1	0	0	0	1	{}	a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	0	3	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	03 FB:27:E8:EE:E2:2A	{}	{}	0
+b55ef71a-268a-11f0-9c63-2cf05d44ba6c	Germaine	Geldhof	Germaine		2025-05-01 14:47:52.796	K103	{}	{}	0	0	0	0	0	{c1dee41e-268a-11f0-9c64-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	2	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	03 E5:63:58:49:C4:5F	{}	{}	1
+921637b2-268c-11f0-9c65-2cf05d44ba6c	Giselle	Poorteman	Giselle		2025-05-01 14:59:18.667	K105	{d821a748-0d67-11f0-ad9e-2cf05d44ba6c}	{}	0	0	0	0	0	{552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,6806973c-0d6e-11f0-8cf3-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	a111cd76-268c-11f0-9c66-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2	4	4	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{dd673294-2460-11f0-af82-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	03 DA:3A:99:48:0A:F9	{}	{}	0
+26056e4c-268e-11f0-9c68-2cf05d44ba6c	Ferdinand	Hatto	Ferdinand		2025-05-01 15:10:19.746	K208	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	4	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	30 D7:78:E5:63:18:2C	{}	{}	0
+0c3216c2-268f-11f0-9c69-2cf05d44ba6c	Jeanne	Bisschop	Jeanne		2025-05-01 15:14:58.916	K003	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	0	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	03 F6:DA:25:19:39:E2	{}	{}	0
+11da59d4-2691-11f0-9c6a-2cf05d44ba6c	Agnes	Lambrecht	Agnes		2025-05-01 15:32:48.249	K101	{d821a748-0d67-11f0-ad9e-2cf05d44ba6c}	{}	1	0	1	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	4001deb8-2691-11f0-9c6b-2cf05d44ba6c	4001deb8-2691-11f0-9c6b-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2	3	3	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 E2:1A:91:2F:9A:4A	{}	{}	0
+ad323736-2695-11f0-9c77-2cf05d44ba6c	Joly	Marie-Therese	Joly		2025-05-01 16:03:22.371	K501	{}	{}	0	0	0	0	0	{1a7c56c6-2693-11f0-9c70-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	1	3	3	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	\N	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{}		{}	{}	1
+1d5a0cf8-26a7-11f0-9c87-2cf05d44ba6c	Denise	Vanhove	Denise		2025-05-01 18:08:27.504	K005	{}	{}	0	0	0	0	0	{0c898218-2667-11f0-9c54-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	0	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{a5baad0e-269e-11f0-9c82-2cf05d44ba6c}	655bd058-2699-11f0-9c7b-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 CE:46:42:B0:65:8F	{}	{}	0
+d3a03514-26a7-11f0-9c88-2cf05d44ba6c	Marie Therese	Vanrobaeys	Marie Therese		2025-05-01 18:13:07.043	Prive	{}	{}	0	0	0	0	0	{6806973c-0d6e-11f0-8cf3-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	0	3	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}		{}	{}	0
+a54908ca-26a8-11f0-9c89-2cf05d44ba6c	Jacqueline	Verbrugghe	Jacqueline		2025-05-01 18:18:53.697	K509	{d821a748-0d67-11f0-ad9e-2cf05d44ba6c}	{}	0	0	0	0	0	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,8fd36ed2-2689-11f0-9c60-2cf05d44ba6c}	a1febb60-0d67-11f0-ad9b-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	3	4	4	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	\N	\N	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{dd673294-2460-11f0-af82-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 EC:69:D0:8B:46:F5	{}	{}	0
+d35da69e-26a8-11f0-9c8a-2cf05d44ba6c	Hedwige	Vercruysse	Hedwige		2025-05-01 18:23:51.423	K111	{}	{}	0	0	0	0	0	{da4270e8-26a8-11f0-9c8b-2cf05d44ba6c,32b54ab8-2693-11f0-9c74-2cf05d44ba6c,f15926a8-2691-11f0-9c6d-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	2	2	2	2	2	{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 CA:C3:16:81:42:82	{}	{}	0
+687bd2a6-269e-11f0-9c80-2cf05d44ba6c	Leo	Vanden Bergh	Leo		2025-05-01 17:06:32.494	K207	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	4	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{a5baad0e-269e-11f0-9c82-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 FC:6F:34:9D:0E:C6	{}	{}	1
+208cbc92-26a5-11f0-9c84-2cf05d44ba6c	Cecille	Vandenbroucke	Cecille		2025-05-01 17:54:34.206	K502	{f5059a72-0d67-11f0-ada1-2cf05d44ba6c}	{}	0	0	0	0	2	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	\N	1	2	2	2	2	{2355200a-26a4-11f0-9c83-2cf05d44ba6c}	{}	\N	\N	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{}	{}		{}	{}	0
+72cb0fca-2689-11f0-9c5e-2cf05d44ba6c	Maria	Diet	Maria		2025-05-01 14:38:05.251	K002	{d821a748-0d67-11f0-ad9e-2cf05d44ba6c}	{361148dc-0d6c-11f0-8cee-2cf05d44ba6c}	0	0	0	0	0	{8fd36ed2-2689-11f0-9c60-2cf05d44ba6c,7a845750-2687-11f0-9c5b-2cf05d44ba6c,aa0abf44-2689-11f0-9c61-2cf05d44ba6c,7e1f4fc6-2689-11f0-9c5f-2cf05d44ba6c}	a1febb60-0d67-11f0-ad9b-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	\N	0	\N	0	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	6871df76-268a-11f0-9c62-2cf05d44ba6c	206c2d36-2463-11f0-b715-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 DB:C6:BE:0F:94:E4	{}	{}	0
+4f896060-2699-11f0-9c7a-2cf05d44ba6c	Suzanne	Bultiauw	Suzanne		2025-05-01 16:29:59.595	K206	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	52808238-1dfe-11f0-ac27-2cf05d44ba6c	0	\N	4	1	1	2	2	{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	655bd058-2699-11f0-9c7b-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 C3:57:73:BB:B0:AE	{}	{}	0
+03f73c88-26aa-11f0-9c8c-2cf05d44ba6c	Lievette	Versyp	Lievette		2025-05-01 18:29:27.765	K106	{}	{}	0	0	0	0	0	{}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	2	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 F2:C2:2C:B5:4C:1A	{}	{}	0
+e8d6f356-269c-11f0-9c7c-2cf05d44ba6c	Leo	Van Biesen	Leo		2025-05-01 16:55:16.231	K505	{}	{}	0	0	0	0	0	{8fd36ed2-2689-11f0-9c60-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	1	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 F2:AF:86:B0:16:C9	{}	{}	0
+d9fca57a-26a5-11f0-9c85-2cf05d44ba6c	Mariette	Vandendriessche	Mariette		2025-05-01 17:58:54.573	K205	{}	{}	0	0	0	0	0	{4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c,0c898218-2667-11f0-9c54-2cf05d44ba6c}	a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	1	\N	4	4	4	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 F9:8B:F4:4C:45:7F	{}	{}	1
+cb64d8a6-2070-11f0-b0cd-2cf05d44ba6c	Cécile	Adins	Cecile		2025-04-23 20:26:01.499	K203	{}	{}	0	0	0	0	0	{10fd0f0a-2071-11f0-b0ce-2cf05d44ba6c,1bbba154-2071-11f0-b0cf-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	52808238-1dfe-11f0-ac27-2cf05d44ba6c	1	\N	4	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	03 C3:E1:B0:7F:66:29	{}	{}	0
+79ef21e8-26a6-11f0-9c86-2cf05d44ba6c	Maria	Vandenheede	Maria		2025-05-01 18:03:55.633	K104	{}	{}	0	0	0	0	0	{552926f2-0d6e-11f0-8cf1-2cf05d44ba6c,615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c,8fd36ed2-2689-11f0-9c60-2cf05d44ba6c,163339f4-2693-11f0-9c6f-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	572f511c-0d67-11f0-ad99-2cf05d44ba6c	3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	0	\N	2	2	2	2	2	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{51b82a46-2460-11f0-af78-2cf05d44ba6c}	\N	\N	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 D5:DB:4C:57:F9:0C	{}	{}	0
+29b4486a-269d-11f0-9c7d-2cf05d44ba6c	Cecile	Van Laeys	Cecile		2025-05-01 16:59:49.984	K108	{}	{}	0	0	0	0	0	{3ae8ef8c-269d-11f0-9c7f-2cf05d44ba6c,31ebe344-269d-11f0-9c7e-2cf05d44ba6c,2a318dfc-2693-11f0-9c73-2cf05d44ba6c}	aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2	2	2	2	2	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{44c235ac-2460-11f0-af77-2cf05d44ba6c}	\N	\N	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	{d695a40a-2460-11f0-af81-2cf05d44ba6c}	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}	03 ED:77:57:DD:7A:51	{}	{}	1
+\.
+
+
+--
+-- Data for Name: customer_remark; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.customer_remark (pkey, name, comment, remark_customer, remark_date, created_on) FROM stdin;
+4eff84ee-1e15-11f0-ac2e-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:28:51
+75eac00a-1e15-11f0-ac2f-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:29:56
+8f4be614-1e15-11f0-ac30-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:30:39
+af61d030-1e15-11f0-ac31-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:31:33
+c244d81e-1e15-11f0-ac32-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:32:05
+cdb280b6-1e15-11f0-ac33-2cf05d44ba6c	\N	qsdfsqdf	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:32:24
+daf9a4f2-1e15-11f0-ac34-2cf05d44ba6c	\N	Verjaardag 2 pistoles	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-26 00:00:00	2025-04-20 18:32:46
+f1dd9f48-1e15-11f0-ac35-2cf05d44ba6c	\N	test	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:33:24
+3061be16-1e16-11f0-ac36-2cf05d44ba6c	\N	testter	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-20 00:00:00	2025-04-20 18:35:09
+3b1dfa54-1e16-11f0-ac37-2cf05d44ba6c	\N	tesyt	83327a98-0d79-11f0-8d00-2cf05d44ba6c	2025-04-30 00:00:00	2025-04-20 18:35:27
+ee99a7a6-1ee1-11f0-b0ca-2cf05d44ba6c	\N	Vandaag niet veel honger	3fbbf25e-0d6e-11f0-8cef-2cf05d44ba6c	2025-04-21 00:00:00	2025-04-21 18:53:36
+\.
+
+
+--
+-- Data for Name: cycle_routine; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycle_routine (pkey, name, routine, routine_class, cycle, parent, parent_class, children, child_class, created_on) FROM stdin;
+3d316dc0-a11c-11ef-9b2f-2cf05d44ba6c	Cycle_02_Phone_03	efa26564-a11b-11ef-9b2c-2cf05d44ba6c	rti_add_phone	f326dbbe-a113-11ef-8fe4-2cf05d44ba6c	{}	CYCLES	{}	CYCLES	\N
+674be802-c317-11ef-b34c-2cf05d44ba6c	Cycle_01_Phone_03	efa26564-a11b-11ef-9b2c-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{25fab38c-a11c-11ef-9b2e-2cf05d44ba6c}		{}	CYCLES	\N
+20fb4ca2-a11c-11ef-9b2d-2cf05d44ba6c	Cycle_01_Phone_01_messageToAddPhoneNumber	974af782-a11b-11ef-9b2a-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{25fab38c-a11c-11ef-9b2e-2cf05d44ba6c}		{}	CYCLES	\N
+25fab38c-a11c-11ef-9b2e-2cf05d44ba6c	Cycle_01_Phone_02_checkIfEmployerExists	ccc8864a-a11b-11ef-9b2b-2cf05d44ba6c	rti_add_phone	e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	{}	CYCLES	{20fb4ca2-a11c-11ef-9b2d-2cf05d44ba6c,674be802-c317-11ef-b34c-2cf05d44ba6c}		2000-01-01 00:00:00
+\.
+
+
+--
+-- Data for Name: cycles; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.cycles (pkey, name, routines, amount_of_processors, startnumber_of_processors, workstation_name, current_routine, created_on) FROM stdin;
+e2ef553c-a113-11ef-8fe3-2cf05d44ba6c	Cycle_01	{}	4	2	5AXE-MINI	\N	\N
+f326dbbe-a113-11ef-8fe4-2cf05d44ba6c	Cycle_02	{}	4	2	5AXE-MINI	\N	\N
+\.
+
+
+--
+-- Data for Name: diet; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.diet (pkey, name, created_on, comment) FROM stdin;
+d821a748-0d67-11f0-ad9e-2cf05d44ba6c	SA	2025-03-30 15:06:46.251	
+df80c898-0d67-11f0-ad9f-2cf05d44ba6c	ALCVR	2025-03-30 15:06:53.091	
+ec652b62-0d67-11f0-ada0-2cf05d44ba6c	Glutten + lactosevrij	2025-03-30 15:07:05.34	
+f5059a72-0d67-11f0-ada1-2cf05d44ba6c	Lactosevrij	2025-03-30 15:07:29.642	
+\.
+
+
+--
+-- Data for Name: does_not_like; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.does_not_like (pkey, name, created_on, comment) FROM stdin;
+4f489f88-0d6e-11f0-8cf0-2cf05d44ba6c	rijst	2025-03-30 15:53:02.261	
+552926f2-0d6e-11f0-8cf1-2cf05d44ba6c	spaghetti	2025-03-30 15:53:10.186	
+615dd7ec-0d6e-11f0-8cf2-2cf05d44ba6c	macaroni	2025-03-30 15:53:19.85	
+6806973c-0d6e-11f0-8cf3-2cf05d44ba6c	rauwkost	2025-03-30 15:53:43.16	
+10fd0f0a-2071-11f0-b0ce-2cf05d44ba6c	Champignons	2025-04-23 20:29:58.425	
+1bbba154-2071-11f0-b0cf-2cf05d44ba6c	Weinig room	2025-04-23 20:30:51.887	
+d81c7ebc-2464-11f0-b717-2cf05d44ba6c	escargots	2025-04-28 21:13:04.44	
+0c898218-2667-11f0-9c54-2cf05d44ba6c	mosselen	2025-05-01 10:34:00.871	
+7a845750-2687-11f0-9c5b-2cf05d44ba6c	pizza	2025-05-01 14:26:10.009	
+5ce798e6-2688-11f0-9c5d-2cf05d44ba6c	kotelet	2025-05-01 14:32:25.317	
+7e1f4fc6-2689-11f0-9c5f-2cf05d44ba6c	aspreges	2025-05-01 14:40:28.977	
+8fd36ed2-2689-11f0-9c60-2cf05d44ba6c	lasagne	2025-05-01 14:41:03.347	
+aa0abf44-2689-11f0-9c61-2cf05d44ba6c	schorseneren	2025-05-01 14:41:47.757	
+c1dee41e-268a-11f0-9c64-2cf05d44ba6c	Soep J/N vooraf vragen	2025-05-01 14:49:31.467	
+f15926a8-2691-11f0-9c6d-2cf05d44ba6c	witte kool	2025-05-01 15:41:03.596	
+163339f4-2693-11f0-9c6f-2cf05d44ba6c	rauw vlees	2025-05-01 15:49:12.476	
+1a7c56c6-2693-11f0-9c70-2cf05d44ba6c	vis	2025-05-01 15:49:24.636	
+1ea27316-2693-11f0-9c71-2cf05d44ba6c	zalm	2025-05-01 15:49:31.606	
+239a75bc-2693-11f0-9c72-2cf05d44ba6c	tomaten	2025-05-01 15:49:38.635	
+2a318dfc-2693-11f0-9c73-2cf05d44ba6c	spenazie	2025-05-01 15:49:48.555	
+32b54ab8-2693-11f0-9c74-2cf05d44ba6c	prei	2025-05-01 15:50:02.076	
+31ebe344-269d-11f0-9c7e-2cf05d44ba6c	spruiten	2025-05-01 17:01:37.609	
+3ae8ef8c-269d-11f0-9c7f-2cf05d44ba6c	kolen	2025-05-01 17:01:45.85	
+da4270e8-26a8-11f0-9c8b-2cf05d44ba6c	lever	2025-05-01 18:25:04.388	
+\.
+
+
+--
+-- Data for Name: empl_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.empl_group (pkey, name, description, level, created_on) FROM stdin;
+f80ad068-ab77-11ef-9beb-2cf05d44ba6c	R&D	Research and development	40	2024-11-25 22:57:05
+27d75404-ab75-11ef-82ff-2cf05d44ba6c	Cleaners	Cleaning the bulding	30	2024-11-25 22:57:11
+5004e9b6-ab78-11ef-9bee-2cf05d44ba6c	Cooks	Cooks	30	2024-11-25 22:57:29
+1bee2fac-ab78-11ef-9bec-2cf05d44ba6c	Verplegers	Verpleegkundigen	20	2024-11-25 22:56:59
+\.
+
+
+--
+-- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.employee (pkey, email, password, sure_name, famely_name, employee_groups, created_on, name) FROM stdin;
+18521866-a10c-11ef-8fdf-2cf05d44ba6c	jean.vandorpe@gmail.com	test	Jean	Vandorpe	{1bee2fac-ab78-11ef-9bec-2cf05d44ba6c,5004e9b6-ab78-11ef-9bee-2cf05d44ba6c}	2024-11-25 23:07:00	Jean
+c7399988-a113-11ef-8fe2-2cf05d44ba6c	wouter.vandorpe.2UVframework@hotmail.com	1234	Wouter	Vandorpe	{27d75404-ab75-11ef-82ff-2cf05d44ba6c,f80ad068-ab77-11ef-9beb-2cf05d44ba6c}	2019-11-25 23:06:20	Wouter
+\.
+
+
+--
+-- Data for Name: errors_living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.errors_living_obj_mach (pkey, name, standard_errors, custom_errors, created_on) FROM stdin;
+64625ea6-a106-11ef-8fd8-2cf05d44ba6c	Machine_01	{500;Socket,10010;approx,20010;something}	{"10020;99999 Error",20500;testing}	\N
+\.
+
+
+--
+-- Data for Name: food_bread; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_bread (pkey, name, created_on, comment) FROM stdin;
+2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	bruin	2025-03-30 15:58:57.561	
+27e7ec22-0d6f-11f0-8cf9-2cf05d44ba6c	melkbrood	2025-03-30 15:59:05.915	
+2f9fb706-0d6f-11f0-8cfa-2cf05d44ba6c	rozijnenbrood	2025-03-30 15:59:14.43	
+35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	sandwich	2025-03-30 15:59:26.592	
+3acd5048-0d6f-11f0-8cfc-2cf05d44ba6c	suikerbol	2025-03-30 15:59:38.376	
+1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	wit	2025-04-23 20:37:58.519	
+2a676a48-2072-11f0-b0d1-2cf05d44ba6c	volkoren	2025-04-23 20:38:26.712	
+38f37b56-2072-11f0-b0d2-2cf05d44ba6c	wit gluten vrij	2025-04-23 20:38:51.556	
+4cc12aa2-2072-11f0-b0d3-2cf05d44ba6c	sandwich SA	2025-04-23 20:39:17.828	
+7fddeb6a-2661-11f0-9c50-2cf05d44ba6c	bruin glutenvrij	2025-05-01 09:53:59.602	
+4001deb8-2691-11f0-9c6b-2cf05d44ba6c	sandwich SA	2025-05-01 15:35:46.726	
+\.
+
+
+--
+-- Data for Name: food_breakfast; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_breakfast (pkey, name, created_on, breakfast_customer, breakfast_perpared, breakfast_bread, breakfast_amount_bread, breakfast_smear, breakfast_crusts, breakfast_butter, comment, breakfast_drinks, breakfast_charcuterie, breakfast_amount_charcuterie, breakfast_sugar, breakfast_dessert, breakfast_napkin, breakfast_paper, breakfast_date, breakfast_location_group, breakfast_drinksservice) FROM stdin;
+f09f2f32-31a9-11f0-8b47-2cf05d44ba6c	Annie	2025-05-15 16:30:40	b102bb24-2663-11f0-9c51-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	3	{ceb1a478-2460-11f0-af80-2cf05d44ba6c}
+f0b4926e-31a9-11f0-8b5a-2cf05d44ba6c	Albert	2025-05-15 16:30:40	1ae91076-2694-11f0-9c76-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-15 00:00:00	0	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0dc2f04-31a9-11f0-8b7e-2cf05d44ba6c	Maria	2025-05-15 16:30:40	72cb0fca-2689-11f0-9c5e-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	\N	6871df76-268a-11f0-9c62-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0e966ec-31a9-11f0-8b8a-2cf05d44ba6c	Leo	2025-05-15 16:30:40	e8d6f356-269c-11f0-9c7c-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-15 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0d8b1ee-31a9-11f0-8b7b-2cf05d44ba6c	Cecille	2025-05-15 16:30:40	208cbc92-26a5-11f0-9c84-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{2355200a-26a4-11f0-9c83-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	1	{}
+f0f24f5a-31a9-11f0-8b92-2cf05d44ba6c	Cecile	2025-05-15 16:30:41	29b4486a-269d-11f0-9c7d-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-15 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0e2ecc2-31a9-11f0-8b84-2cf05d44ba6c	Lievette	2025-05-15 16:30:40	03f73c88-26aa-11f0-9c8c-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0d32990-31a9-11f0-8b76-2cf05d44ba6c	Hedwige	2025-05-15 16:30:40	d35da69e-26a8-11f0-9c8a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0ef0ff2-31a9-11f0-8b8f-2cf05d44ba6c	Maria	2025-05-15 16:30:40	79ef21e8-26a6-11f0-9c86-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0cfec44-31a9-11f0-8b73-2cf05d44ba6c	Jacqueline	2025-05-15 16:30:40	a54908ca-26a8-11f0-9c89-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	4	0	1	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-15 00:00:00	3	{dd673294-2460-11f0-af82-2cf05d44ba6c}
+f0d65ac0-31a9-11f0-8b79-2cf05d44ba6c	Leo	2025-05-15 16:30:40	687bd2a6-269e-11f0-9c80-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-15 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0df7c54-31a9-11f0-8b81-2cf05d44ba6c	Suzanne	2025-05-15 16:30:40	4f896060-2699-11f0-9c7a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	655bd058-2699-11f0-9c7b-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0e62b58-31a9-11f0-8b87-2cf05d44ba6c	Cecile	2025-05-15 16:30:40	cb64d8a6-2070-11f0-b0cd-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	1	\N	2025-05-15 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0ec9696-31a9-11f0-8b8d-2cf05d44ba6c	Mariette	2025-05-15 16:30:40	d9fca57a-26a5-11f0-9c85-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-15 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0d0c128-31a9-11f0-8b74-2cf05d44ba6c	Jacqueline	2025-05-15 16:30:40	a54908ca-26a8-11f0-9c89-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	4	0	1	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-16 00:00:00	3	{dd673294-2460-11f0-af82-2cf05d44ba6c}
+f0d3fa0a-31a9-11f0-8b77-2cf05d44ba6c	Hedwige	2025-05-15 16:30:40	d35da69e-26a8-11f0-9c8a-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0d715e6-31a9-11f0-8b7a-2cf05d44ba6c	Leo	2025-05-15 16:30:40	687bd2a6-269e-11f0-9c80-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-16 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0d9942e-31a9-11f0-8b7c-2cf05d44ba6c	Cecille	2025-05-15 16:30:40	208cbc92-26a5-11f0-9c84-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{2355200a-26a4-11f0-9c83-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	1	{}
+f0dd2486-31a9-11f0-8b7f-2cf05d44ba6c	Maria	2025-05-15 16:30:40	72cb0fca-2689-11f0-9c5e-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	\N	6871df76-268a-11f0-9c62-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0e061a0-31a9-11f0-8b82-2cf05d44ba6c	Suzanne	2025-05-15 16:30:40	4f896060-2699-11f0-9c7a-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	655bd058-2699-11f0-9c7b-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0e3af36-31a9-11f0-8b85-2cf05d44ba6c	Lievette	2025-05-15 16:30:40	03f73c88-26aa-11f0-9c8c-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0e71be4-31a9-11f0-8b88-2cf05d44ba6c	Cecile	2025-05-15 16:30:40	cb64d8a6-2070-11f0-b0cd-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	1	\N	2025-05-16 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0ea37d4-31a9-11f0-8b8b-2cf05d44ba6c	Leo	2025-05-15 16:30:40	e8d6f356-269c-11f0-9c7c-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-16 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0ed6b0c-31a9-11f0-8b8e-2cf05d44ba6c	Mariette	2025-05-15 16:30:40	d9fca57a-26a5-11f0-9c85-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-16 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0efd1b2-31a9-11f0-8b90-2cf05d44ba6c	Maria	2025-05-15 16:30:40	79ef21e8-26a6-11f0-9c86-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0f32f60-31a9-11f0-8b93-2cf05d44ba6c	Cecile	2025-05-15 16:30:41	29b4486a-269d-11f0-9c7d-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-16 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f079d7e6-31a9-11f0-8b27-2cf05d44ba6c	Hubert	2025-05-15 16:30:40	a964035a-2668-11f0-9c55-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f09084be-31a9-11f0-8b3a-2cf05d44ba6c	Robert	2025-05-15 16:30:40	3fbbf25e-0d6e-11f0-8cef-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	4	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	1	\N	2025-05-15 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f08a7740-31a9-11f0-8b35-2cf05d44ba6c	Adrienne	2025-05-15 16:30:40	0d5c4228-2687-11f0-9c59-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f099a24c-31a9-11f0-8b42-2cf05d44ba6c	Martha	2025-05-15 16:30:40	00fa5b20-2667-11f0-9c53-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	3	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	1	{}
+f08e1f44-31a9-11f0-8b38-2cf05d44ba6c	Rita	2025-05-15 16:30:40	05766654-2666-11f0-9c52-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{396e13a0-1abb-11f0-9aa8-2cf05d44ba6c}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	1	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0967220-31a9-11f0-8b3f-2cf05d44ba6c	Erna	2025-05-15 16:30:40	e3b9c2fa-0d6e-11f0-8cf4-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f078b668-31a9-11f0-8b26-2cf05d44ba6c	Hubert	2025-05-15 16:30:40	a964035a-2668-11f0-9c55-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f07fa43c-31a9-11f0-8b2c-2cf05d44ba6c	Paul	2025-05-15 16:30:40	656bbed8-2463-11f0-b716-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f07c520a-31a9-11f0-8b29-2cf05d44ba6c	Jenny	2025-05-15 16:30:40	83327a98-0d79-11f0-8d00-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0822de2-31a9-11f0-8b2e-2cf05d44ba6c	Jacqueline	2025-05-15 16:30:40	328c6ddc-266b-11f0-9c56-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f09ce9a2-31a9-11f0-8b45-2cf05d44ba6c	Paule	2025-05-15 16:30:40	5b292424-2661-11f0-9c4f-2cf05d44ba6c	1	38f37b56-2072-11f0-b0d2-2cf05d44ba6c	3	1	0	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	3	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	3	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0a28272-31a9-11f0-8b4a-2cf05d44ba6c	Rachel	2025-05-15 16:30:40	e438d450-2691-11f0-9c6c-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	3	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f084b62a-31a9-11f0-8b30-2cf05d44ba6c	Daniel	2025-05-15 16:30:40	1ec5df94-266c-11f0-9c57-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	1	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{68ab21ea-2460-11f0-af7a-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	3	{}
+f0872f0e-31a9-11f0-8b32-2cf05d44ba6c	Odette	2025-05-15 16:30:40	1f13d6d0-2686-11f0-9c58-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f093183c-31a9-11f0-8b3c-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	c43576ce-2469-11f0-b718-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	4	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f07d3e36-31a9-11f0-8b2a-2cf05d44ba6c	Jenny	2025-05-15 16:30:40	83327a98-0d79-11f0-8d00-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0808d34-31a9-11f0-8b2d-2cf05d44ba6c	Paul	2025-05-15 16:30:40	656bbed8-2463-11f0-b716-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0830c08-31a9-11f0-8b2f-2cf05d44ba6c	Jacqueline	2025-05-15 16:30:40	328c6ddc-266b-11f0-9c56-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0858190-31a9-11f0-8b31-2cf05d44ba6c	Daniel	2025-05-15 16:30:40	1ec5df94-266c-11f0-9c57-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	1	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{68ab21ea-2460-11f0-af7a-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	3	{}
+f0881996-31a9-11f0-8b33-2cf05d44ba6c	Odette	2025-05-15 16:30:40	1f13d6d0-2686-11f0-9c58-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f08b8b8a-31a9-11f0-8b36-2cf05d44ba6c	Adrienne	2025-05-15 16:30:40	0d5c4228-2687-11f0-9c59-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f08ef3b0-31a9-11f0-8b39-2cf05d44ba6c	Rita	2025-05-15 16:30:40	05766654-2666-11f0-9c52-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{5e12c53a-2460-11f0-af79-2cf05d44ba6c}	{396e13a0-1abb-11f0-9aa8-2cf05d44ba6c}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	1	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0917e78-31a9-11f0-8b3b-2cf05d44ba6c	Robert	2025-05-15 16:30:40	3fbbf25e-0d6e-11f0-8cef-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	4	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	1	\N	2025-05-16 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0941da4-31a9-11f0-8b3d-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	c43576ce-2469-11f0-b718-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	4	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	4	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0973444-31a9-11f0-8b40-2cf05d44ba6c	Erna	2025-05-15 16:30:40	e3b9c2fa-0d6e-11f0-8cf4-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f09a84a0-31a9-11f0-8b43-2cf05d44ba6c	Martha	2025-05-15 16:30:40	00fa5b20-2667-11f0-9c53-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	3	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	1	{}
+f09dc3ea-31a9-11f0-8b46-2cf05d44ba6c	Paule	2025-05-15 16:30:40	5b292424-2661-11f0-9c4f-2cf05d44ba6c	0	38f37b56-2072-11f0-b0d2-2cf05d44ba6c	3	1	0	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	3	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	3	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0a02496-31a9-11f0-8b48-2cf05d44ba6c	Annie	2025-05-15 16:30:40	b102bb24-2663-11f0-9c51-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	3	{ceb1a478-2460-11f0-af80-2cf05d44ba6c}
+f0c3ec82-31a9-11f0-8b68-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	11da59d4-2691-11f0-9c6a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-15 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0cc9bf2-31a9-11f0-8b70-2cf05d44ba6c	Marie Therese	2025-05-15 16:30:40	d3a03514-26a7-11f0-9c88-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	0	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0c96586-31a9-11f0-8b6d-2cf05d44ba6c	Denise	2025-05-15 16:30:40	1d5a0cf8-26a7-11f0-9c87-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	655bd058-2699-11f0-9c7b-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0c0b56c-31a9-11f0-8b65-2cf05d44ba6c	Jeanne	2025-05-15 16:30:40	0c3216c2-268f-11f0-9c69-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0b126ce-31a9-11f0-8b57-2cf05d44ba6c	Marie Jeanne	2025-05-15 16:30:40	07fca5dc-2693-11f0-9c6e-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-15 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0c71f06-31a9-11f0-8b6b-2cf05d44ba6c	Joly	2025-05-15 16:30:40	ad323736-2695-11f0-9c77-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	3	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0ab6bda-31a9-11f0-8b52-2cf05d44ba6c	Gilbert	2025-05-15 16:30:40	5203cab2-2688-11f0-9c5c-2cf05d44ba6c	1	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	2	0	0	\N		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-15 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0ba15c2-31a9-11f0-8b5f-2cf05d44ba6c	Giselle	2025-05-15 16:30:40	921637b2-268c-11f0-9c65-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	a111cd76-268c-11f0-9c66-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-15 00:00:00	2	{dd673294-2460-11f0-af82-2cf05d44ba6c}
+f0b7cc18-31a9-11f0-8b5d-2cf05d44ba6c	Germaine	2025-05-15 16:30:40	b55ef71a-268a-11f0-9c63-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-15 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0aee328-31a9-11f0-8b55-2cf05d44ba6c	Mientje	2025-05-15 16:30:40	ade659e0-2696-11f0-9c78-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0a5d058-31a9-11f0-8b4d-2cf05d44ba6c	Helene	2025-05-15 16:30:40	483ad4e4-2697-11f0-9c79-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	\N	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	3	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0a8358c-31a9-11f0-8b4f-2cf05d44ba6c	Freddy	2025-05-15 16:30:40	714e3494-2687-11f0-9c5a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-15 00:00:00	4	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0bd4620-31a9-11f0-8b62-2cf05d44ba6c	Ferdinand	2025-05-15 16:30:40	26056e4c-268e-11f0-9c68-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-15 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0a910d8-31a9-11f0-8b50-2cf05d44ba6c	Freddy	2025-05-15 16:30:40	714e3494-2687-11f0-9c5a-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-16 00:00:00	4	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0ac7124-31a9-11f0-8b53-2cf05d44ba6c	Gilbert	2025-05-15 16:30:40	5203cab2-2688-11f0-9c5c-2cf05d44ba6c	0	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	2	0	0	\N		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0afba3c-31a9-11f0-8b56-2cf05d44ba6c	Mientje	2025-05-15 16:30:40	ade659e0-2696-11f0-9c78-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	2	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0b21584-31a9-11f0-8b58-2cf05d44ba6c	Marie Jeanne	2025-05-15 16:30:40	07fca5dc-2693-11f0-9c6e-2cf05d44ba6c	0	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-16 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0b5526c-31a9-11f0-8b5b-2cf05d44ba6c	Albert	2025-05-15 16:30:40	1ae91076-2694-11f0-9c76-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	1	\N	2025-05-16 00:00:00	0	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+f0b89f76-31a9-11f0-8b5e-2cf05d44ba6c	Germaine	2025-05-15 16:30:40	b55ef71a-268a-11f0-9c63-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	\N	2025-05-16 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0a36fde-31a9-11f0-8b4b-2cf05d44ba6c	Rachel	2025-05-15 16:30:40	e438d450-2691-11f0-9c6c-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	3	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0a6b18a-31a9-11f0-8b4e-2cf05d44ba6c	Helene	2025-05-15 16:30:40	483ad4e4-2697-11f0-9c79-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	\N	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	3	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0bae448-31a9-11f0-8b60-2cf05d44ba6c	Giselle	2025-05-15 16:30:40	921637b2-268c-11f0-9c65-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	a111cd76-268c-11f0-9c66-2cf05d44ba6c	2a356b28-2073-11f0-b0d4-2cf05d44ba6c	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-16 00:00:00	2	{dd673294-2460-11f0-af82-2cf05d44ba6c}
+f0be4084-31a9-11f0-8b63-2cf05d44ba6c	Ferdinand	2025-05-15 16:30:40	26056e4c-268e-11f0-9c68-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	4	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0c19252-31a9-11f0-8b66-2cf05d44ba6c	Jeanne	2025-05-15 16:30:40	0c3216c2-268f-11f0-9c69-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	0	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0c4a802-31a9-11f0-8b69-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	11da59d4-2691-11f0-9c6a-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	ca3b092e-268c-11f0-9c67-2cf05d44ba6c	2025-05-16 00:00:00	2	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0c7db76-31a9-11f0-8b6c-2cf05d44ba6c	Joly	2025-05-15 16:30:40	ad323736-2695-11f0-9c77-2cf05d44ba6c	0	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	3	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	1	{c5887e8a-2460-11f0-af7f-2cf05d44ba6c}
+f0ca4a1e-31a9-11f0-8b6e-2cf05d44ba6c	Denise	2025-05-15 16:30:40	1d5a0cf8-26a7-11f0-9c87-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	655bd058-2699-11f0-9c7b-2cf05d44ba6c	0	\N	2025-05-16 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0cda434-31a9-11f0-8b71-2cf05d44ba6c	Marie Therese	2025-05-15 16:30:40	d3a03514-26a7-11f0-9c88-2cf05d44ba6c	0	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	\N	2025-05-16 00:00:00	0	{ae4f3d80-2460-11f0-af7d-2cf05d44ba6c}
+\.
+
+
+--
+-- Data for Name: food_butter; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_butter (pkey, name, created_on, comment) FROM stdin;
+4acda312-0d6f-11f0-8cfd-2cf05d44ba6c	boter	2025-03-30 16:00:03.72	
+510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c	becel	2025-03-30 16:00:12.05	
+6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c	niets	2025-03-30 16:01:01.69	
+\.
+
+
+--
+-- Data for Name: food_charcuterie; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_charcuterie (pkey, name, created_on, comment, charcuterie_available_br, charcuterie_available_di) FROM stdin;
+9e448dbe-1aba-11f0-9a93-2cf05d44ba6c	kippewit met kruiden	2025-04-16 14:01:53.869		0	0
+a770deb0-1aba-11f0-9a94-2cf05d44ba6c	parijzer worst	2025-04-16 14:02:09.329		0	0
+90c8ce30-1ab9-11f0-9a73-2cf05d44ba6c	belegen kaas	2025-04-16 13:54:26.611		0	0
+9619167e-1ab9-11f0-9a74-2cf05d44ba6c	oude kaas	2025-04-16 13:54:36.924		0	0
+a5cd5df0-1ab9-11f0-9a75-2cf05d44ba6c	brie	2025-04-16 13:55:03.662		0	0
+ae781abc-1ab9-11f0-9a76-2cf05d44ba6c	camembert	2025-04-16 13:55:12.638		0	0
+cc68ab7c-1ab9-11f0-9a7a-2cf05d44ba6c	geitenkaas	2025-04-16 13:56:04.274		0	0
+d2771ea4-1ab9-11f0-9a7b-2cf05d44ba6c	passendale	2025-04-16 13:56:17.845		1	0
+da4e061a-1ab9-11f0-9a7c-2cf05d44ba6c	bereiding vd chef	2025-04-16 13:56:27.567		0	1
+23a20388-1abb-11f0-9aa5-2cf05d44ba6c	vleesbrood	2025-04-16 14:05:42.156		0	0
+2b899f34-1abb-11f0-9aa6-2cf05d44ba6c	kalfskop	2025-04-16 14:05:53.042		0	0
+3476fdb2-1abb-11f0-9aa7-2cf05d44ba6c	preskop	2025-04-16 14:06:10.753		0	1
+396e13a0-1abb-11f0-9aa8-2cf05d44ba6c	confituur	2025-04-16 14:06:20.968		1	0
+4015a326-1abb-11f0-9aa9-2cf05d44ba6c	chocolade	2025-04-16 14:06:29.734		0	0
+450dc638-1abb-11f0-9aaa-2cf05d44ba6c	nutella	2025-04-16 14:06:41.178		1	0
+4f8e11a8-1abb-11f0-9aab-2cf05d44ba6c	la vache qui rit	2025-04-16 14:06:51.601		0	0
+345b6c9c-1aba-11f0-9a85-2cf05d44ba6c	cremepate	2025-04-16 13:59:01.857		0	1
+3a51e252-1aba-11f0-9a86-2cf05d44ba6c	boerepate	2025-04-16 13:59:11.939		0	0
+40455860-1aba-11f0-9a87-2cf05d44ba6c	blokpate	2025-04-16 13:59:22.372		0	0
+4768cdd4-1aba-11f0-9a88-2cf05d44ba6c	bloedworst	2025-04-16 13:59:32.329		0	1
+4dc62ec4-1aba-11f0-9a89-2cf05d44ba6c	witte pens	2025-04-16 13:59:44.673		0	0
+5619a402-1aba-11f0-9a8a-2cf05d44ba6c	frankfurter	2025-04-16 13:59:55.657		0	0
+5d651a2a-1aba-11f0-9a8b-2cf05d44ba6c	hespenworst	2025-04-16 14:00:08.312		0	1
+6a53c0ba-1aba-11f0-9a8c-2cf05d44ba6c	kalfsworst	2025-04-16 14:00:29.96		0	0
+e2143892-1ab9-11f0-9a7d-2cf05d44ba6c	lunchworst	2025-04-16 13:56:42.126		0	0
+edbc270e-1ab9-11f0-9a7e-2cf05d44ba6c	gekookte ham	2025-04-16 13:57:02.5		0	0
+f57d7286-1ab9-11f0-9a7f-2cf05d44ba6c	italiaanse ham	2025-04-16 13:57:13.181		0	0
+fe6126e0-1ab9-11f0-9a80-2cf05d44ba6c	ardeense ham	2025-04-16 13:57:26.05		0	0
+040fbcbe-1aba-11f0-9a81-2cf05d44ba6c	ssalami	2025-04-16 13:57:41.262		0	0
+0a1b51cc-1aba-11f0-9a82-2cf05d44ba6c	salamie met look	2025-04-16 13:57:50.599		0	0
+181cbbb2-1aba-11f0-9a83-2cf05d44ba6c	champignonworst	2025-04-16 13:58:01.142		0	0
+2e517d0a-1aba-11f0-9a84-2cf05d44ba6c	mosterdspek	2025-04-16 13:58:48.839		0	0
+b2831f2a-1aba-11f0-9a96-2cf05d44ba6c	rosbief	2025-04-16 14:02:33.777		0	0
+b9575c1c-1aba-11f0-9a97-2cf05d44ba6c	varkensgebraad	2025-04-16 14:02:43.891		0	0
+6fe80e6e-1aba-11f0-9a8d-2cf05d44ba6c	bacon	2025-04-16 14:00:42.406		0	0
+77a81284-1aba-11f0-9a8e-2cf05d44ba6c	rundsfilet	2025-04-16 14:00:52.398		0	0
+7f2605ca-1aba-11f0-9a8f-2cf05d44ba6c	paardefilet	2025-04-16 14:01:04.751		0	0
+85de3810-1aba-11f0-9a90-2cf05d44ba6c	boulogne	2025-04-16 14:01:17.317		0	0
+8beb76be-1aba-11f0-9a91-2cf05d44ba6c	kippewit	2025-04-16 14:01:28.419		0	0
+95237e20-1aba-11f0-9a92-2cf05d44ba6c	gerookte kalkoenfilet	2025-04-16 14:01:38.391		0	0
+b559fcba-1ab9-11f0-9a77-2cf05d44ba6c	paterskaas	2025-04-16 13:55:27.783		0	0
+bdd869b2-1ab9-11f0-9a78-2cf05d44ba6c	blauw schimmelkaas	2025-04-16 13:55:38.661		0	0
+c456971e-1ab9-11f0-9a79-2cf05d44ba6c	maredsous	2025-04-16 13:55:52.81		1	0
+c30bbc8a-1aba-11f0-9a98-2cf05d44ba6c	vleessalade	2025-04-16 14:02:54.845		0	0
+c9729c1a-1aba-11f0-9a99-2cf05d44ba6c	tonijnsalade	2025-04-16 14:03:10.507		0	0
+cfd1255e-1aba-11f0-9a9a-2cf05d44ba6c	krabsalade	2025-04-16 14:03:22.151		0	0
+de1143b0-1aba-11f0-9a9b-2cf05d44ba6c	zalmsalade	2025-04-16 14:03:43.241		0	0
+e52354fe-1aba-11f0-9a9c-2cf05d44ba6c	kipsalade	2025-04-16 14:03:56.599		0	0
+ea9650f8-1aba-11f0-9a9d-2cf05d44ba6c	vissalade	2025-04-16 14:04:08.309		0	0
+f22742be-1aba-11f0-9a9e-2cf05d44ba6c	gerookte makreel	2025-04-16 14:04:17.593		0	0
+f8c199b2-1aba-11f0-9a9f-2cf05d44ba6c	gerookte sprot	2025-04-16 14:04:29.871		0	0
+01d4bd18-1abb-11f0-9aa0-2cf05d44ba6c	gerookte haringfilet	2025-04-16 14:04:41.309		0	0
+09575a32-1abb-11f0-9aa1-2cf05d44ba6c	mosselen op azijn	2025-04-16 14:04:56.247		0	0
+100048f8-1abb-11f0-9aa2-2cf05d44ba6c	gekookt ei	2025-04-16 14:05:10.375		1	0
+15c0a792-1abb-11f0-9aa3-2cf05d44ba6c	zomers slaatje	2025-04-16 14:05:19.889		0	0
+1c9068f0-1abb-11f0-9aa4-2cf05d44ba6c	spread gehakt	2025-04-16 14:05:30.914		0	0
+acd5974c-1aba-11f0-9a95-2cf05d44ba6c	lookworst	2025-04-16 14:02:24.774		0	0
+843e6c60-1ab9-11f0-9a71-2cf05d44ba6c	zuivel	2025-04-16 13:54:06.221		0	0
+8a139e44-1ab9-11f0-9a72-2cf05d44ba6c	jonge kaas	2025-04-16 13:54:16.868		0	0
+\.
+
+
+--
+-- Data for Name: food_dessert; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_dessert (pkey, name, created_on, comment) FROM stdin;
+b2a62582-1dfe-11f0-ac2a-2cf05d44ba6c	Vanile pudding	2025-04-20 17:46:52.639	
+acb2584e-1dfe-11f0-ac29-2cf05d44ba6c	Yoghurt	2025-04-20 17:46:38.368	
+2a356b28-2073-11f0-b0d4-2cf05d44ba6c	Yoghurt SA	2025-04-23 20:45:35.03	
+206c2d36-2463-11f0-b715-2cf05d44ba6c	soep	2025-04-28 21:00:55.167	
+6871df76-268a-11f0-9c62-2cf05d44ba6c	SA peperkoek	2025-05-01 14:46:54.407	
+655bd058-2699-11f0-9c7b-2cf05d44ba6c	peperkoek	2025-05-01 16:34:27.415	
+\.
+
+
+--
+-- Data for Name: food_dinner; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_dinner (pkey, name, created_on, dinner_customer, dinner_perpared, dinner_bread, dinner_amount_bread, dinner_smear, dinner_crusts, dinner_butter, comment, dinner_drinks, dinner_charcuterie, dinner_amount_charcuterie, dinner_sugar, dinner_dessert, dinner_napkin, dinner_date, dinner_location_group, dinner_drinksservice) FROM stdin;
+f0c5bcba-31a9-11f0-8b6a-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	11da59d4-2691-11f0-9c6a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0de1d96-31a9-11f0-8b80-2cf05d44ba6c	Maria	2025-05-15 16:30:40	72cb0fca-2689-11f0-9c5e-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	\N	206c2d36-2463-11f0-b715-2cf05d44ba6c	0	2025-05-15 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0b67f66-31a9-11f0-8b5c-2cf05d44ba6c	Albert	2025-05-15 16:30:40	1ae91076-2694-11f0-9c76-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0c287d4-31a9-11f0-8b67-2cf05d44ba6c	Jeanne	2025-05-15 16:30:40	0c3216c2-268f-11f0-9c69-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0b31e48-31a9-11f0-8b59-2cf05d44ba6c	Marie Jeanne	2025-05-15 16:30:40	07fca5dc-2693-11f0-9c6e-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	1	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{aab829ea-2693-11f0-9c75-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0cb70ec-31a9-11f0-8b6f-2cf05d44ba6c	Denise	2025-05-15 16:30:40	1d5a0cf8-26a7-11f0-9c87-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{a5baad0e-269e-11f0-9c82-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f08c9264-31a9-11f0-8b37-2cf05d44ba6c	Adrienne	2025-05-15 16:30:40	0d5c4228-2687-11f0-9c59-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	0	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0ce80de-31a9-11f0-8b72-2cf05d44ba6c	Marie Therese	2025-05-15 16:30:40	d3a03514-26a7-11f0-9c88-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	0	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0dae3ba-31a9-11f0-8b7d-2cf05d44ba6c	Cecille	2025-05-15 16:30:40	208cbc92-26a5-11f0-9c84-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	1	{}
+f07af996-31a9-11f0-8b28-2cf05d44ba6c	Hubert	2025-05-15 16:30:40	a964035a-2668-11f0-9c55-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	1	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f09bb140-31a9-11f0-8b44-2cf05d44ba6c	Martha	2025-05-15 16:30:40	00fa5b20-2667-11f0-9c53-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	3	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	1	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0986ff8-31a9-11f0-8b41-2cf05d44ba6c	Erna	2025-05-15 16:30:40	e3b9c2fa-0d6e-11f0-8cf4-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	1	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0ad7ef2-31a9-11f0-8b54-2cf05d44ba6c	Gilbert	2025-05-15 16:30:40	5203cab2-2688-11f0-9c5c-2cf05d44ba6c	1	35f540e4-0d6f-11f0-8cfb-2cf05d44ba6c	2	0	0	\N		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	1	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0eb467e-31a9-11f0-8b8c-2cf05d44ba6c	Leo	2025-05-15 16:30:40	e8d6f356-269c-11f0-9c7c-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	1	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f07e6ce8-31a9-11f0-8b2b-2cf05d44ba6c	Jenny	2025-05-15 16:30:40	83327a98-0d79-11f0-8d00-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0e4dcb2-31a9-11f0-8b86-2cf05d44ba6c	Lievette	2025-05-15 16:30:40	03f73c88-26aa-11f0-9c8c-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0d50468-31a9-11f0-8b78-2cf05d44ba6c	Hedwige	2025-05-15 16:30:40	d35da69e-26a8-11f0-9c8a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0f0fc04-31a9-11f0-8b91-2cf05d44ba6c	Maria	2025-05-15 16:30:41	79ef21e8-26a6-11f0-9c86-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0bbff7c-31a9-11f0-8b61-2cf05d44ba6c	Giselle	2025-05-15 16:30:40	921637b2-268c-11f0-9c65-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	a111cd76-268c-11f0-9c66-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	2	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+f0d1ca82-31a9-11f0-8b75-2cf05d44ba6c	Jacqueline	2025-05-15 16:30:40	a54908ca-26a8-11f0-9c89-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	0	1	6c6c72c8-0d6f-11f0-8cff-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	3	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0a1281e-31a9-11f0-8b49-2cf05d44ba6c	Annie	2025-05-15 16:30:40	b102bb24-2663-11f0-9c51-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	3	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0a4797e-31a9-11f0-8b4c-2cf05d44ba6c	Rachel	2025-05-15 16:30:40	e438d450-2691-11f0-9c6c-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1	0	1	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	3	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0895018-31a9-11f0-8b34-2cf05d44ba6c	Odette	2025-05-15 16:30:40	1f13d6d0-2686-11f0-9c58-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	3	0	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	4	{f1c614f8-2460-11f0-af83-2cf05d44ba6c}
+f0952122-31a9-11f0-8b3e-2cf05d44ba6c	Agnes	2025-05-15 16:30:40	c43576ce-2469-11f0-b718-2cf05d44ba6c	1	2a676a48-2072-11f0-b0d1-2cf05d44ba6c	4	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	4	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0aa3b16-31a9-11f0-8b51-2cf05d44ba6c	Freddy	2025-05-15 16:30:40	714e3494-2687-11f0-9c5a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	4	1	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	583baa40-1dfe-11f0-ac28-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	4	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0bf489e-31a9-11f0-8b64-2cf05d44ba6c	Ferdinand	2025-05-15 16:30:40	26056e4c-268e-11f0-9c68-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	1	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{51b82a46-2460-11f0-af78-2cf05d44ba6c}	{}	2	4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	4	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0e194bc-31a9-11f0-8b83-2cf05d44ba6c	Suzanne	2025-05-15 16:30:40	4f896060-2699-11f0-9c7a-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	1	0	0	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{71d307e2-2460-11f0-af7b-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	0	2025-05-15 00:00:00	4	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+f0e82be2-31a9-11f0-8b89-2cf05d44ba6c	Cecile	2025-05-15 16:30:40	cb64d8a6-2070-11f0-b0cd-2cf05d44ba6c	1	2380bc04-0d6f-11f0-8cf8-2cf05d44ba6c	2	0	0	510e48f8-0d6f-11f0-8cfe-2cf05d44ba6c		{44c235ac-2460-11f0-af77-2cf05d44ba6c}	{}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	\N	1	2025-05-15 00:00:00	4	{d695a40a-2460-11f0-af81-2cf05d44ba6c}
+c050a332-31aa-11f0-8b94-2cf05d44ba6c	Paul Adins K112	2025-05-15 16:36:28	656bbed8-2463-11f0-b716-2cf05d44ba6c	1	1c0257d8-2072-11f0-b0d0-2cf05d44ba6c	3	1	1	4acda312-0d6f-11f0-8cfd-2cf05d44ba6c		{0de167e4-2463-11f0-b714-2cf05d44ba6c}	{da4e061a-1ab9-11f0-9a7c-2cf05d44ba6c,345b6c9c-1aba-11f0-9a85-2cf05d44ba6c,4768cdd4-1aba-11f0-9a88-2cf05d44ba6c}	2	52808238-1dfe-11f0-ac27-2cf05d44ba6c	206c2d36-2463-11f0-b715-2cf05d44ba6c	0	2025-05-15 00:00:00	2	{b57f8a92-2460-11f0-af7e-2cf05d44ba6c}
+\.
+
+
+--
+-- Data for Name: food_drink; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_drink (pkey, name, created_on, comment) FROM stdin;
+de65f858-0e5b-11f0-814f-2cf05d44ba6c	Glas water	2025-03-31 20:13:27.923	
+e98a3a78-0e5b-11f0-8150-2cf05d44ba6c	Glas cola	2025-03-31 20:13:47.92	
+fc4cf09c-0e5b-11f0-8151-2cf05d44ba6c	Glas Fanta	2025-03-31 20:14:19.505	
+0880e5b2-0e5c-11f0-8152-2cf05d44ba6c	Mok koffie	2025-03-31 20:14:37.404	
+44c235ac-2460-11f0-af77-2cf05d44ba6c	koffie	2025-04-28 20:40:27.465	
+5e12c53a-2460-11f0-af79-2cf05d44ba6c	chocomelk	2025-04-28 20:41:08.534	
+68ab21ea-2460-11f0-af7a-2cf05d44ba6c	rozebottelthee	2025-04-28 20:41:24.856	
+71d307e2-2460-11f0-af7b-2cf05d44ba6c	thee	2025-04-28 20:41:43.167	
+7dd824aa-2460-11f0-af7c-2cf05d44ba6c	warme melk	2025-04-28 20:41:59.72	
+51b82a46-2460-11f0-af78-2cf05d44ba6c	koffiemelk	2025-04-28 20:40:47.545	
+0de167e4-2463-11f0-b714-2cf05d44ba6c	soep	2025-04-28 21:00:25.324	
+aab829ea-2693-11f0-9c75-2cf05d44ba6c	karnemelk koud	2025-05-01 15:53:23.762	
+a5baad0e-269e-11f0-9c82-2cf05d44ba6c	pap	2025-05-01 17:12:01.61	
+2355200a-26a4-11f0-9c83-2cf05d44ba6c	Warme melk	2025-05-01 17:51:17.839	
+\.
+
+
+--
+-- Data for Name: food_drinkserivce; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_drinkserivce (pkey, name, created_on, comment) FROM stdin;
+ae4f3d80-2460-11f0-af7d-2cf05d44ba6c	kleine thermos	2025-04-28 20:43:14.535	
+b57f8a92-2460-11f0-af7e-2cf05d44ba6c	beker	2025-04-28 20:43:37.169	
+c5887e8a-2460-11f0-af7f-2cf05d44ba6c	thermos	2025-04-28 20:44:02.889	
+ceb1a478-2460-11f0-af80-2cf05d44ba6c	1/2 thermos	2025-04-28 20:44:16.44	
+d695a40a-2460-11f0-af81-2cf05d44ba6c	tas	2025-04-28 20:44:35.44	
+dd673294-2460-11f0-af82-2cf05d44ba6c	kannetje	2025-04-28 20:44:43.744	
+f1c614f8-2460-11f0-af83-2cf05d44ba6c	plastiek waterbeker	2025-04-28 20:45:14.438	
+7821af64-269e-11f0-9c81-2cf05d44ba6c	pap	2025-05-01 17:10:45.53	
+\.
+
+
+--
+-- Data for Name: food_lunch; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_lunch (pkey, name, created_on, comment, lunch_customer, lunch_perpared, lunch_location, lunch_texture, lunch_portion, lunch_plate, lunch_drinks, lunch_apiritif, lunch_napkin, lunch_date) FROM stdin;
+\.
+
+
+--
+-- Data for Name: food_place; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_place (pkey, name, created_on, comment) FROM stdin;
+0147e57c-0d6f-11f0-8cf5-2cf05d44ba6c	resto	2025-03-30 15:58:00.58	
+0688fe40-0d6f-11f0-8cf6-2cf05d44ba6c	lounge	2025-03-30 15:58:08.332	
+0aa1901e-0d6f-11f0-8cf7-2cf05d44ba6c	buiten	2025-03-30 15:58:17.384	
+\.
+
+
+--
+-- Data for Name: food_portion; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_portion (pkey, name, created_on, comment) FROM stdin;
+44fc1bce-0d67-11f0-ad97-2cf05d44ba6c	groot	2025-03-30 15:02:28.3	grote portie
+4cef26c8-0d67-11f0-ad98-2cf05d44ba6c	normaal	2025-03-30 15:02:46.45	normale portie
+572f511c-0d67-11f0-ad99-2cf05d44ba6c	klein	2025-03-30 15:02:59.742	kleine portie
+\.
+
+
+--
+-- Data for Name: food_sugar; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_sugar (pkey, name, created_on, comment) FROM stdin;
+4b0cc066-1dfe-11f0-ac26-2cf05d44ba6c	Suiker	2025-04-20 17:42:37.239	
+52808238-1dfe-11f0-ac27-2cf05d44ba6c	2 x suiker	2025-04-20 17:44:12.021	
+583baa40-1dfe-11f0-ac28-2cf05d44ba6c	Geen suiker	2025-04-20 17:44:21.426	
+a111cd76-268c-11f0-9c66-2cf05d44ba6c	canderel	2025-05-01 15:03:03.052	
+\.
+
+
+--
+-- Data for Name: food_texture; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.food_texture (pkey, name, created_on, comment) FROM stdin;
+9d075cc0-0d67-11f0-ad9a-2cf05d44ba6c	gemixt	2025-03-30 15:05:03.44	
+a1febb60-0d67-11f0-ad9b-2cf05d44ba6c	gesneden	2025-03-30 15:05:14.172	
+a6b61702-0d67-11f0-ad9c-2cf05d44ba6c	gemalen	2025-03-30 15:05:22.81	
+aae635fa-0d67-11f0-ad9d-2cf05d44ba6c	normaal	2025-03-30 15:05:29.91	
+\.
+
+
+--
+-- Data for Name: linkeddoc; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.linkeddoc (pkey, name, created_on, file_name, file_path, file_type, file_names_extra, comment) FROM stdin;
+0384550c-c2d6-11ef-b322-2cf05d44ba6c	2UV_02.png	2024-12-25 15:36:30	2UV_02.png	\N	0	\N	\N
+15f30986-c2d6-11ef-b323-2cf05d44ba6c	2UV_01.png	2024-12-25 15:37:01	2UV_01.png	\N	0	\N	\N
+58448224-c2d6-11ef-b324-2cf05d44ba6c	2UV_01.png	2024-12-25 15:38:53	2UV_01.png	\N	0	\N	\N
+e6949212-c2d6-11ef-b325-2cf05d44ba6c	2UV_01.png	2024-12-25 15:42:51	2UV_01.png	\N	0	\N	\N
+ec5d7f56-c2d6-11ef-b326-2cf05d44ba6c	2UV_01.png	2024-12-25 15:43:01	2UV_01.png	\N	0	\N	\N
+f34a2648-c2d6-11ef-b327-2cf05d44ba6c	2UV_01.png	2024-12-25 15:43:13	2UV_01.png	\N	0	\N	\N
+24ea40d4-c2d7-11ef-b328-2cf05d44ba6c	2UV_01.png	2024-12-25 15:44:36	2UV_01.png	\N	0	\N	\N
+a6051d42-c2d7-11ef-b329-2cf05d44ba6c	2UV_01.png	2024-12-25 15:48:13	2UV_01.png	\N	0	\N	\N
+40112aac-c2d8-11ef-b32a-2cf05d44ba6c	2UV_01.png	2024-12-25 15:52:31	2UV_01.png	\N	0	\N	\N
+9c030d58-c2d8-11ef-b32b-2cf05d44ba6c	2UV_01.png	2024-12-25 15:55:05	2UV_01.png	\N	0	\N	\N
+a23aa69a-c2d8-11ef-b32c-2cf05d44ba6c	contact test.png	2024-12-25 15:55:16	contact test.png	\N	0	\N	\N
+20d2ad0e-c2d9-11ef-b32d-2cf05d44ba6c	contact test.png	2024-12-25 15:58:48	contact test.png	\N	0	\N	\N
+8eed37be-c2d9-11ef-b32e-2cf05d44ba6c	contact test.png	2024-12-25 16:01:53	contact test.png	\N	0	\N	\N
+ab9a96a4-c2d9-11ef-b32f-2cf05d44ba6c	2UV_02.png	2024-12-25 16:02:41	2UV_02.png	\N	0	\N	\N
+72b55df6-c2e3-11ef-b330-2cf05d44ba6c	2UV_02.png	2024-12-25 17:12:40	2UV_02.png	\N	0	\N	\N
+d1f6284a-c2e3-11ef-b331-2cf05d44ba6c	2UV_02.png	2024-12-25 17:15:20	2UV_02.png	\N	0	\N	\N
+2ff81fd4-c2e4-11ef-b332-2cf05d44ba6c	2UV_02.png	2024-12-25 17:17:58	2UV_02.png	\N	0	\N	\N
+385cc5d0-c2e4-11ef-b333-2cf05d44ba6c	2UV.png	2024-12-25 17:18:12	2UV.png	\N	0	\N	\N
+269383f4-c2f1-11ef-b338-2cf05d44ba6c	2UV_02.png	2024-12-25 18:50:46	2UV_02.png	\N	0	\N	\N
+2f29863a-c2f1-11ef-b339-2cf05d44ba6c	test.png	2024-12-25 18:51:00	test.png	\N	0	\N	\N
+0b8310de-c2f6-11ef-b33a-2cf05d44ba6c	2UV_02.png	2024-12-25 19:25:48	2UV_02.png	\N	0	\N	\N
+1534a976-c2f6-11ef-b33b-2cf05d44ba6c	contact test.png	2024-12-25 19:26:04	contact test.png	\N	0	\N	\N
+25624042-c2f6-11ef-b33c-2cf05d44ba6c	download.jpg	2024-12-25 19:26:31	download.jpg	\N	0	\N	\N
+30eab638-c2f6-11ef-b33d-2cf05d44ba6c	contact test.png	2024-12-25 19:26:51	contact test.png	\N	0	\N	\N
+7e18fff0-c2f6-11ef-b33e-2cf05d44ba6c	tandwiel.png	2024-12-25 19:29:00	tandwiel.png	\N	0	\N	\N
+bb5ab610-c2f6-11ef-b33f-2cf05d44ba6c	Untitled.xcf	2024-12-25 19:30:43	Untitled.xcf	\N	0	\N	\N
+c0fba688-c2f6-11ef-b340-2cf05d44ba6c	contact test.png	2024-12-25 19:30:52	contact test.png	\N	0	\N	\N
+f463cb4e-c2f7-11ef-b341-2cf05d44ba6c	2UV.png	2024-12-25 19:39:28	2UV.png	\N	0	\N	\N
+0f835b7e-c2f8-11ef-b342-2cf05d44ba6c	Untitled.png	2024-12-25 19:40:13	Untitled.png	\N	0	\N	\N
+21a74f9a-c2f8-11ef-b343-2cf05d44ba6c	2UV_01.png	2024-12-25 19:40:44	2UV_01.png	\N	0	\N	\N
+2321dfbe-c2fa-11ef-b344-2cf05d44ba6c	2UV.xcf	2024-12-25 19:55:05	2UV.xcf	\N	0	\N	\N
+87348196-c2ff-11ef-b346-2cf05d44ba6c	service.jpg	2024-12-25 20:33:41	service.jpg	\N	0	\N	\N
+03f5ec2c-c302-11ef-b348-2cf05d44ba6c		2024-12-25 20:51:29		\N	0	\N	\N
+0ae1cc86-c302-11ef-b349-2cf05d44ba6c	contact test.png	2024-12-25 20:51:41	contact test.png	\N	0	\N	\N
+a69bad72-c30c-11ef-b34a-2cf05d44ba6c	1735164446348904700809154102115.jpg	2024-12-25 22:07:37	1735164446348904700809154102115.jpg	\N	0	\N	\N
+f2a2ccc4-c310-11ef-b34b-2cf05d44ba6c	2UV_02.png	2024-12-25 22:38:22	2UV_02.png	\N	0	\N	\N
+0538d61c-c36b-11ef-b34d-2cf05d44ba6c	netwoork_create.bat	2024-12-26 09:23:09	netwoork_create.bat	\N	0	\N	\N
+566bde7c-c379-11ef-b34e-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:05:38	17352110830336171624991900172499.jpg	\N	0	\N	\N
+8b8b59ac-c379-11ef-b34f-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:07	17352110830336171624991900172499.jpg	\N	0	\N	\N
+8c5d589e-c379-11ef-b350-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:09	17352110830336171624991900172499.jpg	\N	0	\N	\N
+9766ffe2-c379-11ef-b351-2cf05d44ba6c	17352110830336171624991900172499.jpg	2024-12-26 11:07:27	17352110830336171624991900172499.jpg	\N	0	\N	\N
+98d79102-c3b5-11ef-b352-2cf05d44ba6c	autorun.ico	2024-12-26 18:17:00	autorun.ico	\N	0	\N	\N
+1d61df66-d902-11ef-9a74-2cf05d44ba6c	config.client.Server	2025-01-22 21:47:37	config.client.Server	\N	0	\N	\N
+588ae2b8-0fc1-11f0-abef-2cf05d44ba6c		2025-04-02 12:52:33		\N	0	\N	\N
+\.
+
+
+--
+-- Data for Name: living_obj_mach; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.living_obj_mach (pkey, name, datum_start, datum_stop, timer_cycle, socket_port, socket_ip, workstation_name, commands_todo, commands_done, command_replay_history, connection_state, device_state, device_filetransfer, error_table, current_error, ws_tech, created_on) FROM stdin;
+a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	Machine_01	2024-11-12 22:03:27	2024-11-12 22:03:27	1000	1234	192.168.1.210	5AXE-MINI	{}	{}	{}	0	10	0	64625ea6-a106-11ef-8fd8-2cf05d44ba6c		300	\N
+8bc75366-e323-11ef-a3d4-2cf05d44ba6c	Machine_02	2025-02-04 19:11:47	2025-02-04 19:11:47	0	0			{}	{}	{}	0	100	0	\N		300	\N
+94e306d4-e323-11ef-a3d5-2cf05d44ba6c	Machine_03	2025-02-04 19:12:13	2025-02-04 19:12:13	0	0			{}	{}	{}	0	0	0	\N		200	\N
+9dbed850-e323-11ef-a3d6-2cf05d44ba6c	Machine_04	2025-02-04 19:12:28	2025-02-04 19:12:28	0	0			{}	{}	{}	0	0	0	\N		200	\N
+\.
+
+
+--
+-- Data for Name: mach_group; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.mach_group (pkey, name, created_on, mach_group_machs, mach_group_planning) FROM stdin;
+40c3264c-e323-11ef-a3d1-2cf05d44ba6c	MachineGroup_01	2025-02-04 19:10:50	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	c767f664-e328-11ef-a3d9-2cf05d44ba6c
+4f518988-e323-11ef-a3d2-2cf05d44ba6c	MachineGroup_02	2025-02-04 19:12:56	{8bc75366-e323-11ef-a3d4-2cf05d44ba6c}	c767f664-e328-11ef-a3d9-2cf05d44ba6c
+57541f56-e323-11ef-a3d3-2cf05d44ba6c	MachineGroup_03	2025-02-04 19:14:13	{94e306d4-e323-11ef-a3d5-2cf05d44ba6c,9dbed850-e323-11ef-a3d6-2cf05d44ba6c}	e65fbfde-e328-11ef-a3da-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: operation; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.operation (pkey, name, object, objects, datum_start, datum_stop, h2o_value, performed_workstep, operation_state, operation_source, operation_closed_cause, operation_error_information, created_on) FROM stdin;
+e7a98924-a390-11ef-926c-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:33:42	2024-11-15 21:33:51	\N	\N	20	40	10		\N
+f8fd503e-a390-11ef-926d-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:34:11	2024-11-15 21:34:21	\N	\N	20	40	10		\N
+ef9a3b2a-ae7f-11ef-8562-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:29:57	2024-11-29 18:59:57	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+b0091d36-ae80-11ef-8563-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:35:20	2024-11-29 18:59:57	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+3f39cd18-ae84-11ef-8568-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:00:49	2024-11-29 19:00:53	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+b982c852-ae81-11ef-8567-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 18:42:45	2024-11-29 19:01:42	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+9e27223a-ae84-11ef-8569-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:03:28	2024-11-29 19:03:35	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+247346fc-ae85-11ef-856a-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:07:13	2024-11-29 19:21:17	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+12c05774-afed-11ef-8d96-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-01 14:03:42	2024-12-01 14:03:51	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+1d6ad922-ae87-11ef-856b-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:21:20	2024-12-02 20:00:24	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+08a27ed8-b0e8-11ef-8d97-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-02 20:00:09	2024-12-02 23:03:11	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+9ca70694-b101-11ef-8d98-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-02 23:03:15	2024-12-04 20:49:11	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+33a2f208-b281-11ef-8d99-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-04 20:49:05	2024-12-05 16:34:32	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+d0a3fc64-b326-11ef-8d9a-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-05 16:34:36	2024-12-06 16:33:02	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+b8c66cd4-b3ef-11ef-8d9b-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-06 16:32:45	2024-12-06 16:33:02	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+bea02a46-b3ef-11ef-8d9c-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-06 16:32:54	2024-12-07 19:37:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+ac93d878-b4d2-11ef-8d9d-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-07 19:37:20	2024-12-09 09:55:10	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+da879020-b5b4-11ef-8d9e-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-08 22:36:23	2024-12-10 14:36:08	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+1b03b250-b704-11ef-8da0-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-10 14:36:13	2024-12-10 16:20:16	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N	\N
+1999e1f0-b704-11ef-8d9f-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-10 14:36:10	2024-12-22 19:39:25	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+16d681f0-c09e-11ef-a5f8-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:51:09	2024-12-22 19:51:22	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N	\N
+278ff63e-c09e-11ef-a5f9-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:51:37	2024-12-22 19:51:42	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N	\N
+53a4cd5a-c0a6-11ef-a5fa-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 20:50:07	2024-12-22 20:50:17	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+36440e08-c180-11ef-adf4-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-23 22:49:48	2024-12-23 22:49:54	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+6aa1ec90-c09c-11ef-a5f7-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 19:39:11	2024-12-23 22:50:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+42843a3a-c180-11ef-adf5-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-23 22:50:08	2024-12-23 22:50:13	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+5652f752-c0a6-11ef-a5fb-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-22 20:50:12	2024-12-24 10:21:43	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N	\N
+3632f1f8-c1ea-11ef-adf7-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 11:28:34	2024-12-24 11:28:38	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N	\N
+dca02b50-c1e0-11ef-adf6-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 10:21:39	2024-12-24 17:53:38	\N	68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	20	50	10	\N	\N
+0c09add6-c2d5-11ef-b321-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 15:29:35	2024-12-25 18:32:20	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N	\N
+d1123088-c2f0-11ef-b335-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:22	2024-12-25 18:48:33	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	20	50	10	\N	\N
+d4c072d0-c2f0-11ef-b336-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:28	2024-12-25 18:48:41	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N	\N
+028eceea-c220-11ef-b316-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-24 17:53:40	2024-12-29 18:21:52	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+d9e7d564-c2f0-11ef-b337-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:48:37	2024-12-29 18:21:52	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+cb55bd62-c611-11ef-b353-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-29 18:22:00	2024-12-29 18:22:28	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+98ba99c0-c2ee-11ef-b334-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-25 18:32:29	2024-12-30 21:09:51	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N	\N
+d6a52752-c611-11ef-b354-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-29 18:22:19	2024-12-30 21:09:51	\N	96b15708-ae81-11ef-8566-2cf05d44ba6c	20	50	10	\N	\N
+6c52f53c-c6f2-11ef-b355-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-30 21:09:57	2024-12-30 21:10:03	\N	4d478746-ab79-11ef-9bef-2cf05d44ba6c	20	50	10	\N	\N
+349e7260-c792-11ef-b357-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-31 16:13:43	\N	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	10	50	\N	\N	\N
+73bfb38c-c6f2-11ef-b356-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-12-30 21:10:09	2024-12-31 16:13:55	\N	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	50	10	\N	\N
+eeb6eb16-c876-11ef-b358-2cf05d44ba6c	Vandorpe Wouter PHP Task Portal	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2025-01-01 19:31:01	\N	\N	05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	10	50	\N	\N	\N
+7f0c3dca-a139-11ef-9b31-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2017-11-12 22:02:58	2023-11-12 22:03:16	0	6742d11e-ab79-11ef-9bf0-2cf05d44ba6c	20	40	10		2000-01-01 00:00:00
+cfc13d98-a390-11ef-926b-2cf05d44ba6c	System Machine_01	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	{a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c}	2024-11-15 21:33:02	2024-11-15 21:33:11	0	833952d4-ae81-11ef-8565-2cf05d44ba6c	20	40	10		2000-01-01 00:00:00
+\.
+
+
+--
+-- Data for Name: paper; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.paper (pkey, name, created_on, comment) FROM stdin;
+0944f376-0d6c-11f0-8cea-2cf05d44ba6c	De Morgen	2025-03-30 15:36:42.8	
+0d76305e-0d6c-11f0-8ceb-2cf05d44ba6c	De Tijd	2025-03-30 15:36:53.317	
+123de64a-0d6c-11f0-8cec-2cf05d44ba6c	De Standaard	2025-03-30 15:37:00.44	
+1788c0ac-0d6c-11f0-8ced-2cf05d44ba6c	Het Nieuwsblad	2025-03-30 15:37:08.3	
+ca3b092e-268c-11f0-9c67-2cf05d44ba6c	Krant Van West Vlaanderen	2025-05-01 15:04:06.916	
+\.
+
+
+--
+-- Data for Name: planning; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.planning (pkey, name, created_on, overlap_time, pre_prep, post_prep, planning_shift) FROM stdin;
+c767f664-e328-11ef-a3d9-2cf05d44ba6c	Planning_01	2025-02-04 19:48:40	5	15	10	5fec57f4-e324-11ef-a3d7-2cf05d44ba6c
+e65fbfde-e328-11ef-a3da-2cf05d44ba6c	Planning_02	2025-02-04 19:50:03	10	20	5	9cf5b4ec-e324-11ef-a3d8-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.product (pkey, name, created_on, previous_workstep, current_workstep, next_workstep, product_state, product_ws_state, product_index) FROM stdin;
+d8f3f1b8-e7f5-11ef-8490-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.464	\N	\N	\N	0	0	1
+d8f60f2a-e7f5-11ef-8491-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.476	\N	\N	\N	0	0	2
+d8f6927e-e7f5-11ef-8492-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.48	\N	\N	\N	0	0	3
+d8f6faca-e7f5-11ef-8493-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.483	\N	\N	\N	0	0	4
+d8f6facb-e7f5-11ef-8494-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.484	\N	\N	\N	0	0	5
+d8f6facc-e7f5-11ef-8495-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.484	\N	\N	\N	0	0	6
+d8f6facd-e7f5-11ef-8496-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.484	\N	\N	\N	0	0	7
+d8f8616c-e7f5-11ef-8497-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.493	\N	\N	\N	0	0	8
+d8f8616d-e7f5-11ef-8498-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.493	\N	\N	\N	0	0	9
+d8f9c796-e7f5-11ef-8499-2cf05d44ba6c	Batch_02	2025-02-10 22:27:36.501	\N	\N	\N	0	0	10
+1252609e-e598-11ef-a3e0-2cf05d44ba6c	Batch_01	2025-02-10 21:00:06.531	4d13e1d4-e670-11ef-ac52-2cf05d44ba6c	661b545a-e670-11ef-ac53-2cf05d44ba6c	\N	10	0	2
+1251aece-e598-11ef-a3df-2cf05d44ba6c	Batch_01	2025-02-10 21:00:34.501	2fc4ba9a-e670-11ef-ac51-2cf05d44ba6c	4d13e1d4-e670-11ef-ac52-2cf05d44ba6c	661b545a-e670-11ef-ac53-2cf05d44ba6c	10	10	1
+1252ee10-e598-11ef-a3e1-2cf05d44ba6c	Batch_01	2025-02-07 22:11:17.333	2fc4ba9a-e670-11ef-ac51-2cf05d44ba6c	4d13e1d4-e670-11ef-ac52-2cf05d44ba6c	661b545a-e670-11ef-ac53-2cf05d44ba6c	10	10	3
+\.
+
+
+--
+-- Data for Name: rti_add_chef; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_chef (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+\.
+
+
+--
+-- Data for Name: rti_add_customer; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_customer (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+\.
+
+
+--
+-- Data for Name: rti_add_phone; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.rti_add_phone (pkey, name, source_type, source_file, method_name, employee, person) FROM stdin;
+974af782-a11b-11ef-9b2a-2cf05d44ba6c	Phone_01_messageToAddPhoneNumber	PYTHON	RTI_ADD_PHONE.py	messageToAddPhoneNumber	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+efa26564-a11b-11ef-9b2c-2cf05d44ba6c	Phone_03	PYTHON	RTI_ADD_PHONE.py	deletePhoneNumber	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+ccc8864a-a11b-11ef-9b2b-2cf05d44ba6c	Phone_02_checkIfEmployerExists	PYTHON	RTI_ADD_PHONE.py	checkIfEmployerExists	c7399988-a113-11ef-8fe2-2cf05d44ba6c	f2d9c688-a106-11ef-8fdc-2cf05d44ba6c
+\.
+
+
+--
+-- Data for Name: shift; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.shift (pkey, name, created_on, shift_start_monday, shift_start_tuesday, shift_start_wednesday, shift_start_thursday, shift_start_friday, shift_start_saturday, shift_start_sunday, shift_stop_monday, shift_stop_tuesday, shift_stop_wednesday, shift_stop_thursday, shift_stop_friday, shift_stop_saturday, shift_stop_sunday) FROM stdin;
+9cf5b4ec-e324-11ef-a3d8-2cf05d44ba6c	Shift_02	2025-02-04 07:00:18	2025-02-04 07:00:18	2025-02-04 08:00:18	2025-02-04 08:00:18	2025-02-04 08:00:18	2025-02-04 07:00:18	2025-02-04 07:00:18	2025-02-04 08:00:18	2025-02-04 18:30:18	2025-02-04 19:30:18	2025-02-04 17:30:18	2025-02-04 18:00:18	2025-02-04 20:00:18	2025-02-04 20:00:18	2025-02-04 20:00:18
+5fec57f4-e324-11ef-a3d7-2cf05d44ba6c	Shift_01	2025-02-04 19:14:23	2025-02-04 07:30:23	2025-02-04 08:00:23	2025-02-04 06:15:23	2025-02-04 08:30:23	2025-02-04 06:00:23	2025-02-04 00:00:23	2025-02-04 00:00:23	2025-02-04 19:15:23	2025-02-04 20:00:23	2025-02-04 16:00:23	2025-02-04 17:30:23	2025-02-04 19:00:23	2025-02-04 00:00:23	2025-02-04 00:00:23
+\.
+
+
+--
+-- Data for Name: workstep; Type: TABLE DATA; Schema: public; Owner: poststress
+--
+
+COPY public.workstep (pkey, name, ws_tech, ws_assigned, ws_workplace, created_on, ws_state, ws_performed_by, ws_planned_start, ws_planned_stop, linked_documents, ws_mach_group, ws_include_planning) FROM stdin;
+6742d11e-ab79-11ef-9bf0-2cf05d44ba6c	Meeting-01	200	1bee2fac-ab78-11ef-9bec-2cf05d44ba6c	\N	2024-11-25 23:05:00	\N	\N	\N	\N	\N	\N	\N
+12785830-a114-11ef-8fe6-2cf05d44ba6c	Cooking-01	500	5004e9b6-ab78-11ef-9bee-2cf05d44ba6c	\N	2024-12-24 23:52:34	0	\N	2024-12-24 23:52:34	2024-12-24 23:52:34	{cb71668c-c249-11ef-b31d-2cf05d44ba6c,ceaf7c3a-c249-11ef-b31e-2cf05d44ba6c}	\N	\N
+4d478746-ab79-11ef-9bef-2cf05d44ba6c	Research-01	300	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-25 23:04:29	20	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	\N	{21a74f9a-c2f8-11ef-b343-2cf05d44ba6c}	\N	\N
+833952d4-ae81-11ef-8565-2cf05d44ba6c	Research-03	300	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	2024-11-29 19:40:38	30	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:40:38	2024-11-29 19:40:38	{0ae1cc86-c302-11ef-b349-2cf05d44ba6c,f2a2ccc4-c310-11ef-b34b-2cf05d44ba6c}	\N	\N
+05fa7ce6-a114-11ef-8fe5-2cf05d44ba6c	Cleaning-01	10	27d75404-ab75-11ef-82ff-2cf05d44ba6c	\N	2024-11-25 23:02:55	10	c7399988-a113-11ef-8fe2-2cf05d44ba6c	\N	\N	{269383f4-c2f1-11ef-b338-2cf05d44ba6c,269383f4-c2f1-11ef-b338-2cf05d44ba6c,2f29863a-c2f1-11ef-b339-2cf05d44ba6c,0f835b7e-c2f8-11ef-b342-2cf05d44ba6c,87348196-c2ff-11ef-b346-2cf05d44ba6c,a69bad72-c30c-11ef-b34a-2cf05d44ba6c,98d79102-c3b5-11ef-b352-2cf05d44ba6c}	\N	\N
+96b15708-ae81-11ef-8566-2cf05d44ba6c	Cleaning-02	27	27d75404-ab75-11ef-82ff-2cf05d44ba6c	\N	2024-11-29 19:41:20	30	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:41:20	2024-11-29 19:41:20	{8eed37be-c2d9-11ef-b32e-2cf05d44ba6c,8eed37be-c2d9-11ef-b32e-2cf05d44ba6c,7e18fff0-c2f6-11ef-b33e-2cf05d44ba6c,bb5ab610-c2f6-11ef-b33f-2cf05d44ba6c,c0fba688-c2f6-11ef-b340-2cf05d44ba6c,f463cb4e-c2f7-11ef-b341-2cf05d44ba6c,2321dfbe-c2fa-11ef-b344-2cf05d44ba6c,a4fb001a-c2ff-11ef-b347-2cf05d44ba6c,0538d61c-c36b-11ef-b34d-2cf05d44ba6c,1d61df66-d902-11ef-9a74-2cf05d44ba6c}	\N	\N
+2fc4ba9a-e670-11ef-ac51-2cf05d44ba6c	Batch_01_WS01	300	\N	\N	2025-02-08 23:56:42	0	\N	2025-02-08 23:56:42	2025-02-08 23:56:42	{}	40c3264c-e323-11ef-a3d1-2cf05d44ba6c	1
+68f6f0f2-ae81-11ef-8564-2cf05d44ba6c	Research-02	300	f80ad068-ab77-11ef-9beb-2cf05d44ba6c	a7fb4e8e-a106-11ef-8fd9-2cf05d44ba6c	2024-11-29 19:39:42	0	c7399988-a113-11ef-8fe2-2cf05d44ba6c	2024-11-29 19:39:42	2024-11-29 19:39:42	{385cc5d0-c2e4-11ef-b333-2cf05d44ba6c}	\N	\N
+4d13e1d4-e670-11ef-ac52-2cf05d44ba6c	Batch_01_WS02	0	\N	\N	2025-02-08 23:58:25	0	\N	2019-02-08 23:58:25	2025-02-08 23:58:25	{}	4f518988-e323-11ef-a3d2-2cf05d44ba6c	1
+661b545a-e670-11ef-ac53-2cf05d44ba6c	Batch_01_WS03	200	\N	\N	2025-02-08 23:59:10	0	\N	2025-02-08 23:59:10	2025-02-08 23:59:10	{}	57541f56-e323-11ef-a3d3-2cf05d44ba6c	1
+\.
+
+
+--
+-- Name: a_allergy a_allergy_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_allergy
+    ADD CONSTRAINT a_allergy_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_batch a_batch_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_batch
+    ADD CONSTRAINT a_batch_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_customer a_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_customer
+    ADD CONSTRAINT a_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_customer_remark a_customer_remark_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_customer_remark
+    ADD CONSTRAINT a_customer_remark_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycle_routine a_cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycle_routine
+    ADD CONSTRAINT a_cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_cycles a_cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_cycles
+    ADD CONSTRAINT a_cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_diet a_diet_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_diet
+    ADD CONSTRAINT a_diet_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_does_not_like a_does_not_like_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_does_not_like
+    ADD CONSTRAINT a_does_not_like_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_empl_group a_empl_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_empl_group
+    ADD CONSTRAINT a_empl_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_employee a_employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_employee
+    ADD CONSTRAINT a_employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_errors_living_obj_mach a_errors_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_errors_living_obj_mach
+    ADD CONSTRAINT a_errors_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_bread a_food_bread_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_bread
+    ADD CONSTRAINT a_food_bread_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_breakfast a_food_breakfast_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_breakfast
+    ADD CONSTRAINT a_food_breakfast_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_butter a_food_butter_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_butter
+    ADD CONSTRAINT a_food_butter_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_charcuterie a_food_charcuterie_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_charcuterie
+    ADD CONSTRAINT a_food_charcuterie_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_dessert a_food_dessert_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_dessert
+    ADD CONSTRAINT a_food_dessert_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_dinner a_food_dinner_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_dinner
+    ADD CONSTRAINT a_food_dinner_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_drink a_food_drink_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_drink
+    ADD CONSTRAINT a_food_drink_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_drinkserivce a_food_drinkserivce_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_drinkserivce
+    ADD CONSTRAINT a_food_drinkserivce_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_lunch a_food_lunch_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_lunch
+    ADD CONSTRAINT a_food_lunch_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_place a_food_place_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_place
+    ADD CONSTRAINT a_food_place_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_portion a_food_portion_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_portion
+    ADD CONSTRAINT a_food_portion_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_sugar a_food_sugar_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_sugar
+    ADD CONSTRAINT a_food_sugar_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_food_texture a_food_texture_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_food_texture
+    ADD CONSTRAINT a_food_texture_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_linkeddoc a_linkeddoc_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_linkeddoc
+    ADD CONSTRAINT a_linkeddoc_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_living_obj_mach a_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_living_obj_mach
+    ADD CONSTRAINT a_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_mach_group a_mach_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_mach_group
+    ADD CONSTRAINT a_mach_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_operation a_operation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_operation
+    ADD CONSTRAINT a_operation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_paper a_paper_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_paper
+    ADD CONSTRAINT a_paper_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_planning a_planning_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_planning
+    ADD CONSTRAINT a_planning_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_product a_product_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_product
+    ADD CONSTRAINT a_product_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_chef a_rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_chef
+    ADD CONSTRAINT a_rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_customer a_rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_customer
+    ADD CONSTRAINT a_rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_rti_add_phone a_rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_rti_add_phone
+    ADD CONSTRAINT a_rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_shift a_shift_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_shift
+    ADD CONSTRAINT a_shift_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: a_workstep a_workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.a_workstep
+    ADD CONSTRAINT a_workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: allergy allergy_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.allergy
+    ADD CONSTRAINT allergy_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: batch batch_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.batch
+    ADD CONSTRAINT batch_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: customer_remark customer_remark_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.customer_remark
+    ADD CONSTRAINT customer_remark_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycle_routine cycle_routine_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycle_routine
+    ADD CONSTRAINT cycle_routine_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: cycles cycles_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.cycles
+    ADD CONSTRAINT cycles_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: diet diet_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.diet
+    ADD CONSTRAINT diet_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: does_not_like does_not_like_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.does_not_like
+    ADD CONSTRAINT does_not_like_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: empl_group empl_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.empl_group
+    ADD CONSTRAINT empl_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.employee
+    ADD CONSTRAINT employee_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: errors_living_obj_mach errors_living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.errors_living_obj_mach
+    ADD CONSTRAINT errors_living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_bread food_bread_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_bread
+    ADD CONSTRAINT food_bread_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_breakfast food_breakfast_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_breakfast
+    ADD CONSTRAINT food_breakfast_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_butter food_butter_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_butter
+    ADD CONSTRAINT food_butter_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_charcuterie food_charcuterie_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_charcuterie
+    ADD CONSTRAINT food_charcuterie_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_dessert food_dessert_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_dessert
+    ADD CONSTRAINT food_dessert_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_dinner food_dinner_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_dinner
+    ADD CONSTRAINT food_dinner_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_drink food_drink_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_drink
+    ADD CONSTRAINT food_drink_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_drinkserivce food_drinkserivce_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_drinkserivce
+    ADD CONSTRAINT food_drinkserivce_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_lunch food_lunch_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_lunch
+    ADD CONSTRAINT food_lunch_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_place food_place_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_place
+    ADD CONSTRAINT food_place_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_portion food_portion_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_portion
+    ADD CONSTRAINT food_portion_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_sugar food_sugar_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_sugar
+    ADD CONSTRAINT food_sugar_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: food_texture food_texture_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.food_texture
+    ADD CONSTRAINT food_texture_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: linkeddoc linkeddoc_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.linkeddoc
+    ADD CONSTRAINT linkeddoc_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: living_obj_mach living_obj_mach_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.living_obj_mach
+    ADD CONSTRAINT living_obj_mach_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: mach_group mach_group_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.mach_group
+    ADD CONSTRAINT mach_group_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: operation operation_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.operation
+    ADD CONSTRAINT operation_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: paper paper_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.paper
+    ADD CONSTRAINT paper_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: planning planning_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.planning
+    ADD CONSTRAINT planning_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: product product_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.product
+    ADD CONSTRAINT product_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_chef rti_add_chef_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_chef
+    ADD CONSTRAINT rti_add_chef_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_customer rti_add_customer_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_customer
+    ADD CONSTRAINT rti_add_customer_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: rti_add_phone rti_add_phone_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.rti_add_phone
+    ADD CONSTRAINT rti_add_phone_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: shift shift_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.shift
+    ADD CONSTRAINT shift_pkey PRIMARY KEY (pkey);
+
+
+--
+-- Name: workstep workstep_pkey; Type: CONSTRAINT; Schema: public; Owner: poststress
+--
+
+ALTER TABLE ONLY public.workstep
+    ADD CONSTRAINT workstep_pkey PRIMARY KEY (pkey);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
