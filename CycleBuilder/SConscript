@@ -1,0 +1,62 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_CycleBuilder']
+
+################################ CycleBulder ###################################
+
+CycleBulderSources = [ 'clMain.cpp',
+                  myenv.Moc('clMainWindow.h'),
+                  myenv.Moc('clCycleBuilderView.h'),
+                  myenv.Moc('clClassObjectTreeItem.h'),
+                  myenv.Moc('clEditObjectUI.h'),
+                  myenv.Moc('clNewObjectUI.h'),
+                  myenv.Moc('clListWidgetExtendForObject.h'),
+                  myenv.Moc('clWidgetExtendForObject.h'),
+                  myenv.Moc('clListWidgetSelectObject.h'),
+                  myenv.Moc('clListWidgetExtendForString.h'),
+                  myenv.Moc('clChangePropertieTextArray.h'),
+                  myenv.Moc('clExtendGraphicsView.h'),
+                  myenv.Moc('clComboBoxExtend.h'),
+                  myenv.Moc('clNode.h'),
+                  myenv.Moc('clParentChild.h'),
+                  myenv.QT4UI('wdCycleBuilderView.ui')[1:],
+                  myenv.QT4UI('wdChangePropertieText.ui')[1:],
+                  'clMainWindow.cpp',
+                  'clIceClientLogging.cpp',
+                  'clIceClientServer.cpp',
+                  'ICE_LogApplication.cpp',
+                  'ICE_ServerApplication.cpp',
+                  'clCycleBuilderView.cpp',
+                  'clClassObjectTreeItem.cpp',
+                  'clDatabaseColumn.cpp',
+                  'clDatabaseAction.cpp',
+                  'clEditObjectUI.cpp',
+                  'clNewObjectUI.cpp',
+                  'clListWidgetExtendForObject.cpp',
+                  'clWidgetExtendForObject.cpp',
+                  'clListWidgetSelectObject.cpp',
+                  'clListWidgetExtendForString.cpp',
+                  'clChangePropertieTextArray.cpp',
+                  'clExtendGraphicsView.cpp',
+                  'clComboBoxExtend.cpp',
+                  'clNode.cpp',
+                  'clEdge.cpp',
+                  'clParentChild.cpp',
+                  'clDatabaseRow.cpp'
+                 ]
+CycleBulder = myenv.Program('2UVCycleBuilder', CycleBulderSources, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Gui',
+                    'libQt5Xml',
+                    'libQt5Charts',
+                    'libQt5Network',
+					'libpq',
+                    'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL',
+                    'libpython3.12'
+                        ])
+myenv.Install (InstallDir, CycleBulder)

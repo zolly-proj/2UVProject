@@ -1,0 +1,13 @@
+<enums>
+	<enum name="CONNECTION_STATE">
+		<state value="0" text="not connected"/>
+		<state value="1" text="connected"/>
+	</enum>
+	<enum name="DEVICE_STATE">
+		<state value="0" text="nothing"/>
+		<state value="10" text="waiting"/>
+		<state value="20" text="running"/>
+		<state value="30" text="hold"/>
+		<state value="40" text="data transfer"/>
+	</enum>	
+</enums>
