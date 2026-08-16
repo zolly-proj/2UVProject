@@ -1,0 +1,48 @@
+<enums>
+	<enum name="CONNECTION_STATE">
+		<state value="0" text="not connected"/>
+		<state value="1" text="connected"/>
+	</enum>
+	<enum name="DEVICE_STATE">
+		<state value="0" text="nothing"/>
+		<state value="10" text="waiting"/>
+		<state value="20" text="running"/>
+		<state value="30" text="paused"/>
+		<state value="40" text="not connected"/>
+		<state value="100" text="undefined"/>
+		<state value="110" text="error"/>
+	</enum>	
+	<enum name="DEVICE_FILETRANSFER">
+		<state value="0" text="no file transfer"/>
+		<state value="10" text="file transfer on going"/>
+	</enum>
+	<enum name="CALL_METHOD_ON_ERROR">
+		<state value="0" text="no"/>
+		<state value="1" text="yes"/>
+	</enum>	
+	<enum name="OPERATION_STATE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Open"/>
+		<state value="20" text="Closed"/>
+	</enum>		
+	<enum name="OPERATION_CLOSED_CAUSE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Normal"/>
+		<state value="20" text="Error"/>
+	</enum>			
+	<enum name="OPERATION_SOURCE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Cycle"/>
+		<state value="20" text="Routine"/>
+		<state value="30" text="Script"/>
+		<state value="40" text="System"/>
+	</enum>		
+	<enum name="LEVEL">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Board"/>
+		<state value="20" text="Administration"/>
+		<state value="30" text="Worker"/>
+		<state value="40" text="R and D"/>
+		<state value="50" text="Production"/>
+	</enum>		
+</enums>
