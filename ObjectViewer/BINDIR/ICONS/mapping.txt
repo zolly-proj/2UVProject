@@ -1,0 +1,4 @@
+./ICONS/clip-icon.png;LIVING_OBJ_LOCATION
+./ICONS/magnet-icon.png;OBJECT_TO_LOCATE
+./ICONS/kopeteavailable.png;EMPLOYEE
+./ICONS/kontact_contacts.png;EMPL_GROUP

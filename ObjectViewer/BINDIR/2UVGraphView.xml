@@ -1,0 +1,32 @@
+<GraphView>
+	<operationQuery class="OPERTATION" property="OBJECTS" type="uuid[]" expression="=" value="b08808c2-7c4d-11ef-a4b0-2cf05d44ba6c$;$bf2082b2-829a-11ef-9c0e-2cf05d44ba6c" refreshMS="1000">
+	</operationQuery>
+	<GraphLines>
+		<GraphLine color="red" name="Measured Value 01">
+			<valueQuery_Y>	
+				<query class="OPERTATION" property="PERFORMED_WORKSTEP" type="uuid"/>
+				<query class="WORKSTEP" property="MESUREVALUE01" type="float8"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERTATION" property="DATUM_STOP" type="timestamp"/>
+			</valueQuery_X>			
+		</GraphLine>
+		<GraphLine color="green" name="Measured Value 02">
+			<valueQuery_Y>	
+				<query class="OPERTATION" property="PERFORMED_WORKSTEP" type="uuid"/>
+				<query class="WORKSTEP" property="MESUREVALUE02" type="float8"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERTATION" property="DATUM_STOP" type="timestamp"/>
+			</valueQuery_X>			
+		</GraphLine>	
+		<GraphLine color="yellow" name="H2O value">
+			<valueQuery_Y>	
+				<query class="OPERTATION" property="H2O_VALUE" type="float8"/>
+			</valueQuery_Y>
+			<valueQuery_X>	
+				<query class="OPERTATION" property="DATUM_STOP" type="timestamp"/>
+			</valueQuery_X>			
+		</GraphLine>		
+	</GraphLines>
+</GraphView>

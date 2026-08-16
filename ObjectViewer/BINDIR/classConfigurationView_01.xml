@@ -1,0 +1,73 @@
+<root>
+	<class name="EMPLOYEE">
+		<methods>
+			<method name="showQrCodeOfObject"/>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="EMAIL" />
+			<prop name="PASSWORD" />
+			<prop name="EMPLOYEE_GROUPS" />
+		</props>
+	</class>
+	<class name="EMPL_GROUP">
+		<methods>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="DESCRIPTION" />			
+			<prop name="LEVEL" />
+			<prop name="CREATED_ON" />
+		</props>
+	</class>
+	<class name="LIVING_OBJ_LOCATION">
+		<methods>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="CREATED_ON" />
+			<prop name="DATUM_START" />
+			<prop name="DATUM_STOP" />
+			<prop name="TIMER_CYCLE" />
+			<prop name="SOCKET_PORT" />
+			<prop name="SOCKET_IP" />
+			<prop name="WORKSTATION_NAME" />
+			<prop name="COMMANDS_TODO" />
+			<prop name="COMMANDS_DONE" />
+			<prop name="COMMAND_REPLAY_HISTORY" />
+			<prop name="CONNECTION_STATE" />
+			<prop name="DEVICE_FILETRANSFER" />
+			<prop name="DEVICE_STATE" />
+			<prop name="CURRENT_ERROR" />
+			<prop name="FLOOR_PLAN_IMAGE" />
+			<prop name="SIZE_X" />
+			<prop name="SIZE_Y" />
+			<prop name="ERROR_TABLE" />
+		</props>
+	</class>
+	<class name="OBJECT_TO_LOCATE">
+		<methods>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="CREATED_ON" />
+			<prop name="OBJECT_TO_LOCATE_KIND" />
+			<prop name="OBJ_LOCATION_ID" />
+			<prop name="QR_BAR_CODE" />
+			<prop name="SSID" />
+			<prop name="INCLUDED_OBJECT" />
+			<prop name="COORD_X" />
+			<prop name="COORD_Y" />
+			<prop name="COORD_Z" />
+		</props>
+	</class>
+	<class name="BATCH">
+		<methods>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="PRODUCTS" />
+			<prop name="WORKSTEPS" />
+		</props>
+	</class>
+</root>
