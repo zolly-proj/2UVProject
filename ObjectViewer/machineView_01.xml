@@ -1,0 +1,56 @@
+<root>
+	<widget name="MACHINE_VIEW_STATE" row="0" coll="0" object_id="df1e314c-29c2-11f1-9439-0800273b2796" object_class="LIVING_OBJ_MACH" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/mach01.png"/>
+		<methods>
+			<lib name="createOperationForMachine" source="libclCreateOperationForMachine.so" path="./Methods/"/>
+			<lib name="ExportToExcel" source="libclExportToExcel.so" path="./Methods/"/>
+			
+			<lib name="continueForMachine" source="libclContinueForMachine.so" path="./Methods/"/>	
+			<lib name="pauseForMachine" source="libclPauseForMachine.so" path="./Methods/"/>
+			<lib name="runForMachine" source="libclRunForMachine.so" path="./Methods/"/>
+		</methods>
+	</widget>
+	<widget name="MACHINE_VIEW_STATE" row="1" coll="0" object_id="640bdc8c-2564-11f1-9439-0800273b2796" object_class="LIVING_OBJ_MEAS" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/sensor01.jpg"/>
+		<methods>
+			<lib name="createOperationForMachine" source="libclCreateOperationForMachine.so" path="./Methods/"/>
+			<lib name="ExportToExcel" source="libclExportToExcel.so" path="./Methods/"/>
+			
+			<lib name="continueForMachine" source="libclContinueForMachine.so" path="./Methods/"/>	
+			<lib name="pauseForMachine" source="libclPauseForMachine.so" path="./Methods/"/>
+			<lib name="runForMachine" source="libclRunForMachine.so" path="./Methods/"/>			
+		</methods>
+	</widget>
+	<widget name="MACHINE_VIEW_STATE" row="2" coll="0" object_id="3a03860e-37fe-11f1-9439-0800273b2796" object_class="LIVING_OBJ_LOCATION" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/mach01.png"/>
+		<methods>
+			<lib name="createOperationForMachine" source="libclCreateOperationForMachine.so" path="./Methods/"/>
+			<lib name="ExportToExcel" source="libclExportToExcel.so" path="./Methods/"/>
+			
+			<lib name="continueForMachine" source="libclContinueForMachine.so" path="./Methods/"/>	
+			<lib name="pauseForMachine" source="libclPauseForMachine.so" path="./Methods/"/>
+			<lib name="runForMachine" source="libclRunForMachine.so" path="./Methods/"/>			
+		</methods>
+	</widget>		
+	<widget name="MACHINE_VIEW_GRAPH" row="0" coll="1" object_id="df1e314c-29c2-11f1-9439-0800273b2796" object_class="LIVING_OBJ_MACH" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/machine.png"/>
+		<methods>
+			<lib name="createQrCodeOfObject" source="libclCreateQrCodeOfObject.so" path="./Methods/"/>
+			<lib name="showQrCodeOfObject" source="libclShowQrCodeOfObject.so" path="./Methods/"/>			
+		</methods>
+	</widget>
+	<widget name="MACHINE_VIEW_GRAPH" row="1" coll="1" object_id="" object_class="" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/measuredevice.png"/>
+		<methods>
+			<lib name="createQrCodeOfObject" source="libclCreateQrCodeOfObject.so" path="./Methods/"/>
+			<lib name="showQrCodeOfObject" source="libclShowQrCodeOfObject.so" path="./Methods/"/>		
+		</methods>		
+	</widget>
+	<widget name="MACHINE_VIEW_LOC" row="2" coll="1" object_id="" object_class="" width="200" height="150" refresh="3000">
+		<picture value="./ICONS/locatoindevice.png"/>
+		<methods>
+			<lib name="createQrCodeOfObject" source="libclCreateQrCodeOfObject.so" path="./Methods/"/>
+			<lib name="showQrCodeOfObject" source="libclShowQrCodeOfObject.so" path="./Methods/"/>		
+		</methods>
+	</widget>			
+</root>

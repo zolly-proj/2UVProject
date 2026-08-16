@@ -1,0 +1,15 @@
+<root>
+	
+	<lib name="createOperationForMachine" source="libclCreateOperationForMachine.so" path="./Methods/"/>
+	<lib name="ExportToExcel" source="libclExportToExcel.so" path="./Methods/"/>
+	
+	<lib name="continueForMachine" source="libclContinueForMachine.so" path="./Methods/"/>	
+	<lib name="pauseForMachine" source="libclPauseForMachine.so" path="./Methods/"/>
+	<lib name="runForMachine" source="libclRunForMachine.so" path="./Methods/"/>
+	
+	<lib name="openLinkedDoc" source="libclOpenLinkedDoc.so" path="./Methods/"/>
+	<lib name="saveLinkedDoc" source="libclSaveLinkedDoc.so" path="./Methods/"/>
+	
+	<lib name="createQrCodeOfObject" source="libclCreateQrCodeOfObject.so" path="./Methods/"/>
+	<lib name="showQrCodeOfObject" source="libclShowQrCodeOfObject.so" path="./Methods/"/>
+</root>
