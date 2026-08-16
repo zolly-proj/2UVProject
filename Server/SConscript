@@ -1,0 +1,45 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_Server']
+
+SourcesQtTest = [ myenv.QT4UI('wdConfigWorkstationWidget.ui')[1:],
+                  'clMain.cpp',
+                  myenv.Moc('clMainWindow.h'),
+                  myenv.Moc('clConfigProductWidget.h'),
+                  myenv.Moc('clConfigWorkstationWidget.h'),
+                  myenv.Moc('clServerThread.h'),
+                  myenv.Moc('clWorkstationGraphWidget.h'),
+                  'clMainWindow.cpp',
+                  'clConfigProductWidget.cpp',
+                  'clConfigWorkstationWidget.cpp',
+                  'clDatabaseClass.cpp',
+                  'clXMLReader.cpp',
+                  'clDatabaseMySql.cpp',
+                  'clDatabaseOracle.cpp',
+                  'clDatabasePostgres.cpp',
+                  'clDatabaseTable.cpp',
+                  'clDatabaseColumn.cpp',
+                  'clDatabaseAction.cpp',
+                  'clIceClientLogging.cpp',
+                  'ICE_LogApplication.cpp',
+                  'ICE_ServerApplication.cpp',
+                  'clServer_impl.cpp',
+                  'clServerThread.cpp',
+                  'clWorkstationGraphWidget.cpp',                  
+                  'clWorkstationStatus.cpp',
+                  'clDatabaseRoutine.cpp'
+                 ]
+DatabaseProg = myenv.Program('2UVServer', SourcesQtTest, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Charts',
+                    'libQt5Gui',
+                  	'libpq',
+                  	'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL'
+                    ])
+myenv.Install (InstallDir, DatabaseProg)
