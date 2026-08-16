@@ -1,0 +1,21 @@
+<hardwareDevice>
+<id>45789</id>
+<connect do='false'></connect>
+<disconnect do='false'></disconnect>
+<state do='true'></state>
+<run do='false'></run>
+<abort do='false'></abort>
+<hold do='false'></hold>
+<continue do='false'></continue>
+<sendFile do='false'></sendFile>
+<receiveFile do='false'></receiveFile>
+<scriptCommand do='false'>NAMEOFSCRIPTCOMMAND</scriptCommand>
+<optionalCommand do='false' name='SendDataCommand2'>
+<data type='int'></data>
+<data type='byte'></data>
+<data type='hex'></data>
+<data type='string'></data>
+<data type='float'></data>
+<data type='double'></data>
+</optionalCommand>
+</hardwareDevice>

@@ -1,0 +1,26 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR']
+
+################################### INSTALL THE SOCKETBOX ###################################
+SourceSocketBox = [	'clMain.cpp',
+             myenv.Moc('clSocketSimulator.h'),
+             myenv.Moc('clSocketBoxThread.h'),
+			 'clSocketSimulator.cpp',
+             'clSocketBoxSimulator.cpp',
+             'clSocketBoxThread.cpp'
+			]
+			
+SocketBox = myenv.Program('clSocketBox',SourceSocketBox,
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Network'
+                  	])
+
+myenv.Install (InstallDir, SocketBox)
+
+
+
+

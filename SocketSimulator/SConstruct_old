@@ -1,0 +1,96 @@
+import os
+import os.path
+import glob
+import re
+import shutil
+import sys
+
+env = Environment (tools=['default','qt',], TARGET_ARCH='x86_64')
+env.Replace (QT_AUTOSCAN=0)
+env.Replace (QT_LIB='C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib')
+env.Replace (QT_MOCHSUFFIX='.cpp')
+env.Replace (QT_UICIMPLSUFFIX='.cpp')         
+
+env.Append (CPPPATH='C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/include')
+env.Append (CPPPATH='C:/Users/woute/AppData/Local/Programs/Python/Python310/include')
+env.Append (CPPPATH='C:/TEMP/2UV_Framework/TESTPROJECT/#LogServer')
+env.Append (CPPPATH='C:/Program Files/PostgreSQL/14/include/libpq')
+env.Append (CPPPATH='C:/Program Files/PostgreSQL/14/include')
+env.Append (CPPPATH='C:/Users/woute/source/repos/ice/packages/zeroc.ice.v140.3.7.10/build/native/include')
+
+
+#env.Append (LIBPATH='C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/BINDIR')
+env.Append (LIBPATH='C:/Program Files/PostgreSQL/14/lib')
+env.Append (LIBPATH='C:/Users/woute/source/repos/ice/packages/zeroc.ice.v140.3.7.10/build/native/lib/x64/Release')
+env.Append (BINDIR='C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/BINDIR')
+
+env["ICE"] = "C:/Users/woute/source/repos/ice/packages/zeroc.ice.v140.3.7.10/tools"
+env["BINDIR"] = "C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/BINDIR"
+
+
+
+def Qt4UiTargets (target, source, env):
+  base, extension = os.path.splitext ((str(source[0])))
+  targetlist = []
+  targetlist.append( base + '.h')
+  return (targetlist, source)
+
+def Qt4UiBuilderFunction (target, source, env):
+  uiheader = str(target[0])
+  uifile = str(source[0])
+  command = env["QTDIR"]+"/bin/uic -o %s %s" % (uiheader, uifile)
+  print (command)
+  os.system (command)
+
+Qt4UiBuilder = Builder (action=Qt4UiBuilderFunction, emitter=Qt4UiTargets)
+env.Append (BUILDERS={'QT4UI' : Qt4UiBuilder})
+
+
+
+def IceTargets (target, source, env):
+  base, extension = os.path.splitext ((str(source[0])))
+  base = os.path.basename(base)
+  targetlist = []
+  targetlist.append (base+".cpp")
+  targetlist.append (base+".h")
+  print ("source : %s" % str (source[0]))
+  print ("targetlist : %s" % targetlist)
+  return (targetlist, source)
+
+def IceBuilderFunction (target, source, env):
+  print ("Target : %s" % target[0])
+  print ("Source : %s" % source[0])
+  sourcefile = str(source[0])
+  command =  "%s"  % (sourcefile)
+  print ("\"" + env["ICE"] + "/slice2cpp" + "\" " + command)
+  os.system ("\"" + env["ICE"] + "/slice2cpp" + "\" " + command)
+
+# make a builder method
+
+IceBuilder = Builder (action=IceBuilderFunction, emitter=IceTargets)
+env.Append (BUILDERS={'ICE' : IceBuilder})
+
+# build the skeletons for ICE
+
+ICEFiles = glob.glob ('*.ice')
+for ICEFile in ICEFiles:
+	ICEFile = os.path.basename (ICEFile)
+	targetfile = env.ICE (source='%s' % (ICEFile))
+
+for x in os.listdir('.'):
+    if re.match('.*\.ice', x):
+        targetfile = env.ICE (source='%s' % (ICEFile))
+    	
+env.Append(LINKFLAGS = ['/noexp'])
+
+if env['PLATFORM'] == 'win32':
+    env.Append (CCFLAGS='-W3 -MD -O1 -EHsc -GR -DQT_THREAD_SUPPORT -DNO_DEBUG -DGetMessageA=GetMessage -DResetPrinterA=ResetPrinter -DM_PI=3.14159265358979323846')
+    #env.Append (CCFLAGS='-arch:SSE2 -D_WIN32_WINNT=0x0400 -W3 -MD -O2 -G7 -GX -GR -DQT_THREAD_SUPPORT -DNO_DEBUG -DGetMessageA=GetMessage -DResetPrinterA=ResetPrinter -DM_PI=3.14159265358979323846')
+else:
+    env.Append (CCFLAGS='-Wall -DQT_THREAD_SUPPORT -D_REENTRANT')
+
+Export ('env')
+
+SConscript('C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/SConscript01')
+SConscript('C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/SConscript')
+shutil.copyfile('SocketBox.xml', env["BINDIR"] + '/SocketBox.xml')

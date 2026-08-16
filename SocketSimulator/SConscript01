@@ -1,0 +1,33 @@
+Import ('env')
+myenv = env
+
+
+InstallDir = myenv['BINDIR']
+
+################################ INSTALL THE LOG SERVER ###################################
+
+
+SourcesDll = ['clDriverFrame.cpp',
+                'clDriverFrameImplementation.cpp'
+                ]
+SocketBoxDll = myenv.SharedLibrary('SocketBoxContent', SourcesDll,
+                    LIBS=['libQt5Core',
+						  'libQt5Xml'
+                  	]
+                )                    
+#,'C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/SocketBoxContent'				
+myenv.Install (InstallDir, 'SocketBoxContent.dll')
+
+################################ INSTALL THE LOG SERVER ###################################
+
+
+SourcesDllLoc = ['clDriverFrame.cpp',
+                'clDriverFrameImpLocator.cpp'
+                ]
+SocketBoxDllLoc = myenv.SharedLibrary('SocketBoxContentLocator', SourcesDllLoc,
+                    LIBS=['libQt5Core',
+						  'libQt5Xml'
+                  	]
+                )                    
+myenv.Install (InstallDir, 'SocketBoxContentLocator.dll')
+

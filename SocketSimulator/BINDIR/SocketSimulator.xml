@@ -1,0 +1,13 @@
+<socketbox>
+	<general>
+		<name>Sensor1</name>
+		<ip>192.168.1.210</ip>
+		<port>1234</port>
+		<error>some error or empty</error>
+	</general>
+	<specificData>
+		<data>.\SocketBoxContent.dll</data>
+		<data>10.89.67.45</data>
+		<data>C:\TEMP\</data>
+	</specificData>
+</socketbox>
