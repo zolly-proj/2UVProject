@@ -1,0 +1,27 @@
+Scons version
+--------------
+sudo apt install pip
+mv /usr/lib/python3.13/EXTERNALLY-MANAGED /home/zolly/Documents
+python3 -m pip install scons==4.2.0
+
+QT
+------
+sudo apt-get install qtdeclarative5-dev qml-module-qtquick-controls
+sudo apt install designer-qt6
+sudo apt install qt5*
+sudo apt install libqt53*
+sudo apt install qt3*
+
+Creating a user in postgress and database
+--------------------------------------------
+sudo apt install postgresql
+sudo -u postgres createuser --superuser $USER
+sudo -u postgres createuser --superuser zolly
+sudo -u postgres createdb --owner=testuser testdb
+sudo -u postgres createdb --owner=zolly TEST_PROJECT
+sudo -u postgres createuser --login --pwprompt testuser
+sudo -u postgres createuser --login --pwprompt wolly
+passw: wolly
+sudo -u postgres dropdb TEST_PROJECT
+sudo -u postgres createdb --owner=wolly TEST_PROJECT
+import database into existing db
