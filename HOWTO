@@ -25,3 +25,12 @@ passw: wolly
 sudo -u postgres dropdb TEST_PROJECT
 sudo -u postgres createdb --owner=wolly TEST_PROJECT
 import database into existing db
+
+Install pgAdmin
+------------------------
+
+# Install for both desktop and web modes:
+sudo apt install pgadmin4
+
+# Install for desktop mode only:
+sudo apt install pgadmin4-desktop
