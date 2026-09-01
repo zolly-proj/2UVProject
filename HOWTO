@@ -12,6 +12,11 @@ sudo apt install qt5*
 sudo apt install libqt53*
 sudo apt install qt3*
 
+Zeroc Ice
+---------
+sudo apt install zeroc-ice-all-dev
+sudo apt install libzeroc-ice-dev
+
 Creating a user in postgress and database
 --------------------------------------------
 sudo apt install postgresql
