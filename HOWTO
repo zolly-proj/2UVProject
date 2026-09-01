@@ -47,4 +47,5 @@ Using
 3. Open the DatabaseEditor
 4. Open connection to the database
 5. Update database
-6. Check the different applications ...
+6. Startup the LogServer and the 2UVServer (just startup not more to do there)
+7. Check the different applications ...
