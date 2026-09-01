@@ -50,3 +50,12 @@ Using
 6. First startup the LogServer and then the 2UVServer (just startup not more to do there)
 7. Fill up the database in ServerTest->menu..->configure (press refresh to see all the classes).
 8. Check the different applications en run a bit through the code to see what is possible ... .
+
+9. Methods can be addded and configured in the ServerTest or ObjectViewer BINDIR\Config
+10. Object methods can be added and configured in the ServerTest or ObjectViewer BINDIR\CONFIG
+
+
+
+
+
+
