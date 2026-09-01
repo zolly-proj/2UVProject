@@ -40,3 +40,11 @@ sudo apt install pgadmin4
 # Install for desktop mode only:
 sudo apt install pgadmin4-desktop
 
+Using
+-----
+1. Set the xml of the Appstartup correct
+2. Start the Appstartup in the BINDIR with argument of the xml file
+3. Open the DatabaseEditor
+4. Open connection to the database
+5. Update database
+6. Check the different applications ...
