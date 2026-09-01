@@ -53,6 +53,7 @@ Using
 
 9. Methods can be addded and configured in the ServerTest or ObjectViewer BINDIR\Config
 10. Object methods can be added and configured in the ServerTest or ObjectViewer BINDIR\CONFIG
+11. Properties can be added into the DatabaseStructure.xml
 
 
 
